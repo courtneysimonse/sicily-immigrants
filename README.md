@@ -1,6 +1,6 @@
 # final-project
 ## #1 Topic
-I want to design a map that explores emigration from Augusta, Sicily in the late 19th-early 20th century. Recently, I have been doing some genealogy research in advance of a trip to Sicily this summer. My maternal grandmother’s parents were born in Augusta, Sicily, a town on the eastern coast near Syracuse that was founded in 1232. Like all of Sicily, many people left during this time period in search of a better life, including my great-grandparents, who entered through Ellis Island and settled in Detroit and several of their extended family members.
+I want to design a map that explores emigration from Augusta, Sicily in the late 19th-early 20th century. Recently, I have been doing some genealogy research in advance of a trip to Sicily this summer. My maternal grandmother’s parents were born in Augusta, Sicily, a town on the eastern coast near Syracuse that was founded in 1232. Like all of Sicily, many people left during this time period in search of a better life, including my great-grandparents, who entered through Ellis Island and settled in Detroit, and several of their extended family members.
 ## #2 Question
 because I want to find out where those that left Augusta settled. When we asked my grandma about any potential cousins in Sicily, she always told us that everyone left!
 ## #3 Motivation
