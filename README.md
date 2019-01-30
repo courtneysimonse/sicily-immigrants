@@ -7,6 +7,6 @@ because I want to find out where those that left Augusta settled. When we asked 
 in order to help the map user or audience understand better emigration patterns through the example of a town in Sicily.
 
 ## Data
-Through Steve Morse’s [Ellis Island search](https://stevemorse.org/ellis2/ellisgold.html?first_kind=1&FNM=&kind=close&LNM=), I could find all the passengers who listed Augusta as their residence. This file is data/ellis_augusta.csv  
+Through Steve Morse’s [Ellis Island search](https://stevemorse.org/ellis2/ellisgold.html?first_kind=1&FNM=&kind=close&LNM=), I could find all the passengers who listed Augusta as their residence. This file is [ellis_island_augusta.csv](data/ellis_island_augusta.csv)  
 That index only gives me their arrival date and ship name, though.  
 Both Ancestry.com and FamilySearch.org have the digitized manifests for Ellis Island and some other ports of entry for the US. I don’t know how I can get the data I want, namely the Final Destination listed on the manifest for the passengers pulled from above without manually searching. I am still looking around for a different tool/database for this step. If I can’t get this info, I will have to rethink the project, maybe focusing on dates instead.
