@@ -1,15 +1,13 @@
 # final-project
-## #1 Topic
-I want to design a map that explores emigration from Augusta, Sicily in the late 19th-early 20th century. Recently, I have been doing some genealogy research in advance of a trip to Sicily this summer. My maternal grandmother’s parents were born in Augusta, Sicily, a town on the eastern coast near Syracuse that was founded in 1232. Like all of Sicily, many people left during this time period in search of a better life, including my great-grandparents, who entered through Ellis Island and settled in Detroit, and several of their extended family members.
-## #2 Question
-because I want to find out where those that left Augusta settled. When we asked my grandma about any potential cousins in Sicily, she always told us that everyone left!
-## #3 Motivation
-in order to help the map user or audience understand better emigration patterns through the example of a town in Sicily.
-
+## Overview
+I want to design a map that explores Sicilian immigration to the United States in the late 19th-early 20th century.   
+## Background
+[Ellis Island](https://www.nps.gov/elis/index.htm) was the main immigrant processing station for the United States from 1892 to 1954. My great-grandfather went through Ellis Island three times (1905, 1912, and 1922)!  
+My maternal grandmother’s parents were born in Augusta, Sicily, a town on the eastern coast near Syracuse. Like all of Sicily, many people left during this time period in search of a better life. I am interested in where those that left Augusta, or more broadly Sicily, settled in the United States.  
 ## Data
-Through Steve Morse’s [Ellis Island search](https://stevemorse.org/ellis2/ellisgold.html?first_kind=1&FNM=&kind=close&LNM=), I could find all the passengers who listed Augusta as their residence. This file is [ellis_island_augusta.csv](data/ellis_island_augusta.csv)  
-That index only gives me their arrival date and ship name, though.  
-Both Ancestry.com and FamilySearch.org have the digitized manifests for Ellis Island and some other ports of entry for the US. I don’t know how I can get the data I want, namely the Final Destination listed on the manifest for the passengers pulled from above without manually searching. I am still looking around for a different tool/database for this step. If I can’t get this info, I will have to rethink the project, maybe focusing on dates instead.  
-+ [Italians to America Passenger Data File, 1855 - 1900](https://aad.archives.gov/aad/series-description.jsp?s=4433&cat=GP44&bc=,sl&col=1002)
-+ [National Archives API](https://github.com/usnationalarchives/Catalog-API)  
-+ [Immigrant Ships Transcribers Guild NY Arrivals](https://immigrantships.net/nycarrivals1_6.html)
+Both Ancestry.com and FamilySearch.org have the scanned manifests for Ellis Island and some other ports of entry for the US. However, not all the columns on the form are indexed in those databases, namely the "Final Destination" that I'm interested in.  
++ [Steve Morse’s Ellis Island search](https://stevemorse.org/ellis2/ellisgold.html?first_kind=1&FNM=&kind=close&LNM=) is a great search tool for Ellis Island records. I searched for all the passengers who listed Augusta as their residence. This file is [ellis_island_augusta.csv](data/ellis_island_augusta.csv), which includes about 5,000 passengers. The search results only give me their arrival date and ship name, though.  
++ [Italians to America Passenger Data File, 1855 - 1900](https://aad.archives.gov/aad/series-description.jsp?s=4433&cat=GP44&bc=,sl&col=1002) The National Archives has a database of Itailian immigrants with additional columns, including destination and literacy, which I haven't seen in other resources. As an example, [manifest_list_example.csv](data/manifest_list_example.csv) is one manifest. I don't know if it's possible to bulk download this data, so that is something I need to explore.
+  + [National Archives API](https://github.com/usnationalarchives/Catalog-API) Maybe this will be helpful?
++ [Immigrant Ships Transcribers Guild NY Arrivals](https://immigrantships.net/nycarrivals1_6.html) This group transcribes entire manifests.
+I need to investigate this resource further, but I could use some of the other resources to identify manifests to search for on this site.
