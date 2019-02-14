@@ -9,4 +9,7 @@ in order to help the map user or audience understand better emigration patterns 
 ## Data
 Through Steve Morse’s [Ellis Island search](https://stevemorse.org/ellis2/ellisgold.html?first_kind=1&FNM=&kind=close&LNM=), I could find all the passengers who listed Augusta as their residence. This file is [ellis_island_augusta.csv](data/ellis_island_augusta.csv)  
 That index only gives me their arrival date and ship name, though.  
-Both Ancestry.com and FamilySearch.org have the digitized manifests for Ellis Island and some other ports of entry for the US. I don’t know how I can get the data I want, namely the Final Destination listed on the manifest for the passengers pulled from above without manually searching. I am still looking around for a different tool/database for this step. If I can’t get this info, I will have to rethink the project, maybe focusing on dates instead.
+Both Ancestry.com and FamilySearch.org have the digitized manifests for Ellis Island and some other ports of entry for the US. I don’t know how I can get the data I want, namely the Final Destination listed on the manifest for the passengers pulled from above without manually searching. I am still looking around for a different tool/database for this step. If I can’t get this info, I will have to rethink the project, maybe focusing on dates instead.  
++ [Italians to America Passenger Data File, 1855 - 1900](https://aad.archives.gov/aad/series-description.jsp?s=4433&cat=GP44&bc=,sl&col=1002)
++ [National Archives API](https://github.com/usnationalarchives/Catalog-API)  
++ [Immigrant Ships Transcribers Guild NY Arrivals](https://immigrantships.net/nycarrivals1_6.html)
