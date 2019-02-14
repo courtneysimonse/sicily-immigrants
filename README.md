@@ -1,4 +1,5 @@
-# final-project
+# Sicilians Through Ellis Island and Beyond
+## New Maps Plus MS Degree Final Project
 ## Overview
 I want to design a map that explores Sicilian immigration to the United States in the late 19th-early 20th century.   
 ## Background
