@@ -3,7 +3,7 @@
 ## Overview
 I want to design a map that explores Sicilian immigration to the United States in the late 19th-early 20th century.   
 ## Background
-[Ellis Island](https://www.nps.gov/elis/index.htm) was the main immigrant processing station for the United States from 1892 to 1954. My great-grandfather went through Ellis Island three times (1905, 1912, and 1922)!  
+[Ellis Island](https://www.nps.gov/elis/index.htm) was the main immigrant processing station for the United States from 1892 to 1954. My great-grandfather went through Ellis Island three times (1905, 1912, and 1922)! The ship manifests have lists of passengers, as well as age, sex, marital status, occupation, destination, and some other items depending on the year.  
 My maternal grandmother’s parents were born in Augusta, Sicily, a town on the eastern coast near Syracuse. Like all of Sicily, many people left during this time period in search of a better life. I am interested in where those that left Augusta, or more broadly Sicily, settled in the United States.  
 ## Data
 Both Ancestry.com and FamilySearch.org have the scanned manifests for Ellis Island and some other ports of entry for the US. However, not all the columns on the form are indexed in those databases, namely the "Final Destination" that I'm interested in.  
