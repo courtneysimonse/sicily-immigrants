@@ -1,0 +1,157 @@
+1550881472175	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Nightly\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\brooklyn\\AppData\\Local\\Temp\\rust_mozprofile.6reUoyIXqNDn"
+1550881532307	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Nightly\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\brooklyn\\AppData\\Local\\Temp\\rust_mozprofile.onbzPBrhPIS6"
+1550881533854	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1550881533856	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1550881533857	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+[Child 17528, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1550827259/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 17528, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1550827259/build/src/1550881541882	Marionette	INFO	Listening on port 58545
+1550881541916	Marionette	WARN	TLS certificate errors will be ignored for this session
+1550881544498	Marionette	INFO	Stopped listening on port 58545
+JavaScript error: resource://gre/modules/UrlClassifierListManager.jsm, line 595: TypeError: this.tablesData[table] is undefined
+[Parent 7240, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1550827259/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 17040, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1550827259/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 17040, Chrome_ChildT[Parent 7240, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1550827259/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 14352, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1550827259/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 143[Parent 7240, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1550827259/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[GPU 11
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1550881650033	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Nightly\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\brooklyn\\AppData\\Local\\Temp\\rust_mozprofile.j8mwoT8sax8x"
+1550881651140	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1550881651140	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1550881651141	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1550881655712	Marionette	INFO	Listening on port 58628
+1550881656080	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://legendas.tv/cache_js/js-combined.js, line 2: unreachable code after return statement
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: http://%(server)s/dummy/blocklist//buckets/monitor/collections/changes/records?_expected=%221550866958904%22 is not a valid URL..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:193:13
+async*receivedBroadcastMessage@resource://services-settings/remote-settings.js:319:27
+async*receivedBroadcastMessage@resource://gre/modules/PushBroadcastService.jsm:194:23
+async*receivedBroadcastMessage@resource://gre/modules/PushService.jsm:763:26
+_handleBroadcastReply@resource://gre/modules/PushServiceWebSocket.jsm:759:27
+_wsOnMessageAvailable@resource://gre/modules/PushServiceWebSocket.jsm:1050:18
+onMessageAvailable@resource://gre/modules/PushServiceWebSocket.jsm:95:23
+
+[Parent 14136, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1550827259/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 14136, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1550827259/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[Parent 14136, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1550827259/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 15440, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1550827259/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 1550881867759	Marionette	INFO	Stopped listening on port 58628
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+://gre/modules/PushServiceWebSocket.jsm:1050:18
+onMessageAvailable@resource://gre/modules/PushServiceWebSocket.jsm:95:23
+
+[Parent 15700, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1550827259/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 14896, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1550827259/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 15700, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1550827259/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 4940, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1550827259/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Chi1550881868344	Marionette	INFO	Stopped listening on port 58696
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+eBroadcastReply@resource://gre/modules/PushServiceWebSocket.jsm:759:27
+_wsOnMessageAvailable@resource://gre/modules/PushServiceWebSocket.jsm:1050:18
+onMessageAvailable@resource://gre/modules/PushServiceWebSocket.jsm:95:23
+
+[Parent 7636, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1550827259/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 17[Parent 7636, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1550827259/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 11216, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1550827259/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 11216, Chrome_ChildThread] WARNING: pipe error: 109: file z:/t[Parent 7636, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1550827259/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 17880, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1550827259/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Ch1550881868684	Marionette	INFO	Stopped listening on port 58758
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+[Parent 18416, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1550827259/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 19328, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1550827259/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+1550881868592	Marionette	INFO	Stopped listening on port 58837
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1550882496644	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Nightly\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\brooklyn\\AppData\\Local\\Temp\\rust_mozprofile.5bibZsNEeIXV"
+1550882498526	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1550882498528	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1550882498528	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1550882503941	Marionette	INFO	Listening on port 59134
+1550882504341	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://aad.archives.gov/aad/display-partial-records.jsp?dt=2123&sc=25913%2C25914%2C25915%2C25917%2C25918%2C25919%2C25920%2C25921%2C25922%2C25923&cat=all&tf=F&bc=%2Csl%2Cfd&q=&as_alq=&as_anq=&as_epq=&as_woq=&nfo_25913=V%2C50%2C1900&op_25913=0&txt_25913=&nfo_25914=V%2C50%2C1900&op_25914=0&txt_25914=&nfo_25915=V%2C10%2C1900&cl_25915=&nfo_25917=V%2C8%2C1900&cl_25917=&nfo_25918=V%2C4%2C1900&cl_25918=&nfo_25919=V%2C3%2C1900&cl_25919=&nfo_25920=V%2C50%2C1900&op_25920=0&txt_25920=&nfo_25921=V%2C20%2C1900&op_25921=0&txt_25921=&nfo_25922=V%2C20%2C1900&cl_25922=R09%2CR13%2CS09%2C%22S+9%22%2CS9%2CS13%2CS15&nfo_25923=N%2C8%2C1900&op_25923=3&txt_25923=&txt_25923=&rpp=50, line 46: ReferenceError: $ is not defined
+[Parent 12336, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1550827259/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 15444, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1550827259/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 154441550882790077	Marionette	INFO	Stopped listening on port 59134
+llaAddons
+1550882540580	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1550882540581	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1550882544572	Marionette	INFO	Listening on port 59192
+1550882544619	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://aad.archives.gov/aad/display-partial-records.jsp?dt=2123&sc=25913%2C25914%2C25915%2C25917%2C25918%2C25919%2C25920%2C25921%2C25922%2C25923&cat=all&tf=F&bc=%2Csl%2Cfd&q=&as_alq=&as_anq=&as_epq=&as_woq=&nfo_25913=V%2C50%2C1900&op_25913=0&txt_25913=&nfo_25914=V%2C50%2C1900&op_25914=0&txt_25914=&nfo_25915=V%2C10%2C1900&cl_25915=&nfo_25917=V%2C8%2C1900&cl_25917=&nfo_25918=V%2C4%2C1900&cl_25918=&nfo_25919=V%2C3%2C1900&cl_25919=&nfo_25920=V%2C50%2C1900&op_25920=0&txt_25920=&nfo_25921=V%2C20%2C1900&op_25921=0&txt_25921=&nfo_25922=V%2C20%2C1900&cl_25922=R09%2CR13%2CS09%2C%22S+9%22%2CS9%2CS13%2CS15&nfo_25923=N%2C8%2C1900&op_25923=3&txt_25923=&txt_25923=&rpp=50, line 46: ReferenceError: $ is not defined
+[Parent 6820, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1550827259/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 18520, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1550827259/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child [Child 8432, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1550827259/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 8432, Chrome_ChildThread] [Parent 6820, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1550827259/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 9016, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1550827259/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child[Parent 6820, Gecko_IOThread] WARNING: file z:/task_1550827259/build/src/ipc/chromium/src/base/process_util_win.cc, line 160
+1550882788820	Marionette	INFO	Stopped listening on port 59192
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+nq=&as_epq=&as_woq=&nfo_25913=V%2C50%2C1900&op_25913=0&txt_25913=&nfo_25914=V%2C50%2C1900&op_25914=0&txt_25914=&nfo_25915=V%2C10%2C1900&cl_25915=&nfo_25917=V%2C8%2C1900&cl_25917=&nfo_25918=V%2C4%2C1900&cl_25918=&nfo_25919=V%2C3%2C1900&cl_25919=&nfo_25920=V%2C50%2C1900&op_25920=0&txt_25920=&nfo_25921=V%2C20%2C1900&op_25921=0&txt_25921=&nfo_25922=V%2C20%2C1900&cl_25922=R09%2CR13%2CS09%2C%22S+9%22%2CS9%2CS13%2CS15&nfo_25923=N%2C8%2C1900&op_25923=3&txt_25923=&txt_25923=&rpp=50, line 46: ReferenceError: $ is not defined
+[Parent 18640, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1550827259/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 18640, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1550827259/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 18532, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1550827259/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 18[Child 4372, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1550827259/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 437[Parent 18640, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1550827259/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 19256, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1550827259/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+1550882787954	Marionette	INFO	Stopped listening on port 59251
+1550883271825	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Nightly\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\brooklyn\\AppData\\Local\\Temp\\rust_mozprofile.lJtzfgbJKSpH"
+*** You are running in headless mode.
+1550883273271	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1550883273273	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1550883273273	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1550883277042	Marionette	INFO	Listening on port 59630
+1550883277287	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://aad.archives.gov/aad/display-partial-records.jsp?dt=2123&sc=25913%2C25914%2C25915%2C25917%2C25918%2C25919%2C25920%2C25921%2C25922%2C25923&cat=all&tf=F&bc=%2Csl%2Cfd&q=&as_alq=&as_anq=&as_epq=&as_woq=&nfo_25913=V%2C50%2C1900&op_25913=0&txt_25913=&nfo_25914=V%2C50%2C1900&op_25914=0&txt_25914=&nfo_25915=V%2C10%2C1900&cl_25915=&nfo_25917=V%2C8%2C1900&cl_25917=&nfo_25918=V%2C4%2C1900&cl_25918=&nfo_25919=V%2C3%2C1900&cl_25919=&nfo_25920=V%2C50%2C1900&op_25920=0&txt_25920=&nfo_25921=V%2C20%2C1900&op_25921=0&txt_25921=&nfo_25922=V%2C20%2C1900&cl_25922=R09%2CR13%2CS09%2C%22S+9%22%2CS9%2CS13%2CS15&nfo_25923=N%2C8%2C1900&op_25923=3&txt_25923=&txt_25923=&rpp=50, line 46: ReferenceError: $ is not defined
+1550883297600	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Nightly\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\brooklyn\\AppData\\Local\\Temp\\rust_mozprofile.Mg0kjBIfPkHI"
+*** You are running in headless mode.
+1550883298793	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1550883298793	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1550883298793	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1550883304180	Marionette	INFO	Listening on port 59683
+1550883304215	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://aad.archives.gov/aad/display-partial-records.jsp?dt=2123&sc=25913%2C25914%2C25915%2C25917%2C25918%2C25919%2C25920%2C25921%2C25922%2C25923&cat=all&tf=F&bc=%2Csl%2Cfd&q=&as_alq=&as_anq=&as_epq=&as_woq=&nfo_25913=V%2C50%2C1900&op_25913=0&txt_25913=&nfo_25914=V%2C50%2C1900&op_25914=0&txt_25914=&nfo_25915=V%2C10%2C1900&cl_25915=&nfo_25917=V%2C8%2C1900&cl_25917=&nfo_25918=V%2C4%2C1900&cl_25918=&nfo_25919=V%2C3%2C1900&cl_25919=&nfo_25920=V%2C50%2C1900&op_25920=0&txt_25920=&nfo_25921=V%2C20%2C1900&op_25921=0&txt_25921=&nfo_25922=V%2C20%2C1900&cl_25922=R09%2CR13%2CS09%2C%22S+9%22%2CS9%2CS13%2CS15&nfo_25923=N%2C8%2C1900&op_25923=3&txt_25923=&txt_25923=&rpp=50, line 46: ReferenceError: $ is not defined
+1550883351217	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Nightly\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\brooklyn\\AppData\\Local\\Temp\\rust_mozprofile.bi2mWumZYEXx"
+*** You are running in headless mode.
+1550883352378	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1550883352378	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1550883352378	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1550883355507	Marionette	INFO	Listening on port 59739
+1550883355664	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://aad.archives.gov/aad/display-partial-records.jsp?dt=2123&sc=25913%2C25914%2C25915%2C25917%2C25918%2C25919%2C25920%2C25921%2C25922%2C25923&cat=all&tf=F&bc=%2Csl%2Cfd&q=&as_alq=&as_anq=&as_epq=&as_woq=&nfo_25913=V%2C50%2C1900&op_25913=0&txt_25913=&nfo_25914=V%2C50%2C1900&op_25914=0&txt_25914=&nfo_25915=V%2C10%2C1900&cl_25915=&nfo_25917=V%2C8%2C1900&cl_25917=&nfo_25918=V%2C4%2C1900&cl_25918=&nfo_25919=V%2C3%2C1900&cl_25919=&nfo_25920=V%2C50%2C1900&op_25920=0&txt_25920=&nfo_25921=V%2C20%2C1900&op_25921=0&txt_25921=&nfo_25922=V%2C20%2C1900&cl_25922=R09%2CR13%2CS09%2C%22S+9%22%2CS9%2CS13%2CS15&nfo_25923=N%2C8%2C1900&op_25923=3&txt_25923=&txt_25923=&rpp=50, line 46: ReferenceError: $ is not defined
+1550883412847	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Nightly\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\brooklyn\\AppData\\Local\\Temp\\rust_mozprofile.KliZCZD7Jobx"
+*** You are running in headless mode.
+1550883414088	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1550883414089	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1550883414089	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1550883418443	Marionette	INFO	Listening on port 59829
+1550883418892	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://aad.archives.gov/aad/display-partial-records.jsp?dt=2123&sc=25913%2C25914%2C25915%2C25917%2C25918%2C25919%2C25920%2C25921%2C25922%2C25923&cat=all&tf=F&bc=%2Csl%2Cfd&q=&as_alq=&as_anq=&as_epq=&as_woq=&nfo_25913=V%2C50%2C1900&op_25913=0&txt_25913=&nfo_25914=V%2C50%2C1900&op_25914=0&txt_25914=&nfo_25915=V%2C10%2C1900&cl_25915=&nfo_25917=V%2C8%2C1900&cl_25917=&nfo_25918=V%2C4%2C1900&cl_25918=&nfo_25919=V%2C3%2C1900&cl_25919=&nfo_25920=V%2C50%2C1900&op_25920=0&txt_25920=&nfo_25921=V%2C20%2C1900&op_25921=0&txt_25921=&nfo_25922=V%2C20%2C1900&cl_25922=R09%2CR13%2CS09%2C%22S+9%22%2CS9%2CS13%2CS15&nfo_25923=N%2C8%2C1900&op_25923=3&txt_25923=&txt_25923=&rpp=50, line 46: ReferenceError: $ is not defined
+1550883666832	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Nightly\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\brooklyn\\AppData\\Local\\Temp\\rust_mozprofile.p9Fn5H1jFKLz"
+*** You are running in headless mode.
+1550883668065	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1550883668065	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1550883668065	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1550883672295	Marionette	INFO	Listening on port 59910
+1550883672446	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://aad.archives.gov/aad/display-partial-records.jsp?dt=2123&sc=25913%2C25914%2C25915%2C25917%2C25918%2C25919%2C25920%2C25921%2C25922%2C25923&cat=all&tf=F&bc=%2Csl%2Cfd&q=&as_alq=&as_anq=&as_epq=&as_woq=&nfo_25913=V%2C50%2C1900&op_25913=0&txt_25913=&nfo_25914=V%2C50%2C1900&op_25914=0&txt_25914=&nfo_25915=V%2C10%2C1900&cl_25915=&nfo_25917=V%2C8%2C1900&cl_25917=&nfo_25918=V%2C4%2C1900&cl_25918=&nfo_25919=V%2C3%2C1900&cl_25919=&nfo_25920=V%2C50%2C1900&op_25920=0&txt_25920=&nfo_25921=V%2C20%2C1900&op_25921=0&txt_25921=&nfo_25922=V%2C20%2C1900&cl_25922=R09%2CR13%2CS09%2C%22S+9%22%2CS9%2CS13%2CS15&nfo_25923=N%2C8%2C1900&op_25923=3&txt_25923=&txt_25923=&rpp=50, line 46: ReferenceError: $ is not defined
