@@ -1,6 +1,11 @@
-##Map Title  (Links to an external site.)Links to an external site.Subtitle (optional)
+# Sicilians Through Ellis Island and Beyond  
+## 1855-1900
 
 I. Introduction
+
+I want to design a map that explores Sicilian immigration to the United States in the late 19th-early 20th century.   
+[Ellis Island](https://www.nps.gov/elis/index.htm) was the main immigrant processing station for the United States from 1892 to 1954. My great-grandfather went through Ellis Island three times (1905, 1912, and 1922)! The ship manifests have lists of passengers, as well as age, sex, marital status, occupation, destination, and some other items depending on the year.  
+My maternal grandmother’s parents were born in Augusta, Sicily, a town on the eastern coast near Syracuse. Like all of Sicily, many people left during this time period in search of a better life. I am interested in where those that left Augusta, or more broadly Sicily, settled in the United States. 
 
 Provide an introductory paragraph or two. This should answer the following questions for your reader:
 
@@ -14,20 +19,26 @@ Provide an introductory paragraph or two. This should answer the following quest
         Finally, provide a statement of the project's broader impact. - e.g., "The map will help provide an unmet need for society to better understand X."
 
 [possible mockup/wireframe here]
- (Links to an external site.)Links to an external site.II. Methodology
+II. Methodology
 
 First provide a general statement summarizing the following subsections (one or two sentences).
- (Links to an external site.)Links to an external site.A. Data
+ A. Data
 
 What are the content requirements for your map? Provide a description of the following:
 
-    data source(s) with links
-    wrangling and analysis process (include indication of tools you used, e.g., QGIS, spreadsheet applications, Python/Jupyter Notebooks, pandos, etc)
-    an example of the cleaned data (e.g., the first 10 rows of a pandas GeoDataframe or CSV file ... could be a screenshot or you can format example within a Markdown table. If in Jupyter notebooks export to HTML and copy/paste the table created with a DataFrame)
-    anticipated format when ready for web map (e.g., GeoJSON/CSV flat files, remote-hosted PostGres database, etc).
-    additional content you'll want to obtain or generate for the final map (supplementary descriptive text, images, etc).
++ data source(s) with links
+    + [Italians to America Passenger Data File, 1855 - 1900](https://aad.archives.gov/aad/series-description.jsp?s=4433&cat=GP44&bc=,sl&col=1002) The National Archives has a database of Itailian immigrants from transcribed passenger manifests with some demographic data and the passenger's previous residence and final destination. I scraped this data using the jupyter notebook [NARA_scraper.ipynb]: [italians_to_america.csv](data/italians_to_america.csv)  
+    + [List of the communes in Sicily](https://en.wikipedia.org/wiki/List_of_communes_of_Sicily) from Wikipedia
+    + Province boundaries for Italy from http://www.diva-gis.org/. I am using modern-day boundaries.
 
- (Links to an external site.)Links to an external site.B. Medium for delivery
++ wrangling and analysis process (include indication of tools you used, e.g., QGIS, spreadsheet applications, Python/Jupyter Notebooks, pandos, etc)
++ an example of the cleaned data (e.g., the first 10 rows of a pandas GeoDataframe or CSV file ... could be a screenshot or you can format example within a Markdown table. If in Jupyter notebooks export to HTML and copy/paste the table created with a DataFrame)
++ anticipated format when ready for web map (e.g., GeoJSON/CSV flat files, remote-hosted PostGres database, etc).
++ additional content you'll want to obtain or generate for the final map (supplementary descriptive text, images, etc).
+
+ B. Medium for delivery
+ 
+ The map will be a web-brower-based application accessible across mobile and desktop devices. 
 
 Begin with a topic sentence, something like, "The map will be a web browser-based application accessible across mobile and desktop devices ...."
 
@@ -36,12 +47,12 @@ Then provide a description of your anticipated technology stack and likely JavaS
 Given your representation and interaction requirements listed below, consider what other libraries you may use. For example, if you're going to do some buffer analysis perhaps you'll use Turf.js. If classifying data on the fly, perhaps simple-statistics.js. If doing address geolocation in a search bar or routing, then note these as well.
 
 It will be nice to include active links to these libraries within the Markdown proposal.
- (Links to an external site.)Links to an external site.C. Application layout
+ C. Application layout
 
 Here you'll want to consider the general layout of the web page and how it will "respond" to different device sizes. It's probably easiest to include 2 or three very simple wireframes showing mobile, tablet, and desktop layouts (not detailed mockups).
 
-Also see: https://gistbok.ucgis.org/bok-topics/mobile-maps-and-responsive-design (Links to an external site.)Links to an external site.
- (Links to an external site.)Links to an external site.D. Thematic representation
+Also see: https://gistbok.ucgis.org/bok-topics/mobile-maps-and-responsive-design 
+ D. Thematic representation
 
 Here describe how the data will be visually represented (points, lines, polygons) and what thematic technique you will employ (icons or proportional symbols for points, classified choropleth for polygons).
 
@@ -58,8 +69,9 @@ Include additional mockups of either the entire application or specific parts of
 
 You may want to include an example of a user persona/scenario here if it helps describe the intent of your map design (see MAP673 modules 05/06).
 
-Also see: https://gistbok.ucgis.org/bok-topics/user-interface-and-user-experience-uiux-design (Links to an external site.)Links to an external site.
- (Links to an external site.)Links to an external site.F. Aesthetics and design considerations
+Also see: https://gistbok.ucgis.org/bok-topics/user-interface-and-user-experience-uiux-design
+
+F. Aesthetics and design considerations
 
 Here a full-blown mockup may be useful, but not necessary. You may also simply offer some anticipated design solutions for your map. Think about:
 
