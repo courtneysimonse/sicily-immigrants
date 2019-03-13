@@ -27,12 +27,14 @@ First provide a general statement summarizing the following subsections (one or 
 What are the content requirements for your map? Provide a description of the following:
 
 + data source(s) with links
-    + [Italians to America Passenger Data File, 1855 - 1900](https://aad.archives.gov/aad/series-description.jsp?s=4433&cat=GP44&bc=,sl&col=1002) The National Archives has a database of Itailian immigrants from transcribed passenger manifests with some demographic data and the passenger's previous residence and final destination. I scraped this data using the jupyter notebook [NARA_scraper.ipynb]: [italians_to_america.csv](data/italians_to_america.csv)  
+    + [Italians to America Passenger Data File, 1855 - 1900](https://aad.archives.gov/aad/series-description.jsp?s=4433&cat=GP44&bc=,sl&col=1002) The National Archives has a database of Itailian immigrants from transcribed passenger manifests with some demographic data and the passenger's previous residence and final destination.
     + [List of the communes in Sicily](https://en.wikipedia.org/wiki/List_of_communes_of_Sicily) from Wikipedia
     + Province boundaries for Italy from http://www.diva-gis.org/. I am using modern-day boundaries.
 
 + wrangling and analysis process (include indication of tools you used, e.g., QGIS, spreadsheet applications, Python/Jupyter Notebooks, pandos, etc)
+    +  I scraped the passenger and manifest header data using the jupyter notebook [NARA_scraper.ipynb], resulting in [italians_to_america.csv](data/italians_to_america.csv) and [manifest_list_1855_1900.csv](data/manifest_list_1855_1900.csv).  
 + an example of the cleaned data (e.g., the first 10 rows of a pandas GeoDataframe or CSV file ... could be a screenshot or you can format example within a Markdown table. If in Jupyter notebooks export to HTML and copy/paste the table created with a DataFrame)
+
 + anticipated format when ready for web map (e.g., GeoJSON/CSV flat files, remote-hosted PostGres database, etc).
 + additional content you'll want to obtain or generate for the final map (supplementary descriptive text, images, etc).
 
