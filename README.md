@@ -53,11 +53,12 @@ Example of cleaned data:
  !(images/wireframe.JPG "basic layout")
 
  D. Thematic representation  
- I plan on using points with proportional symbols to represent number of people.
+ Points with proportional symbols will represent number of people. I also have age and literacy data that I would like to include, but I'm not sure how I will do it yet.
 
  E. User interaction  
- The user will click on a Province in Sicily to focus on passengers from that Province. A year slider will let the user narrow the range of years to look at. Hovering on the destination points will allow the user to see the number of immigrants represented.
+ The user will click on a Province in Sicily to focus on passengers from that Province. That Province will then stay highlighted as a visual reminder. A year slider will let the user narrow the range of years to look at. Hovering on the destination points will allow the user to see the number of immigrants represented.
 
- F. Aesthetics and design considerations  
+ F. Aesthetics and design considerations
 
- G. Conclusion
+ G. Conclusion  
+ I want to design a map that explore emigration from Sicily to the United States because I want to find out what the patterns were, in order to help the map user or audience understand better US immigration.
