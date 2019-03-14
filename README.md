@@ -50,7 +50,7 @@ Example of cleaned data:
  The map will be a web-browser-based application accessible across mobile and desktop devices.
 
  C. Application layout  
- !(images/wireframe.JPG "basic layout")
+ ![Layout Image](images/wireframe.JPG "basic layout")
 
  D. Thematic representation  
  Points with proportional symbols will represent number of people. I also have age and literacy data that I would like to include, but I'm not sure how I will do it yet.
