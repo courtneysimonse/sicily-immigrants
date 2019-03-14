@@ -13,18 +13,31 @@ II. Methodology
 First provide a general statement summarizing the following subsections (one or two sentences).
  A. Data
 
-What are the content requirements for your map? Provide a description of the following:
-
-+ data source(s) with links
++ Sources
     + [Italians to America Passenger Data File, 1855 - 1900](https://aad.archives.gov/aad/series-description.jsp?s=4433&cat=GP44&bc=,sl&col=1002) The National Archives has a database of Itailian immigrants from transcribed passenger manifests with some demographic data and the passenger's previous residence and final destination.
     + [List of the communes in Sicily](https://en.wikipedia.org/wiki/List_of_communes_of_Sicily) from Wikipedia
     + Province boundaries for Italy from http://www.diva-gis.org/. I am using modern-day boundaries.
 
-+ wrangling and analysis process (include indication of tools you used, e.g., QGIS, spreadsheet applications, Python/Jupyter Notebooks, pandos, etc)
-    +  I scraped the passenger and manifest header data using the jupyter notebook [NARA_scraper.ipynb], resulting in [italians_to_america.csv](data/italians_to_america.csv) and [manifest_list_1855_1900.csv](data/manifest_list_1855_1900.csv).  
-+ an example of the cleaned data (e.g., the first 10 rows of a pandas GeoDataframe or CSV file ... could be a screenshot or you can format example within a Markdown table. If in Jupyter notebooks export to HTML and copy/paste the table created with a DataFrame)
-
-+ anticipated format when ready for web map (e.g., GeoJSON/CSV flat files, remote-hosted PostGres database, etc).
++ Wrangling and analysis process
+    + I scraped the passenger and manifest header data using the jupyter notebook [NARA_scraper.ipynb], resulting in three passenger data files ([italians_parta.csv](data/italians_parta.csv), [italians_partb.csv](data/italians_partb.csv), and [italans_partc.csv](data/italians_partc.csv)) and [manifest_list_1855_1900.csv](data/manifest_list_1855_1900.csv).  
+    + In the jupyter notebook [Italians_data_exploration.ipynb], I combined the three passenger data files into [italians_to_america.csv](data/italians_to_america.csv). 
++ an example of the cleaned data  
+|  #  | LastName | FirstName | Age | Occupation | Literacy | CountyofOrigin | CityTownofLastResidence | DestinationCityTown | TransitTravelCompartment | ManifestID | Province | ShipName | Port | Arrival |
+|-----|---------------|----------------------|----------------------|------------------------------|--------------|----------------|-------------------------|---------------------|--------------------------------------------------------------|------------|---------------|-------------------|-----------------------------|------------|
+| 0   | BUONGIORNO    | ANTONIO              | 49                   | BLACKSMITH                   | READ & WRITE | ITALY          | SCIACCA                 | NEW YORK            | Return trip to USA - non US Citizen [Transit]; Steer[Travel] | 82236      | Agrigento     | EMS               | NAPLES                      | 12/29/1892 |
+| 1   | BUONGIORNO    | GIUSEPPE             | 60                   | BLACKSMITH                   | READ & WRITE | ITALY          | SCIACCA                 | NEW YORK            | Return trip to USA - non US Citizen [Transit]; Steer[Travel] | 82236      | Agrigento     | EMS               | NAPLES                      | 12/29/1892 |
+| 2   | CARUSO        | FRANCESCA            | Infant in months: 10 | INFANT                       | NO           | ITALY          | SCIACCA                 | NEW YORK            | Return trip to USA - non US Citizen [Transit]; Steer[Travel] | 82236      | Agrigento     | EMS               | NAPLES                      | 12/29/1892 |
+| 3   | CARUSO        | FRANCESCO            | 03                   | CHILD, YOUNGSTER             | NO           | ITALY          | SCIACCA                 | NEW YORK            | Return trip to USA - non US Citizen [Transit]; Steer[Travel] | 82236      | Agrigento     | EMS               | NAPLES                      | 12/29/1892 |
+| 4   | CARUSO        | ROSA                 | 38                   | WIFE                         | READ & WRITE | ITALY          | SCIACCA                 | NEW YORK            | Return trip to USA - non US Citizen [Transit]; Steer[Travel] | 82236      | Agrigento     | EMS               | NAPLES                      | 12/29/1892 |
+| 5   | ATTANASIO     | GIUSEPPE             | 21                   | LABORER                      | UNKNOWN      | ITALY          | PALERMO                 | NEW YORK            | Staying in the USA [Transit]; Stowaway [Travel]              | 80591      | Palermo       | GOTTARDO          | ANTWERP                     | 11/30/1884 |
+| 6   | CORRAO        | VINCENZO             | 23                   | CARPENTER                    | UNKNOWN      | ITALY          | PALERMO                 | NEW YORK            | Staying in the USA [Transit]; Stowaway [Travel]              | 80591      | Palermo       | GOTTARDO          | ANTWERP                     | 11/30/1884 |
+| 7   | CUBILLO       | ROSARIO              | 40                   | UNKNOWN                      | UNKNOWN      | ITALY          | MESSINA                 | NEW YORK            | Staying in the USA [Transit]; Stowaway [Travel]              | 63         | Messina       | ALESIA            | MESSINA & NAPLES            | 04/25/1885 |
+| 8   | DACQUISTO     | LORENZO              | 22                   | BLACKSMITH                   | UNKNOWN      | ITALY          | PALERMO                 | NEW YORK            | Staying in the USA [Transit]; Stowaway [Travel]              | 80591      | Palermo       | GOTTARDO          | ANTWERP                     | 11/30/1884 |
+| 9   | DERASE        | LUIGI                | Unknown              | UNKNOWN                      | UNKNOWN      | ITALY          | MESSINA                 | NEW YORK            | Staying in the USA [Transit]; Stowaway [Travel]              | 63         | Messina       | ALESIA            | MESSINA & NAPLES            | 04/25/1885 |
+| 10  | DICNCANA      | FLAGIO               | 18                   | UNKNOWN                      | UNKNOWN      | ITALY          | MESSINA                 | NEW YORK            | Staying in the USA [Transit]; Stowaway [Travel]              | 63         | Messina       | ALESIA            | MESSINA & NAPLES            | 04/25/1885 |
+ 
++ anticipated format when ready for web map
+  + My final data files will be: a csv containing the passenger data and a GeoJSON containing the Province boundaries for Sicily.
 + additional content you'll want to obtain or generate for the final map (supplementary descriptive text, images, etc).
 
  B. Medium for delivery
@@ -33,7 +46,10 @@ What are the content requirements for your map? Provide a description of the fol
 
  C. Application layout
  
- D. Thematic representation  
+ D. Thematic representation 
+ 
+ E. User interaction
+ The user will click on 
 
  F. Aesthetics and design considerations  
  
