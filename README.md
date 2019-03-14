@@ -39,6 +39,7 @@ Example of cleaned data:
  + still to-do
    + change "Infant in months: XX" to "0" years or a decimal
    + aggregate "Final Destination" data to match duplicates.
+     + My process for aggregating destination data is in [destinations.ipynb].
    + geocode "Final Destination" column
  + anticipated format when ready for web map
    + My final data files will be: a csv containing the passenger data and a GeoJSON containing the Province boundaries for Sicily.
