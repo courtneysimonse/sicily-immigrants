@@ -4,7 +4,7 @@
 I. Introduction
 
 I want to design a map that explores Sicilian immigration to the United States in the late 19th-early 20th century.   
-[Ellis Island](https://www.nps.gov/elis/index.htm) was the main immigrant processing station for the United States from 1892 to 1954. My great-grandfather went through Ellis Island three times (1905, 1912, and 1922)! The ship manifests have lists of passengers, as well as other items such as age, sex, marital status, occupation, and destination depending on the year.  
+New York City was a major port of entry for most of US history, with [Castle Garden](https://www.nps.gov/cacl/index.htm), the country's first immigration center, serving from 1855 to 1890. It was replaced by [Ellis Island](https://www.nps.gov/elis/index.htm), which was the main immigrant processing station for the United States from 1892 to 1954. My great-grandfather landed in New York three times (1905, 1912, and 1922)! The ship manifests have lists of passengers, as well as other items such as age, sex, marital status, occupation, and destination depending on the year.  
 1870 example (Passenger lists of vessels arriving at New York, 1820-1897 ; index to passenger lists of vessels arriving in New York, 1820-1846 : NARA publications M261 and M237 / United States. Immigration and Naturalization Service accessed via [familysearch.org]):  
 ![Manifest Example 1870](images/ManifestExample1870.jpg "1870")  
 1892 example (New York passenger arrival lists (Ellis Island), 1892-1924 / United States. Immigration and Naturalization Service accessed via [familysearch.org]):  
@@ -50,7 +50,6 @@ Example of cleaned data:
  My final data files will be: a csv containing the passenger data with associated point data and a GeoJSON file containing the province boundaries for Sicily. I will also add the example manifest images to the final webpage.  
 
  B. Medium for delivery
-
  The map will be a web-browser-based application accessible across mobile and desktop devices.
 
  C. Application layout  
