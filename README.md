@@ -65,7 +65,7 @@ Example of cleaned data:
  The user will click on a province in Sicily to focus on passengers from that province. That province will then stay highlighted as a visual reminder. A year slider will let the user narrow the range of years to look at. Hovering on the destination points will allow the user to see the number of immigrants represented.
 
  F. Aesthetics and design considerations
-
+ I want the design to look clean and not too cluttered. I also want to subtly incorporate Italian colors.
 
  G. Conclusion  
  I want to design a map that explore emigration from Sicily to the United States because I want to find out what the patterns were, in order to help the map user or audience understand better US immigration.
