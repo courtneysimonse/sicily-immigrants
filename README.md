@@ -44,8 +44,7 @@ Example of cleaned data:
 
  + I have a few data-related tasks that I still need to do, including:
    + change "Infant in months: XX" to "0" years or a decimal
-   + aggregate "Final Destination" data to match duplicates
-     + My process for aggregating destination data is in [destinations.ipynb].
+   + aggregate "Final Destination" data to match duplicates (My process for aggregating destination data is in [destinations.ipynb].)
    + Add geocoding results from [geocoding.ipynb] back to the passenger data.  
 
  My final data files will be: a csv containing the passenger data with associated point data and a GeoJSON file containing the province boundaries for Sicily. I will also add the example manifest images to the final webpage.  
