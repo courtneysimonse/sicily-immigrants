@@ -26,7 +26,7 @@ II. Methodology
 
 Example of cleaned data:
 
-|**LastName**|**FirstName**|**Age**|**Occupation**|**Literacy**|**CountryofOrigin**|**CityTownofLastResidence**|**DestinationCityTown**|**TransitTravelCompartment**|**ManifestID**|**Province**|**ShipName**|**Port**|**Arrival**|
+||**LastName**|**FirstName**|**Age**|**Occupation**|**Literacy**|**CountryofOrigin**|**CityTownofLastResidence**|**DestinationCityTown**|**TransitTravelCompartment**|**ManifestID**|**Province**|**ShipName**|**Port**|**Arrival**|
 |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
 |0|BUONGIORNO|ANTONIO|49|BLACKSMITH|READ & WRITE|ITALY|SCIACCA|NEW YORK|Return trip to USA - non US Citizen [Transit];...|82236|Agrigento|EMS|NAPLES|12/29/1892|
 |1|BUONGIORNO|GIUSEPPE|60|BLACKSMITH|READ & WRITE|ITALY|SCIACCA|NEW YORK|Return trip to USA - non US Citizen [Transit];...|82236|Agrigento|EMS|NAPLES|12/29/1892|
