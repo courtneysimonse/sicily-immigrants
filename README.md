@@ -55,7 +55,8 @@ Example of cleaned data:
 
  C. Application layout  
  Desktop layout:  
- ![Layout Image](images/wireframe.JPG "basic layout")
+ ![Layout Image](images/wireframe.JPG "basic layout")  
+ The mobile design will have to be different to accommodate the smaller screen.
 
  D. Thematic representation  
  Points with proportional symbols will represent number of people. I also have age and literacy data that I would like to include, but I'm not sure how I will do it yet.
@@ -64,7 +65,7 @@ Example of cleaned data:
  The user will click on a province in Sicily to focus on passengers from that province. That province will then stay highlighted as a visual reminder. A year slider will let the user narrow the range of years to look at. Hovering on the destination points will allow the user to see the number of immigrants represented.
 
  F. Aesthetics and design considerations
- I want the design to look clean and not too cluttered. I also want to subtly incorporate Italian colors.
+ I want the design to look clean and not too cluttered. I also want to subtly incorporate Italian colors (red, green, and white).
 
  G. Conclusion  
- I want to design a map that explore emigration from Sicily to the United States because I want to find out what the patterns were, in order to help the map user or audience understand better US immigration.
+ Ellis Island and its predecessor, Castle Garden, processed many immigrants. Today, over 40% of Americans can trace their roots back to one of these immigrants ([Ellis Island Fact Sheet](https://www.nps.gov/npnh/learn/news/fact-sheet-elis.htm)). I want to design a map that explore emigration from Sicily to the United States because I want to find out what the patterns were, in order to help the map user or audience understand US immigration better.
