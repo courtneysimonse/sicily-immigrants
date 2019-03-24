@@ -5,11 +5,11 @@ I. Introduction
 
 I want to design a map that explores Sicilian immigration to the United States in the late 19th-early 20th century.   
 New York City was a major port of entry for most of US history, with [Castle Garden](https://www.nps.gov/cacl/index.htm), the country's first immigration center, serving from 1855 to 1890. It was replaced by [Ellis Island](https://www.nps.gov/elis/index.htm), which was the main immigrant processing station for the United States from 1892 to 1954. My great-grandfather landed in New York three times (1905, 1912, and 1922)! The ship manifests have lists of passengers, as well as other items such as age, sex, marital status, occupation, and destination depending on the year.  
-1870 example (Passenger lists of vessels arriving at New York, 1820-1897 ; index to passenger lists of vessels arriving in New York, 1820-1846 : NARA publications M261 and M237 / United States. Immigration and Naturalization Service accessed via [familysearch.org]):  
+1870 example (Passenger lists of vessels arriving at New York, 1820-1897 ; index to passenger lists of vessels arriving in New York, 1820-1846 : NARA publications M261 and M237 / United States. Immigration and Naturalization Service, accessed via [familysearch.org]):  
 ![Manifest Example 1870](images/ManifestExample1870.jpg "1870")  
-1892 example (New York passenger arrival lists (Ellis Island), 1892-1924 / United States. Immigration and Naturalization Service accessed via [familysearch.org]):  
+1892 example (New York passenger arrival lists (Ellis Island), 1892-1924 / United States. Immigration and Naturalization Service, accessed via [familysearch.org]):  
 ![Manifest Example 1892](images/ManifestExample1892.jpg "1892")  
-1905 example (New York passenger arrival lists (Ellis Island), 1892-1924 / United States. Immigration and Naturalization Service accessed via [familysearch.org]):  
+1905 example (New York passenger arrival lists (Ellis Island), 1892-1924 / United States. Immigration and Naturalization Service, accessed via [familysearch.org]):  
 ![Manifest Example 1905](images/ManifestExample1905.jpg "1905")  
 My maternal grandmother’s parents were born in Augusta, Sicily, a town on the eastern coast near Syracuse. Like all of Sicily, many people left during this time period in search of a better life. I am interested in where those that left Augusta, or more broadly Sicily, settled in the United States.  
 My aim is for the user to gain some understanding of the history of immigration to the United States by exploring a small slice of that story.
