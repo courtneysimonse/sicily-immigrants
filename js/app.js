@@ -39,6 +39,8 @@
 
   function parseCSV(data) {
 
+    console.log(data[0])
+
     // build geojson structure
     var geojson = {};
 
@@ -61,9 +63,9 @@
 
       // push each feature to geojson
       geojson.features.push(feature)
-      console.log(datum)
     })
     // return complete geojson
+    console.log(geojson)
     return geojson
   }
 
@@ -79,22 +81,7 @@
       }
     }).addTo(map);
 
-    // var passengersLayer = L.geoJson(passengersData, {
-    //   pointToLayer: function(feature, ll) {
-    //     return L.marker(ll, {
-    //
-    //     })
-    //   },
-    //   onEachFeature: function(feature, layer) {
-    //     var props = feature.properties;
-    //
-    //     var tooltip = "test"
-    //
-    //     layer.bindTooltip(tooltip, {
-    //       className: 'tooltip'
-    //     })
-    //   }
-    // }).addTo(map)
+    var passengersLayer = L.geoJson(passengersData).addTo(map)
 
   } // end drawMap
 
