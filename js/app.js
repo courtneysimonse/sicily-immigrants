@@ -2,14 +2,13 @@
 
   // map options
   var options = {
-    zoomSnap: .1,
-    center: [38, 14], // center of Sicily
-    zoom: 6,
-    minZoom: 4,
-    zoomControl: false,
-    attributionControl: false
-    // maxZoom: 15
-  }
+        zoomSnap: .5,
+        center: [38, -85],
+        zoom: 4,
+        minZoom: 2,
+        zoomControl: false,
+        attributionControl: false
+      }
 
   // create map
   var map = L.map('map', options);
@@ -21,25 +20,46 @@
   	maxZoom: 19
   }).addTo(map);
 
-  // first make sure all data are loaded using deferred requests
-  var passengersData = d3.csv("data/sicily_passengers.csv"),
-      sicilyData = d3.json("data/sicily.geojson")
+  // AJAX request for GeoJSON data
+  // $.getJSON("data/sicily.geojson", function(sicily) {
+  //     Papa.parse('data/sicily_passengers_small.csv', {
+  //       download: true,
+  //       step: function(row) {
+  //     		console.log("Row:", row.data);
+  //     	},
+  //     	complete: function() {
+  //     		console.log("All done!");
+  //     	},
+  //       header: true,
+  //       worker: true,
+  //       complete: function(data) {
+  //               processData(sicily, data);
+  //             }
+  //     });
+  // })
+  $.getJSON('data/sicily.geojson', function(sicily) {
+      Papa.parse('data/sicily_passengers_small.csv', {
+        download: true,
+        dynamicTyping: true,
+        // step: function(row) {
+      	// 	console.log("Row:", row.data);
+      	// },
+      	complete: function(data) {
+      		console.log("All done!");
+          processData(sicily, data.data);
+      	},
+        header: true
+      });
+  })
+  .fail(function(error) {
+      // the data file failed to load
+      console.log("Error... error...");
+      // console.log(error);
+  }); // end of $.getJSON()
 
-  // when all data ARE loaded, call the ready function
-  Promise.all([passengersData, sicilyData]).then(ready)
+  function processData(sicily, data) {
 
-
-  function ready(data) {
-
-    // all data are in GeoJSON now and ready
-    // separate out the data sets and parse CSV to GeoJSON
-    drawMap(parseCSV(data[0]), data[1]);
-
-  }
-
-  function parseCSV(data) {
-
-    console.log(data[0])
+    console.log(data);
 
     // build geojson structure
     var geojson = {};
@@ -59,30 +79,16 @@
       // add all data as props
       feature.properties = datum;
       // add coordinate info
-      feature.geometry.coordinates = datum.latlong
+      feature.geometry.coordinates = [+datum.lng, +datum.lat]
 
       // push each feature to geojson
       geojson.features.push(feature)
-    })
+    });
     // return complete geojson
-    console.log(geojson)
-    return geojson
-  }
+    //return geojson
 
-  function drawMap(passengersData, sicilyData) {
-
-    var sicilyLayer = L.geoJson(sicilyData, {
-      // style Sicily province lines
-      style: function (feature) {
-        return {
-          color: 'red',
-          weight: 2
-        };
-      }
-    }).addTo(map);
-
-    var passengersLayer = L.geoJson(passengersData).addTo(map)
-
-  } // end drawMap
+    //console.log(data);
+    L.geoJSON(geojson).addTo(map);
+  };
 
 })();
