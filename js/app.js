@@ -20,42 +20,40 @@
   	maxZoom: 19
   }).addTo(map);
 
-  // AJAX request for GeoJSON data
-  // $.getJSON("data/sicily.geojson", function(sicily) {
+  // $.getJSON('data/sicily.geojson', function(sicily) {
   //     Papa.parse('data/sicily_passengers_small.csv', {
   //       download: true,
-  //       step: function(row) {
-  //     		console.log("Row:", row.data);
-  //     	},
-  //     	complete: function() {
+  //       dynamicTyping: true,
+  //       // step: function(row) {
+  //     	// 	console.log("Row:", row.data);
+  //     	// },
+  //     	complete: function(data) {
   //     		console.log("All done!");
+  //         processData(sicily, data.data);
   //     	},
-  //       header: true,
-  //       worker: true,
-  //       complete: function(data) {
-  //               processData(sicily, data);
-  //             }
+  //       header: true
   //     });
   // })
-  $.getJSON('data/sicily.geojson', function(sicily) {
-      Papa.parse('data/sicily_passengers_small.csv', {
-        download: true,
-        dynamicTyping: true,
-        // step: function(row) {
-      	// 	console.log("Row:", row.data);
-      	// },
-      	complete: function(data) {
-      		console.log("All done!");
-          processData(sicily, data.data);
-      	},
-        header: true
-      });
-  })
-  .fail(function(error) {
-      // the data file failed to load
-      console.log("Error... error...");
-      // console.log(error);
-  }); // end of $.getJSON()
+  // .fail(function(error) {
+  //     // the data file failed to load
+  //     console.log("Error... error...");
+  //     // console.log(error);
+  // }); // end of $.getJSON()
+
+  var passengerData = d3.csv('data/sicily_passengers_small.csv'),
+      sicilyData = d3.json('data/sicily.geojson')
+
+  // when all data ARE loaded, call the ready function
+  Promise.all([passengerData, sicilyData]).then(ready)
+
+
+  function ready(data) {
+
+    // all data are in GeoJSON now and ready
+    // separate out the data sets and parse CSV to GeoJSON
+    processData(data[1],data[0]);
+
+  }
 
   function processData(sicily, data) {
 
@@ -69,6 +67,7 @@
 
     // loop through data and create features
     data.forEach(function (datum) {
+      //console.log(datum);
       var feature = {
         "type": "Feature",
         "geometry": {
@@ -79,15 +78,21 @@
       // add all data as props
       feature.properties = datum;
       // add coordinate info
-      feature.geometry.coordinates = [+datum.lng, +datum.lat]
+      feature.geometry.coordinates = [Number(datum.lng), Number(datum.lat)]
+
+      if (isNaN(datum.lat)) {
+        console.log(datum);
+        console.log(feature.geometry.coordinates);
+      }
 
       // push each feature to geojson
       geojson.features.push(feature)
+
     });
     // return complete geojson
     //return geojson
 
-    //console.log(data);
+    console.log(geojson);
     L.geoJSON(geojson).addTo(map);
   };
 
