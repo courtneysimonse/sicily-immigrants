@@ -13,6 +13,13 @@
   // create map
   var map = L.map('map', options);
 
+  var smallmap = L.map('smallmap', {
+          zoomControl: false,
+          attributionControl: false,
+          center: [37, 14],
+          zoom: 6
+      });
+
   // request tiles and add to map
   var CartoDB_Positron = L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png', {
   	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="http://cartodb.com/attributions">CartoDB</a>',
@@ -20,42 +27,43 @@
   	maxZoom: 19
   }).addTo(map);
 
-  // $.getJSON('data/sicily.geojson', function(sicily) {
-  //     Papa.parse('data/sicily_passengers_small.csv', {
-  //       download: true,
-  //       dynamicTyping: true,
-  //       // step: function(row) {
-  //     	// 	console.log("Row:", row.data);
-  //     	// },
-  //     	complete: function(data) {
-  //     		console.log("All done!");
-  //         processData(sicily, data.data);
-  //     	},
-  //       header: true
-  //     });
-  // })
-  // .fail(function(error) {
-  //     // the data file failed to load
-  //     console.log("Error... error...");
-  //     // console.log(error);
-  // }); // end of $.getJSON()
+  $.getJSON('data/sicily.geojson', function(sicily) {
+      Papa.parse('data/sicily_passengers_small.csv', {
+        download: true,
+        dynamicTyping: true,
+        // step: function(row) {
+      	// 	console.log("Row:", row.data);
+      	// },
+      	complete: function(data) {
+      		console.log("All done!");
+          processData(sicily, data.data);
+      	},
+        header: true
+      });
+  })
+  .fail(function(error) {
+      // the data file failed to load
+      console.log("Error... error...");
+      // console.log(error);
+  }); // end of $.getJSON()
 
-  var passengerData = d3.csv('data/sicily_passengers_small.csv'),
-      sicilyData = d3.json('data/sicily.geojson')
-
-  // when all data ARE loaded, call the ready function
-  Promise.all([passengerData, sicilyData]).then(ready)
-
-
-  function ready(data) {
-
-    // all data are in GeoJSON now and ready
-    // separate out the data sets and parse CSV to GeoJSON
-    processData(data[1],data[0]);
-
-  }
+  // var passengerData = d3.csv('data/sicily_passengers_small.csv'),
+  //     sicilyData = d3.json('data/sicily.geojson')
+  //
+  // // when all data ARE loaded, call the ready function
+  // Promise.all([passengerData, sicilyData]).then(ready)
+  //
+  //
+  // function ready(data) {
+  //
+  //   // all data are in GeoJSON now and ready
+  //   // separate out the data sets and parse CSV to GeoJSON
+  //   processData(data[1],data[0]);
+  //
+  // }
 
   function processData(sicily, data) {
+    L.geoJSON(sicily).addTo(smallmap);
 
     console.log(data);
 
