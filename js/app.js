@@ -16,7 +16,7 @@
   var smallmap = L.map('smallmap', {
           zoomControl: false,
           attributionControl: false,
-          center: [37, 14],
+          center: [37.5, 14],
           zoom: 6
       });
 
@@ -26,6 +26,11 @@
   	subdomains: 'abcd',
   	maxZoom: 19
   }).addTo(map);
+
+  var OpenStreetMap_Mapnik = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+	   maxZoom: 19,
+	   attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+  }).addTo(smallmap);
 
   $.getJSON('data/sicily.geojson', function(sicily) {
       Papa.parse('data/sicily_passengers_small.csv', {
@@ -62,8 +67,20 @@
   //
   // }
 
+  $( "#ui-controls" ).slider({
+    range: true,
+    max: 1900,
+    min: 1880,
+    values: [1880, 1890]
+  });
+
   function processData(sicily, data) {
-    L.geoJSON(sicily).addTo(smallmap);
+    console.log(sicily);
+    L.geoJSON(sicily)
+      .addTo(smallmap)
+      .bindTooltip(function(layer) {
+        return layer.feature.properties['NAME_2']
+      });
 
     console.log(data);
 
@@ -90,18 +107,18 @@
 
       if (isNaN(datum.lat)) {
         console.log(datum);
-        console.log(feature.geometry.coordinates);
+        console.log(feature);
+      } else {
+        // push each feature to geojson
+        geojson.features.push(feature)
       }
-
-      // push each feature to geojson
-      geojson.features.push(feature)
 
     });
     // return complete geojson
     //return geojson
 
     console.log(geojson);
-    L.geoJSON(geojson).addTo(map);
+    // L.geoJSON(geojson).addTo(map);
   };
 
 })();
