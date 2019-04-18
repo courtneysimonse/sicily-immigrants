@@ -17,7 +17,7 @@
           zoomControl: false,
           attributionControl: false,
           center: [37.5, 14],
-          zoom: 6
+          zoom: 6.5
       });
 
   // request tiles and add to map
@@ -71,7 +71,7 @@
     range: true,
     max: 1900,
     min: 1880,
-    values: [1880, 1890]
+    values: [1880, 1885]
   });
 
   function processData(sicily, data) {
@@ -80,7 +80,7 @@
       .addTo(smallmap)
       .bindTooltip(function(layer) {
         return layer.feature.properties['NAME_2']
-      });
+      }, {"sticky": true});
 
     console.log(data);
 

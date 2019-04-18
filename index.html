@@ -30,21 +30,28 @@
         bottom: 0;
       }
 
-      .tooltip {
+      /* .tooltip {
         width: 300px;
         white-space: normal;
-      }
+      } */
+
       h1 {
+        position: absolute;
+        margin-left: 10px;
+        margin-top: 10px;
         z-index: 650;
         background: rgba(255,255,255,0.9);
         border-radius: 5px;
         font-weight: bold;
       }
-      .details {
+      /* .details {
        display: none;
-      }
+      } */
 
-      #slider {
+      #ui-controls {
+        width: 50%;
+        position: absolute;
+        bottom: 0;
         margin: 10px;
         z-index: 10;
       }
@@ -54,9 +61,10 @@
 
   <body>
 
+    <h1>Sicily to United States: 1880-1900</h1>
+
     <div id='map'></div>
     <div id='smallmap'></div>
-    <div id="map"></div>
     <div id="ui-controls"></div>
 
     <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js" integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg==" crossorigin=""></script>
