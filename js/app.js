@@ -67,11 +67,17 @@
   //
   // }
 
+  var years = [];
+
   $( "#ui-controls" ).slider({
     range: true,
     max: 1900,
     min: 1880,
-    values: [1880, 1885]
+    values: [1880, 1885],
+    change: function (event,ui) {
+      console.log(ui.values);
+      years = ui.values;
+    }
   });
 
   function processData(sicily, data) {
@@ -118,6 +124,11 @@
     //return geojson
 
     console.log(geojson);
+    drawMap(geojson);
+
+  };
+
+  function drawMap(geojson) {
     // L.geoJSON(geojson).addTo(map);
   };
 

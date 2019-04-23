@@ -14,16 +14,29 @@
     <link href='css/styles.css' rel='stylesheet' />
 
     <style></style>
-    
+
   </head>
 
   <body>
 
     <h1>Sicily to the US: 1880-1900</h1>
 
-    <div id='map'></div>
-    <div id='smallmap'></div>
-    <div id="ui-controls"></div>
+    <div class='container-fluid'>
+      <div class='row'>
+        <div class='col-12' id='map'></div>
+        <div class="row justify-content-end">
+          <div id='inset'>
+            <a class="btn btn-primary" data-toggle="collapse" href="#insetMap" role="button" aria-expanded="false" aria-controls="insetMap">Sicily</a>
+            <div class="col-4">
+              <div class="collapse" id="insetMap">
+                <div class="card card-content" id='smallmap'></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="ui-controls"></div>
+      </div>
+    </div>
 
     <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js" integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg==" crossorigin=""></script>
     <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>

@@ -36,9 +36,9 @@ section {
   z-index: 1;
 }
 
-#smallmap {
-  height: 40%;
-  width: 30%;
+#inset {
+  /* height: 40%;
+  width: 30%; */
   z-index: 4;
   position: absolute;
   right: 0;
