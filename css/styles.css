@@ -19,9 +19,9 @@ header {
   }
 }
 
-.portfolio-item {
+/* .portfolio-item {
   margin-bottom: 30px;
-}
+} */
 
 section {
   padding: 80px 0;
@@ -40,9 +40,9 @@ section {
   /* height: 40%;
   width: 30%; */
   z-index: 4;
-  position: absolute;
-  right: 10px;
-  bottom: 10px;
+  /* position: absolute; */
+  /* right: 10px;
+  bottom: 10px; */
 }
 
 #insetMap {
@@ -77,9 +77,9 @@ h1 {
 } */
 
 #ui-controls {
-  width: 50%;
-  position: absolute;
-  bottom: 0;
-  margin: 10px;
+  /* width: 50%; */
+  /* position: absolute;
+  bottom: 0; */
+  /* margin: 20px; */
   z-index: 10;
 }
