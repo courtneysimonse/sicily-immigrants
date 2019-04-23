@@ -25,16 +25,41 @@
       <div class='row'>
         <div class='col-12' id='map'></div>
         <div class="row justify-content-end">
-          <div id='inset'>
+          <div class='col-3' id='inset'>
             <a class="btn btn-primary" data-toggle="collapse" href="#insetMap" role="button" aria-expanded="false" aria-controls="insetMap">Sicily</a>
-            <div class="col-4">
+
               <div class="collapse" id="insetMap">
                 <div class="card card-content" id='smallmap'></div>
               </div>
-            </div>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary info" data-toggle="modal" data-target="#infoModal">
+              Info
+            </button>
           </div>
         </div>
         <div id="ui-controls"></div>
+
+      </div>
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="infoModal" tabindex="-1" role="dialog" aria-labelledby="infoModalTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="infoModalTitle">Sicily to the US: 1880-1900</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
       </div>
     </div>
 
