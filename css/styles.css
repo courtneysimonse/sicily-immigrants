@@ -36,22 +36,14 @@ section {
   z-index: 1;
 }
 
-#inset {
-  /* height: 40%;
-  width: 30%; */
+#buttons {
   z-index: 4;
-  /* position: absolute; */
-  /* right: 10px;
-  bottom: 10px; */
 }
 
-#smallMap {
+#smallmap {
   height: 100px;
   width: 200px;
   z-index: 6;
-  /* position: absolute;
-  right: 10px;
-  bottom: 10px; */
 }
 
 /* .info {
