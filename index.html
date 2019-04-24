@@ -6,7 +6,7 @@
     <title>Sicily to the US: 1880-1900</title>
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
 
-    <link href='https://fonts.googleapis.com/css?family=Work+Sans:400,500,600' rel='stylesheet' type='text/css'>
+    <!-- <link href='https://fonts.googleapis.com/css?family=Work+Sans:400,500,600' rel='stylesheet' type='text/css'> -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA==" crossorigin=""/>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -28,10 +28,11 @@
           <div class='row'>
             <div class='col my-1 mx-5' id="ui-controls"></div>
             <div class='col my-2 mx-1 justify-end' id='inset'>
-              <a class="btn btn-primary" data-toggle="collapse" href="#insetMap" role="button" aria-expanded="false" aria-controls="insetMap">Sicily</a>
-
+              <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#insetMap" aria-expanded="false" aria-controls="insetMap">
+                Sicily
+              </button>
                 <div class="collapse" id="insetMap">
-                  <div class="card card-content" id='smallmap'></div>
+                  <div class="card card-body" id='smallmap'></div>
                 </div>
               <!-- Button trigger modal -->
               <button type="button" class="btn btn-primary info" data-toggle="modal" data-target="#infoModal">

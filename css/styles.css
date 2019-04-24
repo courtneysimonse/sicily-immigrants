@@ -45,13 +45,13 @@ section {
   bottom: 10px; */
 }
 
-#insetMap {
+#smallMap {
   height: 40%;
   width: 30%;
   z-index: 6;
-  position: absolute;
+  /* position: absolute;
   right: 10px;
-  bottom: 10px;
+  bottom: 10px; */
 }
 
 .info {
