@@ -46,17 +46,17 @@ section {
 }
 
 #smallMap {
-  /* height: 40%;
-  width: 30%; */
+  height: 100px;
+  width: 200px;
   z-index: 6;
   /* position: absolute;
   right: 10px;
   bottom: 10px; */
 }
 
-.info {
+/* .info {
   z-index: 15;
-}
+} */
 
 /* .tooltip {
   width: 300px;
