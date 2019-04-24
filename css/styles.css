@@ -46,8 +46,8 @@ section {
 }
 
 #smallMap {
-  height: 40%;
-  width: 30%;
+  /* height: 40%;
+  width: 30%; */
   z-index: 6;
   /* position: absolute;
   right: 10px;
