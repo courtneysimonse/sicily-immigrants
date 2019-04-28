@@ -73,7 +73,7 @@
     range: true,
     max: 1900,
     min: 1880,
-    values: [1880, 1882],
+    values: [1880, 1885],
     change: function (event,ui,geojson) {
       console.log(ui.values);
       console.log(geojson);
@@ -130,18 +130,22 @@
 
   function drawMap(geojson) {
     // L.geoJSON(geojson).addTo(map);
-    updateMap(geojson, [1890, 1895]);
+    updateMap(geojson, [1880, 1885]);
   };
 
   function updateMap(geojson, years) {
+    var markers = L.markerClusterGroup();
     L.geoJSON(geojson, {
       filter: function (feature) {
         arrival = feature.properties['ArrivalYr'];
-        console.log(arrival);
         if (arrival >= years[0] && arrival <= years[1])
          return true
+      },
+      pointToLayer: function (feature, latlng) {
+        return markers.addLayer(L.marker(latlng));
       }
     }).addTo(map);
+    map.addLayer(markers);
   };
 
 })();
