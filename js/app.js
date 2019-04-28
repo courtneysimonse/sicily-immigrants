@@ -17,7 +17,7 @@
           zoomControl: false,
           attributionControl: false,
           center: [37.5, 14],
-          zoom: 6.5
+          zoom: 6
       });
 
   // request tiles and add to map
@@ -33,7 +33,7 @@
   }).addTo(smallmap);
 
   $.getJSON('data/sicily.geojson', function(sicily) {
-      Papa.parse('data/sicily_passengers_small.csv', {
+      Papa.parse('data/sicily_passengers.csv', {
         download: true,
         dynamicTyping: true,
         // step: function(row) {
@@ -73,22 +73,24 @@
     range: true,
     max: 1900,
     min: 1880,
-    values: [1880, 1885],
-    change: function (event,ui) {
+    values: [1880, 1882],
+    change: function (event,ui,geojson) {
       console.log(ui.values);
+      console.log(geojson);
       years = ui.values;
+      updateMap(geojson, years);
     }
   });
 
   function processData(sicily, data) {
-    console.log(sicily);
+    // console.log(sicily);
     L.geoJSON(sicily)
       .addTo(smallmap)
       .bindTooltip(function(layer) {
         return layer.feature.properties['NAME_2']
       }, {"sticky": true});
 
-    console.log(data);
+    // console.log(data);
 
     // build geojson structure
     var geojson = {};
@@ -112,24 +114,34 @@
       feature.geometry.coordinates = [Number(datum.lng), Number(datum.lat)]
 
       if (isNaN(datum.lat)) {
-        console.log(datum);
-        console.log(feature);
+        // console.log(datum);
+        // console.log(feature);
       } else {
         // push each feature to geojson
         geojson.features.push(feature)
       }
 
     });
-    // return complete geojson
-    //return geojson
 
-    console.log(geojson);
+    // console.log(geojson);
     drawMap(geojson);
-
+    // return geojson;
   };
 
   function drawMap(geojson) {
     // L.geoJSON(geojson).addTo(map);
+    updateMap(geojson, [1890, 1895]);
+  };
+
+  function updateMap(geojson, years) {
+    L.geoJSON(geojson, {
+      filter: function (feature) {
+        arrival = feature.properties['ArrivalYr'];
+        console.log(arrival);
+        if (arrival >= years[0] && arrival <= years[1])
+         return true
+      }
+    }).addTo(map);
   };
 
 })();
