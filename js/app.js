@@ -130,11 +130,13 @@
 
   function drawMap(geojson) {
     // L.geoJSON(geojson).addTo(map);
-    updateMap(geojson, [1880, 1885]);
+    updateMap(geojson, [1880, 1900]);
   };
 
   function updateMap(geojson, years) {
-    var markers = L.markerClusterGroup();
+    var markers = L.markerClusterGroup({
+      showCoverageOnHover: false
+    });
     L.geoJSON(geojson, {
       filter: function (feature) {
         arrival = feature.properties['ArrivalYr'];
@@ -142,9 +144,10 @@
          return true
       },
       pointToLayer: function (feature, latlng) {
-        return markers.addLayer(L.marker(latlng));
+        return markers.addLayer(L.marker(latlng)
+          .bindTooltip('Arrival: '+feature.properties['Arrival']));
       }
-    }).addTo(map);
+    });
     map.addLayer(markers);
   };
 
