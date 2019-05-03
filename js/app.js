@@ -27,9 +27,10 @@
   	maxZoom: 19
   }).addTo(map);
 
-  var OpenStreetMap_Mapnik = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-	   maxZoom: 19,
-	   attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+  var CartoDB_DarkMatter = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+  	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+  	subdomains: 'abcd',
+  	maxZoom: 19
   }).addTo(smallmap);
 
   $.getJSON('data/sicily.geojson', function(sicily) {
@@ -73,7 +74,7 @@
     range: true,
     max: 1900,
     min: 1880,
-    values: [1880, 1885],
+    values: [1880, 1900],
     change: function (event,ui,geojson) {
       console.log(ui.values);
       console.log(geojson);
@@ -82,11 +83,17 @@
     }
   });
 
+  $("#insetMap").on("show.bs.collapse", function() {
+    
+  })
+
   function processData(sicily, data) {
     // console.log(sicily);
-    L.geoJSON(sicily)
-      .addTo(smallmap)
-      .bindTooltip(function(layer) {
+    L.geoJSON(sicily, {
+      style: {
+        "color": "green"
+      }
+    }).bindTooltip(function(layer) {
         return layer.feature.properties['NAME_2']
       }, {"sticky": true});
 
@@ -125,7 +132,7 @@
 
     // console.log(geojson);
     drawMap(geojson);
-    // return geojson;
+    return geojson;
   };
 
   function drawMap(geojson) {
@@ -145,7 +152,7 @@
       },
       pointToLayer: function (feature, latlng) {
         return markers.addLayer(L.marker(latlng)
-          .bindTooltip('Arrival: '+feature.properties['Arrival']));
+          .bindTooltip('Arrival: ' + feature.properties['Arrival']));
       }
     });
     map.addLayer(markers);
