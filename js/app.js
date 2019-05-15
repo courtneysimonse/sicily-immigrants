@@ -84,7 +84,7 @@
   });
 
   $("#insetMap").on("show.bs.collapse", function() {
-    
+
   })
 
   function processData(sicily, data) {
@@ -152,7 +152,8 @@
       },
       pointToLayer: function (feature, latlng) {
         return markers.addLayer(L.marker(latlng)
-          .bindTooltip('Arrival: ' + feature.properties['Arrival']));
+          .bindTooltip('Destination: ' + feature.properties['DestinationCityTown'] + '<br>' + 
+            'Arrival: ' + feature.properties['Arrival']));
       }
     });
     map.addLayer(markers);
