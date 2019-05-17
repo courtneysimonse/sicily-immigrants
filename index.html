@@ -7,7 +7,7 @@
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
 
     <!-- <link href='https://fonts.googleapis.com/css?family=Work+Sans:400,500,600' rel='stylesheet' type='text/css'> -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA==" crossorigin=""/>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
@@ -25,18 +25,17 @@
     <h1>Sicily to the US: 1880-1900</h1>
 
     <div class='container-fluid'>
-      <div id='map'></div>
       <div class="row">
+        <div class="col-sm-12 col-6">
+          <div id='map'></div>
+        </div>
+        <div class="col-sm-12 col-6">
+          <div id='sicilyMap'></div>
+        </div>
         <div class='col fixed-bottom'>
           <div class='row'>
             <div class='col-xs-12 col-sm my-3 mx-5 align-self-end' id="ui-controls"></div>
             <div class='col my-2 mx-1 justify-end' id='buttons'>
-              <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#insetMap" aria-expanded="false" aria-controls="insetMap">
-                Sicily
-              </button>
-                <div class="collapse" id="insetMap">
-                  <div class="" id='smallmap'></div>
-                </div>
               <!-- Button trigger modal -->
               <button type="button" class="btn btn-primary info" data-toggle="modal" data-target="#infoModal">
                 Info
@@ -68,7 +67,7 @@
       </div>
     </div>
 
-    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js" integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg==" crossorigin=""></script>
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js" integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og==" crossorigin=""></script>
     <!-- Marker Clustering Plugin -->
     <script src="vendor/markercluster/leaflet.markercluster.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>

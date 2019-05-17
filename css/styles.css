@@ -28,11 +28,11 @@ section {
 }
 
 #map {
-  position: absolute;
+  /* position: absolute;
   width: 100%;
   top: 0;
   bottom: 0;
-  left: 0;
+  left: 0; */
   z-index: 1;
 }
 
@@ -40,9 +40,9 @@ section {
   z-index: 4;
 }
 
-#smallmap {
-  height: 150px;
-  width: 300px;
+#sicilyMap {
+  /* height: 150px;
+  width: 300px; */
   z-index: 6;
 }
 

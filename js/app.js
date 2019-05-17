@@ -13,7 +13,7 @@
   // create map
   var map = L.map('map', options);
 
-  var smallmap = L.map('smallmap', {
+  var sicilyMap = L.map('sicilyMap', {
           zoomControl: false,
           attributionControl: false,
           center: [37.5, 14],
@@ -31,7 +31,7 @@
   	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
   	subdomains: 'abcd',
   	maxZoom: 19
-  }).addTo(smallmap);
+  }).addTo(sicilyMap);
 
   $.getJSON('data/sicily.geojson', function(sicily) {
       Papa.parse('data/sicily_passengers.csv', {
@@ -83,10 +83,6 @@
     }
   });
 
-  $("#insetMap").on("show.bs.collapse", function() {
-
-  })
-
   function processData(sicily, data) {
     // console.log(sicily);
     L.geoJSON(sicily, {
@@ -95,7 +91,8 @@
       }
     }).bindTooltip(function(layer) {
         return layer.feature.properties['NAME_2']
-      }, {"sticky": true});
+      }, {"sticky": true})
+      .addTo(sicilyMap);
 
     // console.log(data);
 
@@ -142,7 +139,8 @@
 
   function updateMap(geojson, years) {
     var markers = L.markerClusterGroup({
-      showCoverageOnHover: false
+      showCoverageOnHover: false,
+      maxClusterRadius: 30
     });
     L.geoJSON(geojson, {
       filter: function (feature) {
@@ -152,7 +150,7 @@
       },
       pointToLayer: function (feature, latlng) {
         return markers.addLayer(L.marker(latlng)
-          .bindTooltip('Destination: ' + feature.properties['DestinationCityTown'] + '<br>' + 
+          .bindTooltip('Destination: ' + feature.properties['DestinationCityTown'] + '<br>' +
             'Arrival: ' + feature.properties['Arrival']));
       }
     });
