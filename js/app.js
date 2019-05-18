@@ -115,9 +115,9 @@
       // add all data as props
       feature.properties = datum;
       // add coordinate info
-      feature.geometry.coordinates = [Number(datum.lng), Number(datum.lat)]
+      feature.geometry.coordinates = [Number(datum.destination_lon), Number(datum.destination_lat)];
 
-      if (isNaN(datum.lat)) {
+      if (isNaN(datum.destination_lat)) {
         // console.log(datum);
         // console.log(feature);
       } else {
@@ -134,10 +134,12 @@
 
   function drawMap(geojson) {
     // L.geoJSON(geojson).addTo(map);
-    updateMap(geojson, [1880, 1900]);
+    updateMap(geojson, [1890, 1895]);
+    // var flowmapLayer = L.canvasFlowmapLayer(geojson).addTo(map).addTo(sicilyMap);
   };
 
   function updateMap(geojson, years) {
+    var flowmapLayer = L.layerGroup();
     var markers = L.markerClusterGroup({
       showCoverageOnHover: false,
       maxClusterRadius: 30
@@ -145,16 +147,21 @@
     L.geoJSON(geojson, {
       filter: function (feature) {
         arrival = feature.properties['ArrivalYr'];
-        if (arrival >= years[0] && arrival <= years[1])
-         return true
+        if (arrival >= years[0] && arrival <= years[1]) {
+          flowmapLayer.addLayer(L.canvasFlowmapLayer(feature));
+          return true
+        }
       },
       pointToLayer: function (feature, latlng) {
         return markers.addLayer(L.marker(latlng)
-          .bindTooltip('Destination: ' + feature.properties['DestinationCityTown'] + '<br>' +
+          .bindTooltip('Origin: ' + feature.properties['origin_city'] + '<br>' +
+            'Destination: ' + feature.properties['destination_city'] + '<br>' +
             'Arrival: ' + feature.properties['Arrival']));
       }
     });
     map.addLayer(markers);
+    console.log(flowmapLayer);
+    map.addLayer(flowmapLayer);
   };
 
 })();
