@@ -1,0 +1,243 @@
+,Unnamed: 0,origin_city,origin_country,geocoder_results,origin_lon,origin_lat
+0,0,SCIACCA,ITALY,"<[OK] Google - Geocode [92019 Sciacca, AG, Italy]>",13.0816305,37.5085148
+1,1,PALERMO,ITALY,"<[OK] Google - Geocode [Palermo, Province of Palermo, Italy]>",13.3614868,38.11569
+2,2,MESSINA,ITALY,"<[OK] Google - Geocode [Messina, Province of Messina, Italy]>",15.5542057,38.1937335
+3,3,POGGIOREALE,ITALY,"<[OK] Google - Geocode [91020 Poggioreale, Province of Trapani, Italy]>",13.0349738,37.7631772
+4,4,SALAPARUTA,ITALY,"<[OK] Google - Geocode [91020 Salaparuta, Province of Trapani, Italy]>",13.0105256,37.7585544
+5,5,CACCAMO,ITALY,"<[OK] Google - Geocode [90012 Caccamo, Province of Palermo, Italy]>",13.6652138,37.9313776
+6,6,USTICA,ITALY,"<[OK] Google - Geocode [Ustica, Italy]>",13.1682675,38.7031179
+7,7,MENFI,ITALY,"<[OK] Google - Geocode [92013 Menfi, AG, Italy]>",12.9665821,37.6198182
+8,8,ALIA,ITALY,"<[OK] Google - Geocode [90021 Alia, Province of Palermo, Italy]>",13.7136622,37.7820261
+9,9,CORLEONE,ITALY,"<[OK] Google - Geocode [90034 Corleone, Province of Palermo, Italy]>",13.298785,37.8138168
+10,10,GODRANO,ITALY,"<[OK] Google - Geocode [90030 Godrano, Province of Palermo, Italy]>",13.4275246,37.9036946
+11,11,ROCCAMENA,ITALY,"<[OK] Google - Geocode [90040 Roccamena, Province of Palermo, Italy]>",13.1556125,37.8398407
+12,12,BISACQUINO,ITALY,"<[OK] Google - Geocode [90032 Bisacquino, Province of Palermo, Italy]>",13.2591456,37.7056085
+13,13,CIMINNA,ITALY,"<[OK] Google - Geocode [90023 Ciminna, Province of Palermo, Italy]>",13.5602194,37.8964116
+14,14,NICOSIA,ITALY,"<[OK] Google - Geocode [94014 Nicosia, Province of Enna, Italy]>",14.3952782,37.7469231
+15,15,MEZZOJUSO,ITALY,"<[OK] Google - Geocode [90030 Mezzojuso, Province of Palermo, Italy]>",13.4687186,37.8630429
+16,16,PARTANNA,ITALY,"<[OK] Google - Geocode [91028 Partanna, Province of Trapani, Italy]>",12.8871626,37.724838
+17,17,VICARI,ITALY,"<[OK] Google - Geocode [90020 Vicari, Province of Palermo, Italy]>",13.5705866,37.8261716
+18,18,TRABIA,ITALY,"<[OK] Google - Geocode [90019 Trabia, Province of Palermo, Italy]>",13.6461308,38.0006815
+19,19,CINISI,ITALY,"<[OK] Google - Geocode [90045 Cinisi, Province of Palermo, Italy]>",13.1088097,38.155087
+20,20,PRIZZI,ITALY,"<[OK] Google - Geocode [90038 Prizzi, Province of Palermo, Italy]>",13.42825,37.7221352
+21,21,ROCCAPALUMBA,ITALY,"<[OK] Google - Geocode [90020 Roccapalumba, Province of Palermo, Italy]>",13.6374546,37.80464
+22,22,GIBELLINA,ITALY,"<[OK] Google - Geocode [91024 Gibellina, Province of Trapani, Italy]>",12.9550673,37.8197579
+23,23,GIULIANA,ITALY,"<[OK] Google - Geocode [90030 Giuliana, Sicily, Province of Palermo, Italy]>",13.2376179,37.6704288
+24,24,MILAZZO,ITALY,"<[OK] Google - Geocode [98057 Milazzo, Province of Messina, Italy]>",15.2419327,38.2207102
+25,25,MARINEO,ITALY,"<[OK] Google - Geocode [90035 Marineo, Province of Palermo, Italy]>",13.4189957,37.9538844
+26,26,LIPARI,ITALY,"<[OK] Google - Geocode [Lipari, 98050 Lipari, Province of Messina, Italy]>",14.9272044,38.4936623
+27,27,TRAPANI,ITALY,"<[OK] Google - Geocode [91100 Trapani, Province of Trapani, Italy]>",12.5365171,38.0173505
+28,28,SCIARA,ITALY,"<[OK] Google - Geocode [90020 Sciara, Sicily, Province of Palermo, Italy]>",13.7600428,37.9174718
+29,29,ARAGONA,ITALY,"<[OK] Google - Geocode [92021 Aragona, AG, Italy]>",13.618945,37.407403
+30,30,ALCAMO,ITALY,"<[OK] Google - Geocode [91011 Alcamo, Province of Trapani, Italy]>",12.9686255,37.9783947
+31,31,PALAZZO ADRIANO,ITALY,"<[OK] Google - Geocode [90030 Palazzo Adriano, Province of Palermo, Italy]>",13.3790607,37.6815232
+32,32,RIPOSTO,ITALY,"<[OK] Google - Geocode [95018 Riposto, Province of Catania, Italy]>",15.2019295,37.7083695
+33,33,SCILLATO,ITALY,"<[OK] Google - Geocode [90020 Scillato, Province of Palermo, Italy]>",13.9201994,37.8695985
+34,34,CATANIA,ITALY,"<[OK] Google - Geocode [Catania, Province of Catania, Italy]>",15.0830304,37.5078772
+35,35,CASTELVETRANO,ITALY,"<[OK] Google - Geocode [91022 Castelvetrano, Province of Trapani, Italy]>",12.7917794,37.6785135
+36,36,MISILMERI,ITALY,"<[OK] Google - Geocode [90036 Misilmeri, Province of Palermo, Italy]>",13.4481866,38.0299031
+37,37,CASTELBUONO,ITALY,"<[OK] Google - Geocode [90013 Castelbuono, Province of Palermo, Italy]>",14.088775,37.9329881
+38,38,SANTA NINFA,ITALY,"<[OK] Google - Geocode [91029 Santa Ninfa, Province of Trapani, Italy]>",12.8791253,37.7719947
+39,39,VILLALBA,ITALY,"<[OK] Google - Geocode [93010 Villalba, Sicily, Province of Caltanissetta, Italy]>",13.8454869,37.6557673
+40,40,GERACI SICULO,ITALY,"<[OK] Google - Geocode [90010 Geraci Siculo, Province of Palermo, Italy]>",14.1527033,37.8518903
+41,41,LERCARA FRIDDI,ITALY,"<[OK] Google - Geocode [90025 Lercara Friddi, Province of Palermo, Italy]>",13.6015463,37.7250127
+42,42,TUSA,ITALY,"<[OK] Google - Geocode [98079 Tusa, Sicily, Province of Messina, Italy]>",14.2362677,37.9834939
+43,43,PARTINICO,ITALY,"<[OK] Google - Geocode [90047 Partinico, Province of Palermo, Italy]>",13.1183541,38.0466977
+44,44,CALTANISSETTA,ITALY,"<[OK] Google - Geocode [93100 Caltanissetta, Province of Caltanissetta, Italy]>",14.0628928,37.4901115
+45,45,MONTEVAGO,ITALY,"<[OK] Google - Geocode [92010 Montevago, AG, Italy]>",12.9851671,37.7056169
+46,46,PETRALIA SOPRANA,ITALY,"<[OK] Google - Geocode [90026 Petralia Soprana, Province of Palermo, Italy]>",14.1078775,37.7964148
+47,47,GANGI,ITALY,"<[OK] Google - Geocode [90024 Gangi, Sicily, Province of Palermo, Italy]>",14.2059064,37.7966504
+48,48,CERDA,ITALY,"<[OK] Google - Geocode [90010 Cerda, Province of Palermo, Italy]>",13.8148569,37.9035301
+49,49,ALIMENA,ITALY,"<[OK] Google - Geocode [90020 Alimena, Province of Palermo, Italy]>",14.112994,37.6901468
+50,50,VILLAROSA,ITALY,"<[OK] Google - Geocode [94010 Villarosa, Province of Enna, Italy]>",14.1814686,37.593011
+51,51,MARIANOPOLI,ITALY,"<[OK] Google - Geocode [93010 Marianopoli, Province of Caltanissetta, Italy]>",13.9149407,37.599206
+52,52,LASCARI,ITALY,"<[OK] Google - Geocode [90010 Lascari, Province of Palermo, Italy]>",13.9445265,37.9977026
+53,53,CAMPOREALE,ITALY,"<[OK] Google - Geocode [90043 Camporeale, Province of Palermo, Italy]>",13.0875535,37.8935967
+54,54,LICATA,ITALY,"<[OK] Google - Geocode [92027 Licata, AG, Italy]>",13.9373306,37.1017094
+55,55,BOMPIETRO,ITALY,"<[OK] Google - Geocode [90020 Bompietro, Province of Palermo, Italy]>",14.1003182,37.7470889
+56,56,AUGUSTA,ITALY,"<[OK] Google - Geocode [96011 Augusta, Province of Syracuse, Italy]>",15.2216971,37.2500684
+57,57,CALTABELLOTTA,ITALY,"<[OK] Google - Geocode [92010 Caltabellotta, AG, Italy]>",13.2186148,37.5757496
+58,58,VALLEDOLMO,ITALY,"<[OK] Google - Geocode [90029 Valledolmo, Province of Palermo, Italy]>",13.8277065,37.7471877
+59,59,PATTI,ITALY,"<[OK] Google - Geocode [98066 Patti, Province of Messina, Italy]>",14.966624,38.1386229
+60,60,BAGHERIA,ITALY,"<[OK] Google - Geocode [90011 Bagheria, Province of Palermo, Italy]>",13.512365,38.0789178
+61,61,GRATTERI,ITALY,"<[OK] Google - Geocode [90010 Gratteri, Province of Palermo, Italy]>",13.9745206,37.9654496
+62,62,SIRACUSA,ITALY,"<[OK] Google - Geocode [96100 Syracuse, Province of Syracuse, Italy]>",15.2865861,37.0754739
+63,63,VILLAFRATI,ITALY,"<[OK] Google - Geocode [90030 Villafrati, Province of Palermo, Italy]>",13.4892624,37.9053952
+64,64,CASTELDACCIA,ITALY,"<[OK] Google - Geocode [90014 Casteldaccia, Province of Palermo, Italy]>",13.5312438,38.0549544
+65,65,MONREALE,ITALY,"<[OK] Google - Geocode [90046 Monreale, Province of Palermo, Italy]>",13.2889834,38.0814986
+66,66,ALIMINUSA,ITALY,"<[OK] Google - Geocode [90020 Aliminusa, Province of Palermo, Italy]>",13.7826639,37.8649836
+67,67,BAUCINA,ITALY,"<[OK] Google - Geocode [90020 Baucina, Province of Palermo, Italy]>",13.5355513,37.9268256
+68,68,CAMPOBELLO DI MAZARA,ITALY,"<[OK] Google - Geocode [91021 Campobello di Mazara, Province of Trapani, Italy]>",12.7483705,37.6323046
+69,69,ISNELLO,ITALY,"<[OK] Google - Geocode [90010 Isnello, Province of Palermo, Italy]>",14.0055111,37.942962
+70,70,TERRASINI,ITALY,"<[OK] Google - Geocode [90049 Terrasini, Province of Palermo, Italy]>",13.082736,38.1514581
+71,71,VITTORIA,ITALY,"<[OK] Google - Geocode [97019 Vittoria, Free municipal consortium of Ragusa, Italy]>",14.5372653,36.9520998
+72,72,BRONTE,ITALY,"<[OK] Google - Geocode [95034 Bronte, Sicily, Province of Catania, Italy]>",14.8306658,37.78835
+73,73,CALTAVUTURO,ITALY,"<[OK] Google - Geocode [90022 Caltavuturo, Province of Palermo, Italy]>",13.8910289,37.81965690000001
+74,74,FAVIGNANA,ITALY,"<[OK] Google - Geocode [91023 Favignana, Province of Trapani, Italy]>",12.2948557,37.9279662
+75,75,LINGUAGLOSSA,ITALY,"<[OK] Google - Geocode [95015 Linguaglossa, Province of Catania, Italy]>",15.1417683,37.8427705
+76,76,MARSALA,ITALY,"<[OK] Google - Geocode [91025 Marsala, Province of Trapani, Italy]>",12.4372236,37.7981074
+77,77,MONTEDORO,ITALY,"<[OK] Google - Geocode [93010 Montedoro, Province of Caltanissetta, Italy]>",13.8274226,37.4527002
+78,78,CAMPOFIORITO,ITALY,"<[OK] Google - Geocode [90030 Campofiorito, Province of Palermo, Italy]>",13.2678358,37.75226480000001
+79,79,SERRADIFALCO,ITALY,"<[OK] Google - Geocode [93010 Serradifalco, Province of Caltanissetta, Italy]>",13.8854007,37.4562658
+80,80,COLLESANO,ITALY,"<[OK] Google - Geocode [90016 Collesano, Province of Palermo, Italy]>",13.939015,37.9232987
+81,81,POLIZZI GENEROSA,ITALY,"<[OK] Google - Geocode [90028 Polizzi Generosa PA, Italy]>",14.004854,37.8119687
+82,82,SAPONARA,ITALY,"<[OK] Google - Geocode [98047 Saponara, Province of Messina, Italy]>",15.4337621,38.1943157
+83,83,AGIRA,ITALY,"<[OK] Google - Geocode [94011 Agira, Province of Enna, Italy]>",14.5422225,37.6005279
+84,84,CARONIA,ITALY,"<[OK] Google - Geocode [98072 Caronia, Province of Messina, Italy]>",14.4411069,38.0217959
+85,85,FURNARI,ITALY,"<[OK] Google - Geocode [98054 Furnari, Province of Messina, Italy]>",15.1083542,38.1040898
+86,86,TROINA,ITALY,"<[OK] Google - Geocode [94018 Troina, Province of Enna, Italy]>",14.6000721,37.7847915
+87,87,SANTA FLAVIA,ITALY,"<[OK] Google - Geocode [90017 Santa Flavia, Province of Palermo, Italy]>",13.5253315,38.0817189
+88,88,PORTO EMPEDOCLE,ITALY,"<[OK] Google - Geocode [92014 Porto Empedocle, AG, Italy]>",13.5271724,37.2881801
+89,89,SAN BIAGIO PLATANI,ITALY,"<[OK] Google - Geocode [92020 San Biagio Platani, AG, Italy]>",13.5249611,37.5092934
+90,90,BELMONTE MEZZAGNO,ITALY,"<[OK] Google - Geocode [90031 Belmonte Mezzagno, Province of Palermo, Italy]>",13.3874997,38.0479627
+91,91,SPADAFORA,ITALY,"<[OK] Google - Geocode [98048 Spadafora, Province of Messina, Italy]>",15.3793585,38.2227337
+92,92,TRIPI,ITALY,"<[OK] Google - Geocode [98060 Tripi, Province of Messina, Italy]>",15.0908147,38.0391768
+93,93,CALASCIBETTA,ITALY,"<[OK] Google - Geocode [94010 Calascibetta, Province of Enna, Italy]>",14.2705208,37.5895224
+94,94,BIVONA,ITALY,"<[OK] Google - Geocode [92010 Bivona, AG, Italy]>",13.416501,37.6002307
+95,95,BOLOGNETTA,ITALY,"<[OK] Google - Geocode [90030 Bolognetta, Province of Palermo, Italy]>",13.4572578,37.9632187
+96,96,MOTTA D'AFFERMO,ITALY,"<[OK] Google - Geocode [98070 Motta d'Affermo, Province of Messina, Italy]>",14.3032004,37.9811619
+97,97,CALATABIANO,ITALY,"<[OK] Google - Geocode [95011 Calatabiano, Province of Catania, Italy]>",15.2077798,37.8166214
+98,98,MELILLI,ITALY,"<[OK] Google - Geocode [96010 Melilli, Province of Syracuse, Italy]>",15.1253159,37.1810245
+99,99,CERAMI,ITALY,"<[OK] Google - Geocode [94010 Cerami, Province of Enna, Italy]>",14.5081812,37.8094607
+100,100,PACE DEL MELA,ITALY,"<[OK] Google - Geocode [98042 Pace del Mela, Province of Messina, Italy]>",15.3074158,38.1784438
+101,101,RIBERA,ITALY,"<[OK] Google - Geocode [92016 Ribera, AG, Italy]>",13.2894368,37.4577038
+102,102,OLIVERI,ITALY,"<[OK] Google - Geocode [98060 Oliveri, Province of Messina, Italy]>",15.0599564,38.1229996
+103,103,BURGIO,ITALY,"<[OK] Google - Geocode [92010 Burgio, AG, Italy]>",13.3009828,37.61349269999999
+104,104,PETRALIA SOTTANA,ITALY,"<[OK] Google - Geocode [90027 Petralia Sottana, Province of Palermo, Italy]>",14.0899507,37.8085652
+105,105,SPERLINGA,ITALY,"<[OK] Google - Geocode [94010 Sperlinga, Province of Enna, Italy]>",14.3210095,37.7635149
+106,106,VENETICO,ITALY,"<[OK] Google - Geocode [98043 Venetico, Province of Messina, Italy]>",15.3745964,38.2004722
+107,107,ROCCAVALDINA,ITALY,"<[OK] Google - Geocode [98043 Roccavaldina, Province of Messina, Italy]>",15.3748742,38.1826561
+108,108,MIRTO,ITALY,"<[OK] Google - Geocode [87060 Mirto, Province of Cosenza, Italy]>",16.7676967,39.6025302
+109,109,ROMETTA,ITALY,"<[OK] Google - Geocode [98040 Rometta, Province of Messina, Italy]>",15.4126652,38.1773312
+110,110,SAN PIER NICETO,ITALY,"<[OK] Google - Geocode [98045 San Pier Niceto, Province of Messina, Italy]>",15.3511289,38.1583399
+111,111,TAORMINA,ITALY,"<[OK] Google - Geocode [98039 Taormina, Province of Messina, Italy]>",15.2853127,37.8516366
+112,112,CASTEL DI LUCIO,ITALY,"<[OK] Google - Geocode [98070 Castel di Lucio, Province of Messina, Italy]>",14.3132362,37.887652
+113,113,SALEMI,ITALY,"<[OK] Google - Geocode [91018 Salemi, Province of Trapani, Italy]>",12.7824777,37.8075233
+114,114,REITANO,ITALY,"<[OK] Google - Geocode [98070 Reitano, Province of Messina, Italy]>",14.3384616,37.9848121
+115,115,VITA,ITALY,"<[OK] Google - Geocode [91010 Vita, Province of Trapani, Italy]>",12.8209584,37.8723438
+116,116,SANTA CROCE CAMERINA,ITALY,"<[OK] Google - Geocode [97017 Santa Croce Camerina, Free municipal consortium of Ragusa, Italy]>",14.5241063,36.8284661
+117,117,FICARRA,ITALY,"<[OK] Google - Geocode [98062 Ficarra, Province of Messina, Italy]>",14.8279512,38.1198189
+118,118,GROTTE,ITALY,"<[OK] Google - Geocode [92020 Grotte, AG, Italy]>",13.7011401,37.4026433
+119,119,CAPO D'ORLANDO,ITALY,"<[OK] Google - Geocode [98071 Capo d'Orlando, Province of Messina, Italy]>",14.742693,38.1585238
+120,120,NOVARA DI SICILIA,ITALY,"<[OK] Google - Geocode [98058 Novara di Sicilia, Province of Messina, Italy]>",15.1375908,38.0123532
+121,121,MUSSOMELI,ITALY,"<[OK] Google - Geocode [93014 Mussomeli, Province of Caltanissetta, Italy]>",13.7529685,37.5756738
+122,122,ITALA,ITALY,"<[OK] Google - Geocode [98025 Itala, Province of Messina, Italy]>",15.4368572,38.0509051
+123,123,NASO,ITALY,"<[OK] Google - Geocode [98074 Naso, Province of Messina, Italy]>",14.7863115,38.1202696
+124,124,TERMINI IMERESE,ITALY,"<[OK] Google - Geocode [90018 Termini Imerese, Province of Palermo, Italy]>",13.6961892,37.984023
+125,125,LEONFORTE,ITALY,"<[OK] Google - Geocode [94013 Leonforte, Province of Enna, Italy]>",14.391633,37.6392064
+126,126,MISTRETTA,ITALY,"<[OK] Google - Geocode [98073 Mistretta, Province of Messina, Italy]>",14.3559158,37.9151675
+127,127,ROCCELLA VALDEMONE,ITALY,"<[OK] Google - Geocode [98030 Roccella Valdemone, Province of Messina, Italy]>",15.0106826,37.9338709
+128,128,LIBRIZZI,ITALY,"<[OK] Google - Geocode [98064 Librizzi, Province of Messina, Italy]>",14.9680914,38.08103130000001
+129,129,CAMMARATA,ITALY,"<[OK] Google - Geocode [92022 Cammarata, AG, Italy]>",13.6386711,37.6327938
+130,130,REALMONTE,ITALY,"<[OK] Google - Geocode [92010 Realmonte, AG, Italy]>",13.4569571,37.3178158
+131,131,SAN GIUSEPPE JATO,ITALY,"<[OK] Google - Geocode [90048 San Giuseppe Jato, Province of Palermo, Italy]>",13.1818344,37.9690953
+132,132,POZZALLO,ITALY,"<[OK] Google - Geocode [97016 Pozzallo, Free municipal consortium of Ragusa, Italy]>",14.8491127,36.7298607
+133,133,MILO,ITALY,"<[OK] Google - Geocode [95010 Milo, Province of Catania, Italy]>",15.114442,37.7228991
+134,134,PAGLIARA,ITALY,"<[OK] Google - Geocode [98020 Pagliara, Province of Messina, Italy]>",15.3600742,37.9862605
+135,135,CONTESSA ENTELLINA,ITALY,"<[OK] Google - Geocode [90030 Contessa Entellina, Province of Palermo, Italy]>",13.1833552,37.7295385
+136,136,BORGETTO,ITALY,"<[OK] Google - Geocode [90042 Borgetto, Province of Palermo, Italy]>",13.1567337,38.041984
+137,137,LIMINA,ITALY,"<[OK] Google - Geocode [98030 Limina, Province of Messina, Italy]>",15.2726707,37.941434
+138,138,POLLINA,ITALY,"<[OK] Google - Geocode [90010 Pollina, Province of Palermo, Italy]>",14.1349852,37.994288
+139,139,RESUTTANO,ITALY,"<[OK] Google - Geocode [93010 Resuttano, Province of Caltanissetta, Italy]>",14.0298963,37.6765919
+140,140,VALDINA,ITALY,"<[OK] Google - Geocode [98043 Valdina, Province of Messina, Italy]>",15.3688351,38.1936046
+141,141,BROLO,ITALY,"<[OK] Google - Geocode [98061 Brolo, Province of Messina, Italy]>",14.8308695,38.147876
+142,142,SAMBUCA DI SICILIA,ITALY,"<[OK] Google - Geocode [92017 Sambuca di Sicilia, AG, Italy]>",13.1111107,37.6477137
+143,143,SAN FRATELLO,ITALY,"<[OK] Google - Geocode [98075 San Fratello, Province of Messina, Italy]>",14.5974572,38.0128274
+144,144,CASTELTERMINI,ITALY,"<[OK] Google - Geocode [92025 Casteltermini, AG, Italy]>",13.6594267,37.5405776
+145,145,MINEO,ITALY,"<[OK] Google - Geocode [95044 Mineo, Province of Catania, Italy]>",14.6906828,37.2658657
+146,146,CARINI,ITALY,"<[OK] Google - Geocode [90044 Carini, Province of Palermo, Italy]>",13.1812609,38.1311611
+147,147,RACALMUTO,ITALY,"<[OK] Google - Geocode [92020 Racalmuto, AG, Italy]>",13.7323321,37.4086814
+148,148,NICOLOSI,ITALY,"<[OK] Google - Geocode [95030 Nicolosi, Province of Catania, Italy]>",15.0240927,37.6174952
+149,149,RAGUSA,ITALY,"<[OK] Google - Geocode [97100 Ragusa, Free municipal consortium of Ragusa, Italy]>",14.7255129,36.9269273
+150,150,GIARRE,ITALY,"<[OK] Google - Geocode [95014 Giarre, Province of Catania, Italy]>",15.1842443,37.7269871
+151,151,MALETTO,ITALY,"<[OK] Google - Geocode [95035 Maletto, Province of Catania, Italy]>",14.8661695,37.8317688
+152,152,CASTROREALE,ITALY,"<[OK] Google - Geocode [98053 Castroreale, Province of Messina, Italy]>",15.2126293,38.1005812
+153,153,CHIUSA SCLAFANI,ITALY,"<[OK] Google - Geocode [90033 Chiusa Sclafani, Province of Palermo, Italy]>",13.3009828,37.65532870000001
+154,154,CALAMONACI,ITALY,"<[OK] Google - Geocode [92010 Calamonaci, AG, Italy]>",13.3183038,37.5225293
+155,155,REGALBUTO,ITALY,"<[OK] Google - Geocode [94017 Regalbuto, Province of Enna, Italy]>",14.6402566,37.6500078
+156,156,BALESTRATE,ITALY,"<[OK] Google - Geocode [90041 Balestrate, Province of Palermo, Italy]>",13.0083325,38.0496188
+157,157,GRANITI,ITALY,"<[OK] Google - Geocode [98036 Graniti, Province of Messina, Italy]>",15.2257882,37.8910679
+158,158,SANTA CRISTINA GELA,ITALY,"<[OK] Google - Geocode [90030 Santa Cristina Gela, Province of Palermo, Italy]>",13.3280639,37.9847686
+159,159,MALFA,ITALY,"<[OK] Google - Geocode [98050 Malfa, Province of Messina, Italy]>",14.8377747,38.5812426
+160,160,MONTAGNAREALE,ITALY,"<[OK] Google - Geocode [98060 Montagnareale, Province of Messina, Italy]>",14.9465335,38.1321924
+161,161,PALAGONIA,ITALY,"<[OK] Google - Geocode [95046 Palagonia, Province of Catania, Italy]>",14.7467051,37.3282181
+162,162,VILLABATE,ITALY,"<[OK] Google - Geocode [90039 Villabate, Province of Palermo, Italy]>",13.4434068,38.0756559
+163,163,RIESI,ITALY,"<[OK] Google - Geocode [93016 Riesi, Province of Caltanissetta, Italy]>",14.088517,37.2904107
+164,164,FALCONE,ITALY,"<[OK] Google - Geocode [98060 Falcone, Province of Messina, Italy]>",15.0853998,38.1168012
+165,165,MONTELEPRE,ITALY,"<[OK] Google - Geocode [90040 Montelepre, Province of Palermo, Italy]>",13.1727066,38.0897184
+166,166,PIRAINO,ITALY,"<[OK] Google - Geocode [98060 Piraino, Province of Messina, Italy]>",14.8746508,38.1551554
+167,167,RAMACCA,ITALY,"<[OK] Google - Geocode [95040 Ramacca, Province of Catania, Italy]>",14.6935384,37.3851428
+168,168,ROCCAFIORITA,ITALY,"<[OK] Google - Geocode [98030 Roccafiorita, Province of Messina, Italy]>",15.2686398,37.93053039999999
+169,169,ENNA,ITALY,"<[OK] Google - Geocode [94100 Enna, Province of Enna, Italy]>",14.262851,37.5099321
+170,170,NARO,ITALY,"<[OK] Google - Geocode [92028 Naro, AG, Italy]>",13.7951239,37.2948287
+171,171,LONGI,ITALY,"<[OK] Google - Geocode [98070 Longi, Province of Messina, Italy]>",14.7695962,37.9616357
+172,172,LUCCA SICULA,ITALY,"<[OK] Google - Geocode [92010 Lucca Sicula, AG, Italy]>",13.3067156,37.5788223
+173,173,CASTROFILIPPO,ITALY,"<[OK] Google - Geocode [92020 Castrofilippo, AG, Italy]>",13.7496432,37.3474882
+174,174,TORRETTA,ITALY,"<[OK] Google - Geocode [90040 Torretta, Province of Palermo, Italy]>",13.2367965,38.1315816
+175,175,GIOIOSA MAREA,ITALY,"<[OK] Google - Geocode [98063 Gioiosa Marea, Province of Messina, Italy]>",14.9272044,38.163861
+176,176,MANDANICI,ITALY,"<[OK] Google - Geocode [98020 Mandanici, Province of Messina, Italy]>",15.3169414,38.0037544
+177,177,PIAZZA ARMERINA,ITALY,"<[OK] Google - Geocode [94015 Piazza Armerina, Province of Enna, Italy]>",14.3559158,37.372976
+178,178,AGRIGENTO,ITALY,"<[OK] Google - Geocode [92100 Agrigento, AG, Italy]>",13.5857528,37.3088512
+179,179,ADRANO,ITALY,"<[OK] Google - Geocode [95031 Adrano, Province of Catania, Italy]>",14.8326154,37.6627555
+180,180,FICARAZZI,ITALY,"<[OK] Google - Geocode [90010 Ficarazzi, Province of Palermo, Italy]>",13.4656279,38.0922547
+181,181,NISSORIA,ITALY,"<[OK] Google - Geocode [94010 Nissoria, Province of Enna, Italy]>",14.4498936,37.6535869
+182,182,COMITINI,ITALY,"<[OK] Google - Geocode [92020 Comitini, AG, Italy]>",13.643691,37.4082936
+183,183,UCRIA,ITALY,"<[OK] Google - Geocode [98060 Ucria, Province of Messina, Italy]>",14.8792762,38.0434784
+184,184,VALVERDE,ITALY,"<[OK] Google - Geocode [95028 Valverde, Province of Catania, Italy]>",15.1232415,37.5788848
+185,185,SAN VITO LO CAPO,ITALY,"<[OK] Google - Geocode [91010 San Vito Lo Capo, Province of Trapani, Italy]>",12.7334622,38.1750295
+186,186,SCLAFANI BAGNI,ITALY,"<[OK] Google - Geocode [90020 Sclafani Bagni, Province of Palermo, Italy]>",13.8564085,37.7991465
+187,187,CAPIZZI,ITALY,"<[OK] Google - Geocode [98031 Capizzi, Province of Messina, Italy]>",14.4772169,37.8485682
+188,188,SANT'ALFIO,ITALY,"<[OK] Google - Geocode [95010 Sant'Alfio, Province of Catania, Italy]>",15.096661,37.7637191
+189,189,MAZZARINO,ITALY,"<[OK] Google - Geocode [93013 Mazzarino, Sicily, Province of Caltanissetta, Italy]>",14.2117892,37.3039343
+190,190,GAGGI,ITALY,"<[OK] Google - Geocode [98030 Gaggi, Province of Messina, Italy]>",15.2253316,37.8609793
+191,191,PACHINO,ITALY,"<[OK] Google - Geocode [96018 Pachino, Province of Syracuse, Italy]>",15.0913364,36.7151738
+192,192,BUSETO PALIZZOLO,ITALY,"<[OK] Google - Geocode [91012 Buseto Palizzolo, Province of Trapani, Italy]>",12.7169408,38.0021464
+193,193,GIARDINELLO,ITALY,"<[OK] Google - Geocode [90040 Giardinello, Province of Palermo, Italy]>",13.157032,38.0885995
+194,194,SOLARINO,ITALY,"<[OK] Google - Geocode [96010 Solarino, Province of Syracuse, Italy]>",15.119678,37.10085
+195,195,CAPACI,ITALY,"<[OK] Google - Geocode [90040 Capaci, Province of Palermo, Italy]>",13.2392409,38.1713258
+196,196,ROCCALUMERA,ITALY,"<[OK] Google - Geocode [98027 Roccalumera, Province of Messina, Italy]>",15.3887085,37.9694618
+197,197,NOTO,ITALY,"<[OK] Google - Geocode [96017 Noto, Province of Syracuse, Italy]>",15.0651945,36.8924433
+198,198,GALLODORO,ITALY,"<[OK] Google - Geocode [98030 Gallodoro, Province of Messina, Italy]>",15.2937129,37.902003
+199,199,ACIREALE,ITALY,"<[OK] Google - Geocode [95024 Acireale, Province of Catania, Italy]>",15.166736,37.607802
+200,200,SICULIANA,ITALY,"<[OK] Google - Geocode [92010 Siculiana, AG, Italy]>",13.4216615,37.3354454
+201,201,CASSARO,ITALY,"<[OK] Google - Geocode [96010 Cassaro, Province of Syracuse, Italy]>",14.9481305,37.1056179
+202,202,ALTAVILLA MILICIA,ITALY,"<[OK] Google - Geocode [90010 Altavilla Milicia, Province of Palermo, Italy]>",13.5476246,38.0393751
+203,203,AVOLA,ITALY,"<[OK] Google - Geocode [96012 Avola, Province of Syracuse, Italy]>",15.1348891,36.9095319
+204,204,SAN CATALDO,ITALY,"<[OK] Google - Geocode [93017 San Cataldo, Sicily, Province of Caltanissetta, Italy]>",13.9880975,37.4831552
+205,205,PALMA DI MONTECHIARO,ITALY,"<[OK] Google - Geocode [92020 Palma di Montechiaro, AG, Italy]>",13.7619472,37.1929277
+206,206,MONFORTE SAN GIORGIO,ITALY,"<[OK] Google - Geocode [98041 Monforte San Giorgio, Province of Messina, Italy]>",15.3829141,38.15647920000001
+207,207,ANTILLO,ITALY,"<[OK] Google - Geocode [98030 Antillo, Province of Messina, Italy]>",15.2463797,37.9759085
+208,208,SAN PIERO PATTI,ITALY,"<[OK] Google - Geocode [98068 San Piero Patti, Province of Messina, Italy]>",14.9505671,38.0574422
+209,209,CENTURIPE,ITALY,"<[OK] Google - Geocode [94010 Centuripe, Province of Enna, Italy]>",14.7407541,37.6222297
+210,210,SAN FILIPPO DEL MELA,ITALY,"<[OK] Google - Geocode [98044 San Filippo del Mela, Province of Messina, Italy]>",15.2742899,38.1691648
+211,211,COMISO,ITALY,"<[OK] Google - Geocode [97013 Comiso, Free municipal consortium of Ragusa, Italy]>",14.577181,36.9361931
+212,212,ISOLA DELLE FEMMINE,ITALY,"<[OK] Google - Geocode [90040 Isola delle Femmine, Province of Palermo, Italy]>",13.2493239,38.1985979
+213,213,CARLENTINI,ITALY,"<[OK] Google - Geocode [96013 Carlentini, Province of Syracuse, Italy]>",15.014569,37.2698234
+214,214,MONTALLEGRO,ITALY,"<[OK] Google - Geocode [92010 Montallegro, AG, Italy]>",13.352953,37.392754
+215,215,TORREGROTTA,ITALY,"<[OK] Google - Geocode [98043 Torregrotta, Province of Messina, Italy]>",15.3523175,38.1907143
+216,216,GELA,ITALY,"<[OK] Google - Geocode [93012 Gela, Province of Caltanissetta, Italy]>",14.2403537,37.0741526
+217,217,SANTA LUCIA DEL MELA,ITALY,"<[OK] Google - Geocode [98046 Santa Lucia del Mela, Province of Messina, Italy]>",15.2807285,38.1421527
+218,218,MASCALI,ITALY,"<[OK] Google - Geocode [95016 Mascali, Province of Catania, Italy]>",15.1935143,37.7516509
+219,219,MODICA,ITALY,"<[OK] Google - Geocode [97015 Modica, Free municipal consortium of Ragusa, Italy]>",14.7608152,36.8588355
+220,220,SAN MARCO D'ALUNZIO,ITALY,"<[OK] Google - Geocode [98070 San Marco d'Alunzio, Province of Messina, Italy]>",14.6979477,38.0737233
+221,221,CALTAGIRONE,ITALY,"<[OK] Google - Geocode [95041 Caltagirone, Province of Catania, Italy]>",14.5126066,37.2380929
+222,222,PETTINEO,ITALY,"<[OK] Google - Geocode [98070 Pettineo, Province of Messina, Italy]>",14.2914046,37.9680813
+223,223,CIANCIANA,ITALY,"<[OK] Google - Geocode [92012 Cianciana, AG, Italy]>",13.4327892,37.5213158
+224,224,SANTA TERESA DI RIVA,ITALY,"<[OK] Google - Geocode [98028 Santa Teresa di Riva, Province of Messina, Italy]>",15.357029,37.9548796
+225,225,MISTERBIANCO,ITALY,"<[OK] Google - Geocode [95045 Municipality of Misterbianco, Province of Catania, Italy]>",15.0206757,37.5290926
+226,226,PANTELLERIA,ITALY,"<[OK] Google - Geocode [Pantelleria, 91017 Pantelleria, Province of Trapani, Italy]>",11.9918779,36.785262
+227,227,MALVAGNA,ITALY,"<[OK] Google - Geocode [98030 Malvagna, Province of Messina, Italy]>",15.0557249,37.9180249
+228,228,PIANA DEGLI ALBANESI,ITALY,"<[OK] Google - Geocode [90037 Piana degli Albanesi, Province of Palermo, Italy]>",13.2882915,37.9937488
+229,229,MASCALUCIA,ITALY,"<[OK] Google - Geocode [95030 Mascalucia, Province of Catania, Italy]>",15.0382076,37.5841225
+230,230,ACI CASTELLO,ITALY,"<[OK] Google - Geocode [95021 Aci Castello, Province of Catania, Italy]>",15.1444802,37.5557219
+231,231,SAN GIOVANNI GEMINI,ITALY,"<[OK] Google - Geocode [92020 San Giovanni Gemini, AG, Italy]>",13.6478486,37.6151386
+232,232,FERLA,ITALY,"<[OK] Google - Geocode [96010 Ferla, Province of Syracuse, Italy]>",14.9330448,37.13794850000001
+233,233,SORTINO,ITALY,"<[OK] Google - Geocode [96010 Sortino, Province of Syracuse, Italy]>",15.0277384,37.1579678
+234,234,CAMPOBELLO DI LICATA,ITALY,"<[OK] Google - Geocode [92023 Campobello di Licata, AG, Italy]>",13.917697,37.2588435
+235,235,DELIA,ITALY,"<[OK] Google - Geocode [93010 Delia, Province of Caltanissetta, Italy]>",13.926812,37.356288
+236,236,ACI CATENA,ITALY,"<[OK] Google - Geocode [95022 Aci Catena, Province of Catania, Italy]>",15.1419245,37.6064346
+237,237,BELPASSO,ITALY,"<[OK] Google - Geocode [95032 Belpasso, Province of Catania, Italy]>",14.9768276,37.5898196
+238,238,ISPICA,ITALY,"<[OK] Google - Geocode [97014 Ispica, Free municipal consortium of Ragusa, Italy]>",14.9101565,36.788137
+239,239,MILITELLO ROSMARINO,ITALY,"<[OK] Google - Geocode [98070 Militello Rosmarino, Province of Messina, Italy]>",14.6759066,38.04545969999999
+240,240,SUTERA,ITALY,"<[OK] Google - Geocode [93010 Sutera, Province of Caltanissetta, Italy]>",13.7355354,37.5208495
+241,241,BUCCHERI,ITALY,"<[OK] Google - Geocode [96010 Buccheri, Province of Syracuse, Italy]>",14.8481113,37.1269486
