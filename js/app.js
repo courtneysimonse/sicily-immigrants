@@ -17,7 +17,7 @@
           zoomControl: false,
           attributionControl: false,
           center: [37.5, 14],
-          zoom: 6
+          zoom: 7
       });
 
   // request tiles and add to map
@@ -148,7 +148,9 @@
       filter: function (feature) {
         arrival = feature.properties['ArrivalYr'];
         if (arrival >= years[0] && arrival <= years[1]) {
-          flowmapLayer.addLayer(L.canvasFlowmapLayer(feature));
+          flowmapLayer.addLayer(L.canvasFlowmapLayer(feature), {
+            pathDisplayMode: 'selection'
+          });
           return true
         }
       },
