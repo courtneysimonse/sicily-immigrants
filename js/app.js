@@ -68,13 +68,13 @@
   //
   // }
 
-  var years = [];
+  var years = [1890, 1895];
 
   $( "#ui-controls" ).slider({
     range: true,
     max: 1900,
     min: 1880,
-    values: [1880, 1900],
+    values: years,
     change: function (event,ui,geojson) {
       console.log(ui.values);
       console.log(geojson);
@@ -133,9 +133,10 @@
   };
 
   function drawMap(geojson) {
-    // L.geoJSON(geojson).addTo(map);
-    updateMap(geojson, [1890, 1895]);
+    // L.geoJSON(geojson).addTo(map)
+    updateMap(geojson, years);
     // var flowmapLayer = L.canvasFlowmapLayer(geojson).addTo(map).addTo(sicilyMap);
+    
   };
 
   function updateMap(geojson, years) {
@@ -148,9 +149,7 @@
       filter: function (feature) {
         arrival = feature.properties['ArrivalYr'];
         if (arrival >= years[0] && arrival <= years[1]) {
-          flowmapLayer.addLayer(L.canvasFlowmapLayer(feature), {
-            pathDisplayMode: 'selection'
-          });
+          // return flowmapLayer.addLayer(L.canvasFlowmapLayer(feature), {});
           return true
         }
       },
