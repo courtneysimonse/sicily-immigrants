@@ -73,7 +73,8 @@
   var flowmapLayer = L.layerGroup();
   var markers = L.markerClusterGroup({
     showCoverageOnHover: false,
-    maxClusterRadius: 30
+    maxClusterRadius: 30,
+    chunkedLoading: true
   });
 
   $( "#ui-controls" ).slider({
@@ -148,12 +149,15 @@
   function updateMap(geojson, years) {
 
     markers.clearLayers();
+    flowmapLayer.clearLayers();
 
     L.geoJSON(geojson, {
       filter: function (feature) {
         arrival = feature.properties['ArrivalYr'];
         if (arrival >= years[0] && arrival <= years[1]) {
-          // return flowmapLayer.addLayer(L.canvasFlowmapLayer(feature), {});
+          // return flowmapLayer.addLayer(L.canvasFlowmapLayer(feature), {
+          //   pathDisplayMode: 'selection'
+          // });
           return true
         }
       },
@@ -166,7 +170,7 @@
     });
     map.addLayer(markers);
     // console.log(flowmapLayer);
-    // map.addLayer(flowmapLayer);
+    map.addLayer(flowmapLayer);
 
   };
 
