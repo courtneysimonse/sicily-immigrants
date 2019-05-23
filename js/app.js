@@ -69,15 +69,21 @@
   // }
 
   var years = [1890, 1895];
+  var geojson = {};
+  var flowmapLayer = L.layerGroup();
+  var markers = L.markerClusterGroup({
+    showCoverageOnHover: false,
+    maxClusterRadius: 30
+  });
 
   $( "#ui-controls" ).slider({
     range: true,
     max: 1900,
     min: 1880,
     values: years,
-    change: function (event,ui,geojson) {
+    change: function (event,ui) {
       console.log(ui.values);
-      console.log(geojson);
+      // console.log(geojson);
       years = ui.values;
       updateMap(geojson, years);
     }
@@ -97,7 +103,7 @@
     // console.log(data);
 
     // build geojson structure
-    var geojson = {};
+    // var geojson = {};
 
     geojson.type = "FeatureCollection";
     geojson.features = [];
@@ -136,15 +142,13 @@
     // L.geoJSON(geojson).addTo(map)
     updateMap(geojson, years);
     // var flowmapLayer = L.canvasFlowmapLayer(geojson).addTo(map).addTo(sicilyMap);
-    
+
   };
 
   function updateMap(geojson, years) {
-    var flowmapLayer = L.layerGroup();
-    var markers = L.markerClusterGroup({
-      showCoverageOnHover: false,
-      maxClusterRadius: 30
-    });
+
+    markers.clearLayers();
+
     L.geoJSON(geojson, {
       filter: function (feature) {
         arrival = feature.properties['ArrivalYr'];
@@ -161,8 +165,9 @@
       }
     });
     map.addLayer(markers);
-    console.log(flowmapLayer);
-    map.addLayer(flowmapLayer);
+    // console.log(flowmapLayer);
+    // map.addLayer(flowmapLayer);
+
   };
 
 })();
