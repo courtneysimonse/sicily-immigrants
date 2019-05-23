@@ -68,12 +68,17 @@
   //
   // }
 
-  var years = [1890, 1895];
+  var years = [1890, 1891];
   var geojson = {};
   var flowmapLayer = L.layerGroup();
   var markers = L.markerClusterGroup({
     showCoverageOnHover: false,
     maxClusterRadius: 30,
+    chunkedLoading: true
+  });
+  var originMarkers = L.markerClusterGroup({
+    showCoverageOnHover: false,
+    maxClusterRadius: 20,
     chunkedLoading: true
   });
 
@@ -149,28 +154,37 @@
   function updateMap(geojson, years) {
 
     markers.clearLayers();
+    originMarkers.clearLayers();
     flowmapLayer.clearLayers();
 
     L.geoJSON(geojson, {
       filter: function (feature) {
         arrival = feature.properties['ArrivalYr'];
         if (arrival >= years[0] && arrival <= years[1]) {
-          // return flowmapLayer.addLayer(L.canvasFlowmapLayer(feature), {
-          //   pathDisplayMode: 'selection'
-          // });
+          flowmapLayer.addLayer(L.canvasFlowmapLayer(feature), {
+            pathDisplayMode: 'selection'
+          });
           return true
         }
       },
       pointToLayer: function (feature, latlng) {
-        return markers.addLayer(L.marker(latlng)
-          .bindTooltip('Origin: ' + feature.properties['origin_city'] + '<br>' +
+        markers.addLayer(L.marker(latlng)
+          .bindTooltip('Origin: ' + feature.properties['origin_city'] + ", " + feature.properties['Province'] + '<br>' +
             'Destination: ' + feature.properties['destination_city'] + '<br>' +
             'Arrival: ' + feature.properties['Arrival']));
+        originMarkers.addLayer(
+          L.marker([Number(feature.properties.origin_lat), Number(feature.properties.origin_lon)])
+            .bindTooltip('Origin: ' + feature.properties['origin_city'] + ", " + feature.properties['Province'] + '<br>' +
+              'Destination: ' + feature.properties['destination_city'] + '<br>' +
+              'Arrival: ' + feature.properties['Arrival'])
+        );
       }
     });
     map.addLayer(markers);
-    // console.log(flowmapLayer);
+    sicilyMap.addLayer(originMarkers);
+
     map.addLayer(flowmapLayer);
+    sicilyMap.addLayer(flowmapLayer);
 
   };
 
