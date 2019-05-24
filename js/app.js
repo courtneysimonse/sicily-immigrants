@@ -81,6 +81,10 @@
     maxClusterRadius: 20,
     chunkedLoading: true
   });
+  var markerOptions = {
+    radius: 5,
+    color: '#de2d26'
+  }
 
   $( "#ui-controls" ).slider({
     range: true,
@@ -157,23 +161,25 @@
     originMarkers.clearLayers();
     flowmapLayer.clearLayers();
 
+    var filteredData = {};
+    filteredData.type = "FeatureCollection";
+    filteredData.features = [];
+
     L.geoJSON(geojson, {
       filter: function (feature) {
         arrival = feature.properties['ArrivalYr'];
         if (arrival >= years[0] && arrival <= years[1]) {
-          flowmapLayer.addLayer(L.canvasFlowmapLayer(feature), {
-            pathDisplayMode: 'selection'
-          });
+          filteredData.features.push(feature);
           return true
         }
       },
       pointToLayer: function (feature, latlng) {
-        markers.addLayer(L.marker(latlng)
+        markers.addLayer(L.circleMarker(latlng, markerOptions)
           .bindTooltip('Origin: ' + feature.properties['origin_city'] + ", " + feature.properties['Province'] + '<br>' +
             'Destination: ' + feature.properties['destination_city'] + '<br>' +
             'Arrival: ' + feature.properties['Arrival']));
         originMarkers.addLayer(
-          L.marker([Number(feature.properties.origin_lat), Number(feature.properties.origin_lon)])
+          L.circleMarker([Number(feature.properties.origin_lat), Number(feature.properties.origin_lon)], markerOptions)
             .bindTooltip('Origin: ' + feature.properties['origin_city'] + ", " + feature.properties['Province'] + '<br>' +
               'Destination: ' + feature.properties['destination_city'] + '<br>' +
               'Arrival: ' + feature.properties['Arrival'])
@@ -183,6 +189,9 @@
     map.addLayer(markers);
     sicilyMap.addLayer(originMarkers);
 
+    flowmapLayer.addLayer(L.canvasFlowmapLayer(filteredData), {
+      pathDisplayMode: 'selection'
+    });
     map.addLayer(flowmapLayer);
     sicilyMap.addLayer(flowmapLayer);
 
