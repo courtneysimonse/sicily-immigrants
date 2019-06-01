@@ -192,8 +192,8 @@
     flowmapLayer.addLayer(L.canvasFlowmapLayer(filteredData), {
       pathDisplayMode: 'selection'
     });
-    map.addLayer(flowmapLayer);
-    sicilyMap.addLayer(flowmapLayer);
+    // map.addLayer(flowmapLayer);
+    // sicilyMap.addLayer(flowmapLayer);
 
   };
 
