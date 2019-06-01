@@ -187,11 +187,11 @@
       }
     });
     map.addLayer(markers);
-    sicilyMap.addLayer(originMarkers);
+    // sicilyMap.addLayer(originMarkers);
 
-    flowmapLayer.addLayer(L.canvasFlowmapLayer(filteredData), {
-      pathDisplayMode: 'selection'
-    });
+    // flowmapLayer.addLayer(L.canvasFlowmapLayer(filteredData), {
+    //   pathDisplayMode: 'selection'
+    // });
     // map.addLayer(flowmapLayer);
     // sicilyMap.addLayer(flowmapLayer);
 
