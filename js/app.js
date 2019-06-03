@@ -71,6 +71,7 @@
   var years = [1890, 1891];
   var geojson = {};
   var flowmapLayer = L.layerGroup();
+  var copyFlowmapLayer = L.layerGroup(); // use copy to add layer to second map
   var markers = L.markerClusterGroup({
     showCoverageOnHover: false,
     maxClusterRadius: 30,
@@ -169,6 +170,7 @@
     markers.clearLayers();
     originMarkers.clearLayers();
     flowmapLayer.clearLayers();
+    copyFlowmapLayer.clearLayers();
 
     var filteredData = {};
     filteredData.type = "FeatureCollection";
@@ -204,8 +206,11 @@
     // sicilyMap.addLayer(originMarkers);
 
     flowmapLayer.addLayer(L.canvasFlowmapLayer(filteredData));
+    copyFlowmapLayer.addLayer(L.canvasFlowmapLayer(filteredData));
+    console.log(copyFlowmapLayer);
+    console.log(flowmapLayer);
     map.addLayer(flowmapLayer);
-    sicilyMap.addLayer(flowmapLayer);
+    sicilyMap.addLayer(copyFlowmapLayer);
 
   };
 
