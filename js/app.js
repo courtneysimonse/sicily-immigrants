@@ -96,19 +96,11 @@
       // console.log(geojson);
       years = ui.values;
       updateMap(geojson, years);
+      return years;
     }
   });
 
   function processData(sicily, data) {
-    // console.log(sicily);
-    L.geoJSON(sicily, {
-      style: {
-        "color": "green"
-      }
-    }).bindTooltip(function(layer) {
-        return layer.feature.properties['NAME_2']
-      }, {"sticky": true})
-      .addTo(sicilyMap);
 
     // console.log(data);
 
@@ -143,6 +135,22 @@
 
     });
 
+    // console.log(sicily);
+    L.geoJSON(sicily, {
+      style: {
+        "color": "green"
+      }
+    }).bindTooltip(function(layer) {
+        // add tooltip with province name
+        return layer.feature.properties['NAME_2']
+      }, {"sticky": true})
+      // add event to filter passenger data by origin province
+      .on('click', function(e) {
+        console.log(e.layer.feature.properties['NAME_2']);
+        updateMap(geojson, years, e.layer.feature.properties['NAME_2'])
+      })
+      .addTo(sicilyMap);
+
     // console.log(geojson);
     drawMap(geojson);
     return geojson;
@@ -155,7 +163,8 @@
 
   };
 
-  function updateMap(geojson, years) {
+  function updateMap(geojson, years, province = "") {
+    console.log('updateMap');
 
     markers.clearLayers();
     originMarkers.clearLayers();
@@ -168,9 +177,15 @@
     L.geoJSON(geojson, {
       filter: function (feature) {
         arrival = feature.properties['ArrivalYr'];
+        originProv = feature.properties['Province'];
         if (arrival >= years[0] && arrival <= years[1]) {
-          filteredData.features.push(feature);
-          return true
+          if (province == "") {
+            return true
+          }
+          else if (originProv == province) {
+            filteredData.features.push(feature);
+            return true
+          }
         }
       },
       pointToLayer: function (feature, latlng) {
@@ -178,22 +193,19 @@
           .bindTooltip('Origin: ' + feature.properties['origin_city'] + ", " + feature.properties['Province'] + '<br>' +
             'Destination: ' + feature.properties['destination_city'] + '<br>' +
             'Arrival: ' + feature.properties['Arrival']));
-        originMarkers.addLayer(
-          L.circleMarker([Number(feature.properties.origin_lat), Number(feature.properties.origin_lon)], markerOptions)
-            .bindTooltip('Origin: ' + feature.properties['origin_city'] + ", " + feature.properties['Province'] + '<br>' +
-              'Destination: ' + feature.properties['destination_city'] + '<br>' +
-              'Arrival: ' + feature.properties['Arrival'])
-        );
+        // originMarkers.addLayer(
+        //   L.circleMarker([Number(feature.properties.origin_lat), Number(feature.properties.origin_lon)], markerOptions)
+        //     .bindTooltip('Origin: ' + feature.properties['origin_city'] + ", " + feature.properties['Province'] + '<br>' +
+        //       'Destination: ' + feature.properties['destination_city'] + '<br>' +
+        //       'Arrival: ' + feature.properties['Arrival']));
       }
     });
     map.addLayer(markers);
     // sicilyMap.addLayer(originMarkers);
 
-    // flowmapLayer.addLayer(L.canvasFlowmapLayer(filteredData), {
-    //   pathDisplayMode: 'selection'
-    // });
-    // map.addLayer(flowmapLayer);
-    // sicilyMap.addLayer(flowmapLayer);
+    flowmapLayer.addLayer(L.canvasFlowmapLayer(filteredData));
+    map.addLayer(flowmapLayer);
+    sicilyMap.addLayer(flowmapLayer);
 
   };
 
