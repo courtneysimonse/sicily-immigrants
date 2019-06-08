@@ -53,23 +53,8 @@
       // console.log(error);
   }); // end of $.getJSON()
 
-  // var passengerData = d3.csv('data/sicily_passengers_small.csv'),
-  //     sicilyData = d3.json('data/sicily.geojson')
-  //
-  // // when all data ARE loaded, call the ready function
-  // Promise.all([passengerData, sicilyData]).then(ready)
-  //
-  //
-  // function ready(data) {
-  //
-  //   // all data are in GeoJSON now and ready
-  //   // separate out the data sets and parse CSV to GeoJSON
-  //   processData(data[1],data[0]);
-  //
-  // }
-
   var years = [1890, 1891];
-  var geojson = {};
+  // var geojson = {};
   // var flowmapLayer = L.layerGroup();
   // var copyFlowmapLayer = L.layerGroup(); // use copy to add layer to second map
   var markers = L.markerClusterGroup({
@@ -87,42 +72,8 @@
     color: '#de2d26'
   }
 
-  function processData(sicily, data) {
+  function processData(sicily, passengers) {
 
-    // console.log(data);
-
-    // build geojson structure
-    // var geojson = {};
-
-    geojson.type = "FeatureCollection";
-    geojson.features = [];
-
-    // loop through data and create features
-    data.forEach(function (datum) {
-      //console.log(datum);
-      var feature = {
-        "type": "Feature",
-        "geometry": {
-          "type": "Point",
-          "coordinates": []
-        }
-      }
-      // add all data as props
-      feature.properties = datum;
-      // add coordinate info
-      feature.geometry.coordinates = [Number(datum.destination_lon), Number(datum.destination_lat)];
-
-      if (isNaN(datum.destination_lat)) {
-        // console.log(datum);
-        // console.log(feature);
-      } else {
-        // push each feature to geojson
-        geojson.features.push(feature)
-      }
-
-    });
-
-    // console.log(sicily);
     L.geoJSON(sicily, {
       style: {
         "color": "#006d2c",
@@ -150,16 +101,15 @@
       }, {"sticky": true})
       // add event to filter passenger data by origin province
       .on('click', function(e) {
-        updateMap(geojson, years, e.layer.feature.properties['NAME_2'])
+        updateMap(passengers, years, e.layer.feature.properties['NAME_2'])
       })
       .addTo(sicilyMap);
 
-    // console.log(geojson);
-    drawMap(geojson);
-    return geojson;
+    drawMap(passengers);
+    return passengers;
   };
 
-  function drawMap(geojson) {
+  function drawMap(passengers) {
     $( "#ui-controls" ).slider({
       range: true,
       max: 1900,
@@ -176,18 +126,19 @@
       change: function (event,ui) {
         console.log(ui.values);
         years = ui.values;
-        updateMap(geojson, years);
+        updateMap(passengers, years);
         return years;
       }
     });
     // L.geoJSON(geojson).addTo(map)
-    updateMap(geojson, years);
+    updateMap(passengers, years);
     // var flowmapLayer = L.canvasFlowmapLayer(geojson).addTo(map).addTo(sicilyMap);
 
   };
 
-  function updateMap(geojson, years, province = "") {
-    // console.log('updateMap');
+  function updateMap(passengers, years, province = "") {
+    console.log('updateMap');
+    console.log(passengers);
 
     markers.clearLayers();
     originMarkers.clearLayers();
@@ -198,8 +149,21 @@
     // filteredData.type = "FeatureCollection";
     // filteredData.features = [];
 
-    L.geoJSON(geojson, {
+    // options = {
+    //   // titles: ['index','LastName','FirstName','Age','Occupation','Literacy','origin_country','origin_city','destination_city','TransitTravelCompartment','ManifestID','Province','ShipName','Port','Arrival','destination_id','destination_lat','destination_lon','ArrivalYr','origin_id','origin_lon','origin_lat'],
+    //   latitudeTitle: ['destination_lat'],
+    //   longitudeTitle: ['destination_lon'],
+    //   fieldSeparator: ',',
+    //   firstLineTitles: true
+    // }
+
+    var geoLayer = L.geoCsv(passengers, {
+      latitudeTitle: ['destination_lat'],
+      longitudeTitle: ['destination_lon'],
+      fieldSeparator: ',',
+      firstLineTitles: true,
       filter: function (feature) {
+        console.log(feature);
         arrival = feature.properties['ArrivalYr'];
         originProv = feature.properties['Province'];
         if (arrival >= years[0] && arrival <= years[1]) {
@@ -226,6 +190,8 @@
     });
     map.addLayer(markers);
     // sicilyMap.addLayer(originMarkers);
+
+    console.log(geoLayer);
 
     // flowmapLayer.addLayer(L.canvasFlowmapLayer(filteredData));
     // copyFlowmapLayer.addLayer(L.canvasFlowmapLayer(filteredData));
