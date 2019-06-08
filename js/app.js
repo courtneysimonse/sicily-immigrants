@@ -87,20 +87,6 @@
     color: '#de2d26'
   }
 
-  $( "#ui-controls" ).slider({
-    range: true,
-    max: 1900,
-    min: 1880,
-    values: years,
-    change: function (event,ui) {
-      console.log(ui.values);
-      // console.log(geojson);
-      years = ui.values;
-      updateMap(geojson, years);
-      return years;
-    }
-  });
-
   function processData(sicily, data) {
 
     // console.log(data);
@@ -139,7 +125,7 @@
     // console.log(sicily);
     L.geoJSON(sicily, {
       style: {
-        "color": "#31a354",
+        "color": "#006d2c",
         'fillColor': '#e5f5e0',
         'fillOpacity': .2,
         "clickable": true
@@ -157,10 +143,6 @@
             'fillOpacity': .2
           });
         });
-        layer.on('click', function () {
-          // Let's say you've got a property called url in your geojsonfeature:
-          window.location = feature.properties.url;
-        });
       }
     }).bindTooltip(function(layer) {
         // add tooltip with province name
@@ -168,8 +150,6 @@
       }, {"sticky": true})
       // add event to filter passenger data by origin province
       .on('click', function(e) {
-        console.log(e.layer.feature.properties['NAME_2']);
-
         updateMap(geojson, years, e.layer.feature.properties['NAME_2'])
       })
       .addTo(sicilyMap);
@@ -180,6 +160,26 @@
   };
 
   function drawMap(geojson) {
+    $( "#ui-controls" ).slider({
+      range: true,
+      max: 1900,
+      min: 1880,
+      values: years,
+      create: function(event, ui) {
+        $("#handle-1").text(years[0]);
+        $("#handle-2").text(years[1]);
+      },
+      slide: function (event, ui) {
+        $("#handle-1").text(ui.values[0]);
+        $("#handle-2").text(ui.values[1]);
+      },
+      change: function (event,ui) {
+        console.log(ui.values);
+        years = ui.values;
+        updateMap(geojson, years);
+        return years;
+      }
+    });
     // L.geoJSON(geojson).addTo(map)
     updateMap(geojson, years);
     // var flowmapLayer = L.canvasFlowmapLayer(geojson).addTo(map).addTo(sicilyMap);

@@ -66,3 +66,21 @@ h1 {
 .row {
   height: 100%;
 }
+
+#handle-1 {
+  width: 4em;
+  height: 1.6em;
+  top: 50%;
+  margin-top: -.8em;
+  text-align: center;
+  line-height: 1.6em;
+}
+
+#handle-2 {
+  width: 3.5em;
+  height: 1.6em;
+  top: 50%;
+  margin-top: -.8em;
+  text-align: center;
+  line-height: 1.6em;
+}
