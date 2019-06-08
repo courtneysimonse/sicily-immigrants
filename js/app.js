@@ -139,14 +139,33 @@
     // console.log(sicily);
     L.geoJSON(sicily, {
       style: {
-        "color": "green",
+        "color": "#31a354",
+        'fillColor': '#e5f5e0',
+        'fillOpacity': .2,
         "clickable": true
+      },
+      onEachFeature: function (feature, layer) {
+        layer.on('mouseover', function () {
+          this.setStyle({
+            'fillColor': '#a1d99b',
+            'fillOpacity': .5
+          });
+        });
+        layer.on('mouseout', function () {
+          this.setStyle({
+            'fillColor': '#e5f5e0',
+            'fillOpacity': .2
+          });
+        });
+        layer.on('click', function () {
+          // Let's say you've got a property called url in your geojsonfeature:
+          window.location = feature.properties.url;
+        });
       }
     }).bindTooltip(function(layer) {
         // add tooltip with province name
         return layer.feature.properties['NAME_2']
       }, {"sticky": true})
-
       // add event to filter passenger data by origin province
       .on('click', function(e) {
         console.log(e.layer.feature.properties['NAME_2']);
