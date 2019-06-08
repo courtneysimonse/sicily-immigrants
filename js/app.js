@@ -70,8 +70,8 @@
 
   var years = [1890, 1891];
   var geojson = {};
-  var flowmapLayer = L.layerGroup();
-  var copyFlowmapLayer = L.layerGroup(); // use copy to add layer to second map
+  // var flowmapLayer = L.layerGroup();
+  // var copyFlowmapLayer = L.layerGroup(); // use copy to add layer to second map
   var markers = L.markerClusterGroup({
     showCoverageOnHover: false,
     maxClusterRadius: 30,
@@ -139,15 +139,18 @@
     // console.log(sicily);
     L.geoJSON(sicily, {
       style: {
-        "color": "green"
+        "color": "green",
+        "clickable": true
       }
     }).bindTooltip(function(layer) {
         // add tooltip with province name
         return layer.feature.properties['NAME_2']
       }, {"sticky": true})
+
       // add event to filter passenger data by origin province
       .on('click', function(e) {
         console.log(e.layer.feature.properties['NAME_2']);
+
         updateMap(geojson, years, e.layer.feature.properties['NAME_2'])
       })
       .addTo(sicilyMap);
@@ -165,16 +168,16 @@
   };
 
   function updateMap(geojson, years, province = "") {
-    console.log('updateMap');
+    // console.log('updateMap');
 
     markers.clearLayers();
     originMarkers.clearLayers();
-    flowmapLayer.clearLayers();
-    copyFlowmapLayer.clearLayers();
+    // flowmapLayer.clearLayers();
+    // copyFlowmapLayer.clearLayers();
 
-    var filteredData = {};
-    filteredData.type = "FeatureCollection";
-    filteredData.features = [];
+    // var filteredData = {};
+    // filteredData.type = "FeatureCollection";
+    // filteredData.features = [];
 
     L.geoJSON(geojson, {
       filter: function (feature) {
@@ -185,7 +188,7 @@
             return true
           }
           else if (originProv == province) {
-            filteredData.features.push(feature);
+            // filteredData.features.push(feature);
             return true
           }
         }
@@ -205,12 +208,10 @@
     map.addLayer(markers);
     // sicilyMap.addLayer(originMarkers);
 
-    flowmapLayer.addLayer(L.canvasFlowmapLayer(filteredData));
-    copyFlowmapLayer.addLayer(L.canvasFlowmapLayer(filteredData));
-    console.log(copyFlowmapLayer);
-    console.log(flowmapLayer);
-    map.addLayer(flowmapLayer);
-    sicilyMap.addLayer(copyFlowmapLayer);
+    // flowmapLayer.addLayer(L.canvasFlowmapLayer(filteredData));
+    // copyFlowmapLayer.addLayer(L.canvasFlowmapLayer(filteredData));
+    // map.addLayer(flowmapLayer);
+    // sicilyMap.addLayer(copyFlowmapLayer);
 
   };
 
