@@ -225,6 +225,7 @@
       }
     });
     map.addLayer(markers);
+
     // sicilyMap.addLayer(originMarkers);
 
     // flowmapLayer.addLayer(L.canvasFlowmapLayer(filteredData));
