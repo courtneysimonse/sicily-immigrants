@@ -34,17 +34,23 @@
   }).addTo(sicilyMap);
 
   $.getJSON('data/sicily.geojson', function(sicily) {
-      Papa.parse('data/sicily_passengers.csv', {
-        download: true,
-        dynamicTyping: true,
-        // step: function(row) {
-      	// 	console.log("Row:", row.data);
-      	// },
-      	complete: function(data) {
-      		console.log("All done!");
-          processData(sicily, data.data);
-      	},
-        header: true
+      // Papa.parse('data/sicily_passengers.csv', {
+      //   download: true,
+      //   dynamicTyping: true,
+      //   // step: function(row) {
+      // 	// 	console.log("Row:", row.data);
+      // 	// },
+      // 	complete: function(data) {
+      // 		console.log("All done!");
+      //     processData(sicily, data.data);
+      // 	},
+      //   header: true
+      // });
+      $.get('data/sicily_passengers.csv', function(data) {
+          var passengers = data;
+          console.log('All done!');
+          processData(sicily, data)
+          return passengers
       });
   })
   .fail(function(error) {
