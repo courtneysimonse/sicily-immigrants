@@ -122,37 +122,71 @@
 
     });
 
+    var sicilyStyle = {
+      "color": "#006d2c",
+      'fillColor': '#e5f5e0',
+      'fillOpacity': .2,
+      "clickable": true
+    };
+    var clickID = null;
+    var clickID2 = null;
+    var hoverID = null;
+    var firstPass = false;
+
     // console.log(sicily);
-    L.geoJSON(sicily, {
-      style: {
-        "color": "#006d2c",
-        'fillColor': '#e5f5e0',
-        'fillOpacity': .2,
-        "clickable": true
-      },
+    var sicilyLayer = L.geoJSON(sicily, {
+      style: sicilyStyle,
       onEachFeature: function (feature, layer) {
-        layer.on('mouseover', function () {
-          this.setStyle({
-            'fillColor': '#a1d99b',
-            'fillOpacity': .5
-          });
-        });
-        layer.on('mouseout', function () {
-          this.setStyle({
-            'fillColor': '#e5f5e0',
-            'fillOpacity': .2
-          });
-        });
+        layer.on({
+          mouseover: highlight,
+          mouseout: resetHighlight,
+          click: highlightSelection
+        })
       }
     }).bindTooltip(function(layer) {
         // add tooltip with province name
         return layer.feature.properties['NAME_2']
       }, {"sticky": true})
-      // add event to filter passenger data by origin province
-      .on('click', function(e) {
-        updateMap(geojson, years, e.layer.feature.properties['NAME_2'])
-      })
       .addTo(sicilyMap);
+
+      function highlight(e) {
+        if (this._leaflet_id != clickID) {
+          this.setStyle({
+            'fillColor': '#a1d99b',
+            'fillOpacity': .5
+          });
+        }
+      }
+
+      function resetHighlight(e) {
+        hoverID = this._leaflet_id;
+        if (hoverID != clickID) {
+          sicilyLayer.resetStyle(e.target);
+        } else if (clickID != clickID2) {
+          sicilyLayer.resetStyle(e.target);
+        }
+      }
+
+      function highlightSelection(e) {
+        clickID = this._leaflet_id;
+
+        if (firstPass == true) {
+          resetHighlight(previous)
+        }
+        previous = e;
+        clickID2 = this._leaflet_id
+
+        this.setStyle({
+          'fillColor': '#a1d99b',
+          'fillOpacity': .8,
+          'color': '#006d2c'
+        });
+        firstPass = true;
+
+        // add event to filter passenger data by origin province
+        updateMap(geojson, years, this.feature.properties['NAME_2'])
+      }
+
 
     // console.log(geojson);
     drawMap(geojson);
