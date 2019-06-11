@@ -15,6 +15,18 @@ header {
   }
 }
 
+@media (max-width: 575.98px) {
+  .col-xs-6 {
+    height: 50%;
+  }
+}
+
+@media (min-width: 576px) {
+  .col-xs-6 {
+    height: 100%;
+  }
+}
+
 /* .portfolio-item {
   margin-bottom: 30px;
 } */
