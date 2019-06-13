@@ -37,6 +37,7 @@ section {
 
 html, body {
   height: 100%;
+  font-family: 'Poppins', sans-serif;
 }
 
 #map {
@@ -86,6 +87,7 @@ h1 {
   margin-top: -.8em;
   text-align: center;
   line-height: 1.6em;
+  font-family: 'Poppins', sans-serif;
 }
 
 #handle-2 {
@@ -95,4 +97,5 @@ h1 {
   margin-top: -.8em;
   text-align: center;
   line-height: 1.6em;
+  font-family: 'Poppins', sans-serif;
 }
