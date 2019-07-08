@@ -81,11 +81,11 @@
     maxClusterRadius: 30,
     chunkedLoading: true
   });
-  var originMarkers = L.markerClusterGroup({
-    showCoverageOnHover: false,
-    maxClusterRadius: 20,
-    chunkedLoading: true
-  });
+  // var originMarkers = L.markerClusterGroup({
+  //   showCoverageOnHover: false,
+  //   maxClusterRadius: 20,
+  //   chunkedLoading: true
+  // });
   var markerOptions = {
     radius: 5,
     color: '#de2d26'
@@ -233,7 +233,7 @@
     // console.log('updateMap');
 
     markers.clearLayers();
-    originMarkers.clearLayers();
+    // originMarkers.clearLayers();
     // flowmapLayer.clearLayers();
     // copyFlowmapLayer.clearLayers();
 
