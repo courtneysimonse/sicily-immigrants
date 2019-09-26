@@ -1,105 +1,113 @@
 <!DOCTYPE html>
 <html>
 
-  <head>
-    <meta charset=utf-8 />
-    <title>Sicily to the US: 1880-1900</title>
-    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+<head>
+  <meta charset=utf-8 />
+  <title>Sicily to the US: 1880-1900</title>
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
 
-    <!-- <link href='https://fonts.googleapis.com/css?family=Work+Sans:400,500,600' rel='stylesheet' type='text/css'> -->
-    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <!-- Leaflet.markercluster Plugin -->
-  	<link rel="stylesheet" href="vendor/markercluster/MarkerCluster.css" />
-  	<link rel="stylesheet" href="vendor/markercluster/MarkerCluster.Default.css" />
-    <link href='css/styles.css' rel='stylesheet' />
+  <!-- <link href='https://fonts.googleapis.com/css?family=Work+Sans:400,500,600' rel='stylesheet' type='text/css'> -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin="" />
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <!-- Leaflet.markercluster Plugin -->
+  <link rel="stylesheet" href="vendor/markercluster/MarkerCluster.css" />
+  <link rel="stylesheet" href="vendor/markercluster/MarkerCluster.Default.css" />
+  <link href='css/styles.css' rel='stylesheet' />
 
-    <style></style>
+</head>
 
-  </head>
+<body>
 
-  <body>
+  <h1>Sicily to the US: 1880-1900</h1>
 
-    <h1>Sicily to the US: 1880-1900</h1>
-
-    <div class='container-fluid'>
-      <div class="row">
-        <div class="col-sm col-xs-6 m-0 p-0">
-          <div id='map'></div>
-          <!-- <div class='my-2 mx-1 fixed-bottom' id="ui-controls"></div> -->
+  <div class='container-fluid'>
+    <div class="row">
+      <div class="col-sm col-xs-6 m-0 p-0">
+        <div id='map'></div>
+        <!-- <div class='my-2 mx-1 fixed-bottom' id="ui-controls"></div> -->
+      </div>
+      <div class="col-sm col-xs-6 m-0 p-0">
+        <div id='sicilyMap'></div>
+      </div>
+      <div class="row m-0">
+        <div class='col-12 my-4 mx-1 justify-end fixed-bottom' id='buttons'>
+          <button type="button" class="btn btn-primary info" data-toggle="modal" data-target="#infoModal">
+            Info
+          </button>
         </div>
-        <div class="col-sm col-xs-6 m-0 p-0">
-          <div id='sicilyMap'></div>
-        </div>
-        <div class="row m-0">
-          <div class='col-12 my-4 mx-1 justify-end fixed-bottom' id='buttons'>
-            <button type="button" class="btn btn-primary info" data-toggle="modal" data-target="#infoModal">
-              Info
-            </button>
-          </div>
-          <div class='col-12 mx-3 my-2 fixed-bottom' id="ui-controls">
-            <div id="handle-1" class="ui-slider-handle"></div>
-            <div id="handle-2" class="ui-slider-handle"></div>
-          </div>
+        <div class='col-12 mx-3 my-2 fixed-bottom' id="ui-controls">
+          <div id="handle-1" class="ui-slider-handle"></div>
+          <div id="handle-2" class="ui-slider-handle"></div>
         </div>
       </div>
     </div>
+  </div>
 
 
-    <!-- Modal -->
-    <div class="modal fade" id="infoModal" tabindex="-1" role="dialog" aria-labelledby="infoModalTitle" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-scrollable" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="infoModalTitle">Sicily to the US: 1880-1900</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <p>This map uses data from the National Archives' <a href="https://aad.archives.gov/aad/series-description.jsp?s=4433&cat=GP44&bc=,sl&col=1002" target="_blank">Italians to America Passenger Data File</a>, which contains passenger manifest data for passengers who identified themselves as of Italian origin.</p>
-            <p>For more information on this project you can visit the project's <a target="_blank" href="https://github.com/courtneysimonse/sicily-immigrants">repo</a>.</p>
-            <!-- Remove manifest images, too hard to read in popup
+  <!-- Modal -->
+  <div class="modal fade" id="infoModal" tabindex="-1" role="dialog" aria-labelledby="infoModalTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="infoModalTitle">Sicily to the US: 1880-1900</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>This map uses data from the National Archives' <a
+              href="https://aad.archives.gov/aad/series-description.jsp?s=4433&cat=GP44&bc=,sl&col=1002"
+              target="_blank">Italians to America Passenger Data File</a>, which contains passenger manifest data for
+            passengers who identified themselves as of Italian origin.</p>
+          <p>For more information on this project you can visit the project's <a target="_blank"
+              href="https://github.com/courtneysimonse/sicily-immigrants">repo</a>.</p>
+          <!-- Remove manifest images, too hard to read in popup
             <p><img src="images/ManifestExample1870.jpg" alt="Manifest Example 1870" class="img-fluid"></p>
             <p><img src="images/ManifestExample1892.jpg" alt="Manifest Example 1892" class="img-fluid"></p>
             <p><img src="images/ManifestExample1905.jpg" alt="Manifest Example 1905" class="img-fluid"></p> -->
-            <p>Basemaps: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a></p>
-            <p>Italian Province Boundaries: <a href="http://www.diva-gis.org" target="_blank">http://www.diva-gis.org</a></p>
-            <p>By <a href="http://courtneysimonse.ninja" target="_blank">Courtney Simonse</a>, published June 2019. <a target="_blank" href="https://github.com/courtneysimonse"><i class="fa fa-github mr-2"></i></a></p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          </div>
+          <p>Basemaps: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a
+              href="https://carto.com/attributions">CARTO</a></p>
+          <p>Italian Province Boundaries: <a href="http://www.diva-gis.org" target="_blank">http://www.diva-gis.org</a>
+          </p>
+          <p>By <a href="http://courtneysimonse.ninja" target="_blank">Courtney Simonse</a>, published June 2019. <a
+              target="_blank" href="https://github.com/courtneysimonse"><i class="fa fa-github mr-2"></i></a></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
+  </div>
 
-    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js" integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og==" crossorigin=""></script>
-    <!-- Marker Clustering Plugin -->
-    <script src="vendor/markercluster/leaflet.markercluster.js"></script>
+  <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+    integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+    crossorigin=""></script>
+  <!-- Marker Clustering Plugin -->
+  <script src="vendor/markercluster/leaflet.markercluster.js"></script>
 
-    <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
-    <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.0.0/papaparse.min.js"></script>
-    <!-- Bootstrap JavaScript -->
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <!-- JavaScript Plugin -->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-    <!-- Custom JavaScript for this theme -->
-    <script src="js/scrolling-nav.js"></script>
-    <!-- Load animation tweening lib requirement for CanvasFlowMapLayer -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/16.6.0/Tween.min.js"></script> -->
-    <!-- then load CanvasFlowMapLayer -->
-    <!-- <script src="vendor/Leaflet.Canvas-Flowmap-Layer/src/CanvasFlowmapLayer.js"></script> -->
+  <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+  <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.0.0/papaparse.min.js"></script>
+  <!-- Bootstrap JavaScript -->
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- JavaScript Plugin -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <!-- Custom JavaScript for this theme -->
+  <script src="js/scrolling-nav.js"></script>
+  <!-- Load animation tweening lib requirement for CanvasFlowMapLayer -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/16.6.0/Tween.min.js"></script> -->
+  <!-- then load CanvasFlowMapLayer -->
+  <!-- <script src="vendor/Leaflet.Canvas-Flowmap-Layer/src/CanvasFlowmapLayer.js"></script> -->
 
-    <script src="js/app.js"></script>
+  <script src="js/app.js"></script>
 
-    <script>
-    </script>
-
-  </body>
+</body>
 
 </html>
