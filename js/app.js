@@ -1,6 +1,6 @@
 (function () {
 
-  // map options
+  // US map options
   var options = {
         zoomSnap: .5,
         center: [38, -85],
@@ -13,12 +13,14 @@
   // create map
   var map = L.map('map', options);
 
-  var sicilyMap = L.map('sicilyMap', {
-          zoomControl: false,
-          attributionControl: false,
-          center: [37.5, 14],
-          zoom: 7
-      });
+  // Sicily map options
+  var sicilyOpts = {
+    zoomControl: false,
+    attributionControl: false,
+    center: [37.5, 14],
+    zoom: 7
+  }
+  var sicilyMap = L.map('sicilyMap', sicilyOpts);
 
   // request tiles and add to map
   var CartoDB_Positron = L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png', {
@@ -223,11 +225,26 @@
         return years;
       }
     });
+
+    // When "Reset" button clicked, reset map to original state
+    $("#reset-btn").click(function() {
+      console.log("Click happened");
+      map.setView(options.center, options.zoom);
+      sicilyMap.setView(sicilyOpts.center, sicilyOpts.zoom);
+      // clear Sicily province selection
+      sicilyLayer.eachLayer(function (layer) {
+        sicilyLayer.resetStyle(layer); // reset highlighting
+      });
+      clickID = null;
+      clickID2 = null;
+      updateMap(geojson, years);
+    });
+      
     // L.geoJSON(geojson).addTo(map)
     updateMap(geojson, years);
     // var flowmapLayer = L.canvasFlowmapLayer(geojson).addTo(map).addTo(sicilyMap);
 
-  };
+  };  // end drawMap
 
   function updateMap(geojson, years, province = "") {
     // console.log('updateMap');
@@ -276,6 +293,8 @@
     // map.addLayer(flowmapLayer);
     // sicilyMap.addLayer(copyFlowmapLayer);
 
-  };
+  }; //end updateMap
+
+
 
 })();
