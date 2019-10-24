@@ -228,7 +228,32 @@
     // });
 
     // List of years
-    $("ui-controls")
+    var y = 1880;
+    while (y <= 1900) {
+
+      y++;
+    }
+    // $("#ui-controls").append()
+
+    /* When the user clicks on the button,
+    toggle between hiding and showing the dropdown content */
+    $(".dropbtn").click(function dropdown() {
+      document.getElementById("year-1").classList.toggle("show");
+    });
+
+    // Close the dropdown menu if the user clicks outside of it
+    window.onclick = function(event) {
+      if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    };
 
     // When "Reset" button clicked, reset map to original state
     $("#reset-btn").click(function() {
@@ -298,7 +323,6 @@
     // sicilyMap.addLayer(copyFlowmapLayer);
 
   }; //end updateMap
-
 
 
 })();
