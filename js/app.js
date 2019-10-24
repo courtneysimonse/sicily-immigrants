@@ -27,13 +27,13 @@
   	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="http://cartodb.com/attributions">CartoDB</a>',
   	subdomains: 'abcd',
   	maxZoom: 19
-  }).addTo(map);
+  }).addTo(sicilyMap);
 
   var CartoDB_DarkMatter = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
   	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
   	subdomains: 'abcd',
   	maxZoom: 19
-  }).addTo(sicilyMap);
+  }).addTo(map);
 
   $.getJSON('data/sicily.geojson', function(sicily) {
       Papa.parse('data/sicily_passengers.csv', {
@@ -154,8 +154,8 @@
       function highlight(e) {
         if (this._leaflet_id != clickID) {
           this.setStyle({
-            'fillColor': '#a1d99b',
-            'fillOpacity': .5
+            'fillColor': '#16dd66',
+            'fillOpacity': .6
           });
         }
       }
@@ -179,8 +179,8 @@
         clickID2 = this._leaflet_id
 
         this.setStyle({
-          'fillColor': '#a1d99b',
-          'fillOpacity': .8,
+          'fillColor': '#16dd66',
+          'fillOpacity': .9,
           'color': '#006d2c'
         });
         firstPass = true;
