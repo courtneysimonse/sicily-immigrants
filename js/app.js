@@ -197,34 +197,38 @@
 
   function drawMap(geojson, sicilyLayer) {
 
-    $( "#ui-controls" ).slider({
-      range: true,
-      max: 1900,
-      min: 1880,
-      values: years,
-      create: function(event, ui) {
-        // add year values to handles
-        $("#handle-1").text(years[0]);
-        $("#handle-2").text(years[1]);
-      },
-      // change values on handles as they slide
-      slide: function (event, ui) {
-        $("#handle-1").text(ui.values[0]);
-        $("#handle-2").text(ui.values[1]);
-      },
-      // update map when slider value changes
-      change: function (event,ui) {
-        console.log(ui.values);
-        years = ui.values;
-        sicilyLayer.eachLayer(function (layer) {
-          sicilyLayer.resetStyle(layer); // reset highlighting
-        });
-        clickID = null;
-        clickID2 = null;
-        updateMap(geojson, years);
-        return years;
-      }
-    });
+    // Year range slider
+    // $( "#ui-controls" ).slider({
+    //   range: true,
+    //   max: 1900,
+    //   min: 1880,
+    //   values: years,
+    //   create: function(event, ui) {
+    //     // add year values to handles
+    //     $("#handle-1").text(years[0]);
+    //     $("#handle-2").text(years[1]);
+    //   },
+    //   // change values on handles as they slide
+    //   slide: function (event, ui) {
+    //     $("#handle-1").text(ui.values[0]);
+    //     $("#handle-2").text(ui.values[1]);
+    //   },
+    //   // update map when slider value changes
+    //   change: function (event,ui) {
+    //     console.log(ui.values);
+    //     years = ui.values;
+    //     sicilyLayer.eachLayer(function (layer) {
+    //       sicilyLayer.resetStyle(layer); // reset highlighting
+    //     });
+    //     clickID = null;
+    //     clickID2 = null;
+    //     updateMap(geojson, years);
+    //     return years;
+    //   }
+    // });
+
+    // List of years
+    $("ui-controls")
 
     // When "Reset" button clicked, reset map to original state
     $("#reset-btn").click(function() {
