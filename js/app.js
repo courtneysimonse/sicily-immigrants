@@ -154,8 +154,8 @@
       function highlight(e) {
         if (this._leaflet_id != clickID) {
           this.setStyle({
-            'fillColor': '#a1d99b',
-            'fillOpacity': .5
+            'fillColor': '#16dd66',
+            'fillOpacity': .6
           });
         }
       }
@@ -179,8 +179,8 @@
         clickID2 = this._leaflet_id
 
         this.setStyle({
-          'fillColor': '#a1d99b',
-          'fillOpacity': .8,
+          'fillColor': '#16dd66',
+          'fillOpacity': .9,
           'color': '#006d2c'
         });
         firstPass = true;
