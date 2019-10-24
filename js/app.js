@@ -228,7 +228,7 @@
 
     // When "Reset" button clicked, reset map to original state
     $("#reset-btn").click(function() {
-      console.log("Click happened");
+      //console.log("Click happened");
       map.setView(options.center, options.zoom);
       sicilyMap.setView(sicilyOpts.center, sicilyOpts.zoom);
       // clear Sicily province selection
@@ -239,7 +239,7 @@
       clickID2 = null;
       updateMap(geojson, years);
     });
-      
+
     // L.geoJSON(geojson).addTo(map)
     updateMap(geojson, years);
     // var flowmapLayer = L.canvasFlowmapLayer(geojson).addTo(map).addTo(sicilyMap);
