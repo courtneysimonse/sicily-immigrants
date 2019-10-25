@@ -44,7 +44,8 @@
       	// },
       	complete: function(data) {
       		console.log("All done!");
-          processData(sicily, data.data);
+          processData(data.data);
+          drawMap(geojson, sicily);
       	},
         header: true
       });
@@ -70,7 +71,8 @@
   //
   // }
 
-  var years = [1890, 1891];
+  var yearsOrig = [1890, 1891];
+  var years = yearsOrig
   var geojson = {};
   var clickID = null;
   var clickID2 = null;
@@ -93,7 +95,7 @@
     color: '#de2d26'
   }
 
-  function processData(sicily, data) {
+  function processData(data) {
 
     // console.log(data);
 
@@ -128,6 +130,11 @@
 
     });
 
+    // console.log(geojson);
+    return geojson;
+  };
+
+  function drawMap(geojson, sicily) {
     var sicilyStyle = {
       "color": "#006d2c",
       'fillColor': '#e5f5e0',
@@ -189,14 +196,6 @@
         updateMap(geojson, years, this.feature.properties['NAME_2'])
       }
 
-
-    // console.log(geojson);
-    drawMap(geojson, sicilyLayer);
-    return geojson;
-  };
-
-  function drawMap(geojson, sicilyLayer) {
-
     // Year range slider
     // $( "#ui-controls" ).slider({
     //   range: true,
@@ -227,51 +226,60 @@
     //   }
     // });
 
-    // List of years
-    var y = 1880;
-    while (y <= 1900) {
-
-      y++;
-    }
+    // // List of years
+    // var y = 1880;
+    // while (y <= 1900) {
+    //
+    //   y++;
+    // }
     // $("#ui-controls").append()
+    $(".dropdown-item").click(function(e) {
+      console.log(Number($(this).text()));
+      years[0] = Number($(this).text());
+      console.log(years);
+      updateMap(geojson, years);
 
-    /* When the user clicks on the button,
-    toggle between hiding and showing the dropdown content */
-    $(".dropbtn").click(function dropdown() {
-      document.getElementById("year-1").classList.toggle("show");
-    });
-
-    // Close the dropdown menu if the user clicks outside of it
-    window.onclick = function(event) {
-      if (!event.target.matches('.dropbtn')) {
-        var dropdowns = document.getElementsByClassName("dropdown-content");
-        var i;
-        for (i = 0; i < dropdowns.length; i++) {
-          var openDropdown = dropdowns[i];
-          if (openDropdown.classList.contains('show')) {
-            openDropdown.classList.remove('show');
-          }
-        }
-      }
-    };
-
-    // When "Reset" button clicked, reset map to original state
-    $("#reset-btn").click(function() {
-      //console.log("Click happened");
-      map.setView(options.center, options.zoom);
-      sicilyMap.setView(sicilyOpts.center, sicilyOpts.zoom);
       // clear Sicily province selection
       sicilyLayer.eachLayer(function (layer) {
         sicilyLayer.resetStyle(layer); // reset highlighting
       });
       clickID = null;
       clickID2 = null;
-      updateMap(geojson, years);
+      updateMap(geojson, yearsOrig);
+      return years;
+    });
+
+    // When "Reset" button clicked, reset map to original state
+    $("#reset-btn").click(function() {
+      map.setView(options.center, options.zoom);
+      sicilyMap.setView(sicilyOpts.center, sicilyOpts.zoom);
+
+      // clear Sicily province selection
+      sicilyLayer.eachLayer(function (layer) {
+        sicilyLayer.resetStyle(layer); // reset highlighting
+      });
+      clickID = null;
+      clickID2 = null;
+      updateMap(geojson, yearsOrig);
     });
 
     // L.geoJSON(geojson).addTo(map)
     updateMap(geojson, years);
     // var flowmapLayer = L.canvasFlowmapLayer(geojson).addTo(map).addTo(sicilyMap);
+
+    // function for resetting the map - DOESN'T WORK
+    function resetMap() {
+      map.setView(options.center, options.zoom);
+      sicilyMap.setView(sicilyOpts.center, sicilyOpts.zoom);
+
+      // clear Sicily province selection
+      sicilyLayer.eachLayer(function (layer) {
+        sicilyLayer.resetStyle(layer); // reset highlighting
+      });
+      clickID = null;
+      clickID2 = null;
+      updateMap(geojson, yearsOrig);
+    };  //end resetMap
 
   };  // end drawMap
 
