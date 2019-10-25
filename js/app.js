@@ -248,9 +248,10 @@
 
   function updateMap(geojson, years, province = "") {
     // console.log('updateMap');
+    originMarkers = L.layerGroup();
 
     markers.clearLayers();
-    // originMarkers.clearLayers();
+    originMarkers.clearLayers();
     // flowmapLayer.clearLayers();
     // copyFlowmapLayer.clearLayers();
 
@@ -279,8 +280,10 @@
             'Arrival: ' + feature.properties['Arrival'])
           .on('click', function(e) {
             console.log(feature.properties);
+            originMarkers.clearLayers();
             L.circleMarker([Number(feature.properties.origin_lat), Number(feature.properties.origin_lon)], markerOptions)
-              .addTo(sicilyMap);
+              .addTo(originMarkers);
+            originMarkers.addTo(sicilyMap);
           }));
         // originMarkers.addLayer(
         //   L.circleMarker([Number(feature.properties.origin_lat), Number(feature.properties.origin_lon)], markerOptions)
