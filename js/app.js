@@ -227,12 +227,16 @@
     // });
 
     // // List of years
-    // var y = 1880;
-    // while (y <= 1900) {
-    //
-    //   y++;
-    // }
-    // $("#ui-controls").append()
+    var y = 1880;
+    while (y <= 1900) {
+
+      $(".yr-list").append(
+        '<a class="dropdown-item" href="#">'+y+'</a>'
+      )
+
+      y++
+    }
+
     $(".dropdown-item").click(function(e) {
       console.log(Number($(this).text()));
       years[0] = Number($(this).text());
