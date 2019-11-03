@@ -27,6 +27,11 @@
   <h1>Sicily to the US: 1880-1900</h1>
 
   <div class='container-fluid'>
+    <!-- <div class="row">
+      <div>
+
+      </div>
+    </div> -->
     <div class="row">
       <div class="col-sm col-xs-6 m-0 p-0">
         <div id='sicilyMap'></div>
@@ -43,11 +48,24 @@
           <button type="button" class="btn btn-primary info" id="reset-btn">
             Reset
           </button>
-        </div>
-        <div class='col-12 mx-3 my-2 fixed-bottom' id="ui-controls">
-          <div id="handle-1" class="ui-slider-handle"></div>
-          <div id="handle-2" class="ui-slider-handle"></div>
-        </div>
+          <div class="btn-group">
+            <button type="button" class="btn btn-primary dropdown-toggle" id="min-yr" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Min Yr
+            </button>
+            <div class="dropdown-menu yr-list" id="min-yr-list"></div>
+          </div>
+          <div class="btn-group">
+            <button type="button" class="btn btn-primary dropdown-toggle" id="max-yr" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Max Yr
+            </button>
+            <div class="dropdown-menu yr-list" id="max-yr-list"></div>
+          </div>
+        <!-- <div class='col-12 mx-3 my-2 fixed-bottom' id="ui-controls"> -->
+
+          <!-- <div id="handle-1" class="ui-slider-handle"></div>
+          <div id="handle-2" class="ui-slider-handle"></div> -->
+
+        <!-- </div> -->
       </div>
     </div>
   </div>

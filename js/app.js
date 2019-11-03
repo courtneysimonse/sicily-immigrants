@@ -44,7 +44,8 @@
       	// },
       	complete: function(data) {
       		console.log("All done!");
-          processData(sicily, data.data);
+          processData(data.data);
+          drawMap(geojson, sicily);
       	},
         header: true
       });
@@ -70,7 +71,8 @@
   //
   // }
 
-  var years = [1890, 1891];
+  var yearsOrig = [1890, 1891];
+  var years = yearsOrig
   var geojson = {};
   var clickID = null;
   var hoverID = null;
@@ -92,7 +94,7 @@
     color: '#de2d26'
   }
 
-  function processData(sicily, data) {
+  function processData(data) {
 
     // console.log(data);
 
@@ -127,6 +129,11 @@
 
     });
 
+    // console.log(geojson);
+    return geojson;
+  };
+
+  function drawMap(geojson, sicily) {
     var sicilyStyle = {
       "color": "#006d2c",
       'fillColor': '#e5f5e0',
@@ -198,57 +205,71 @@
         updateMap(geojson, years, this.feature.properties['NAME_2'])
       }
 
+    // List of years 1880-1900
+    var y = 1880;
+    while (y <= 1900) {
 
-    // console.log(geojson);
-    drawMap(geojson, sicilyLayer);
-    return geojson;
-  };
+      // add year to dropdown list
+      $("#min-yr-list").append(
+        '<a class="dropdown-item min-yr" href="#">'+y+'</a>'
+      )
+      $("#max-yr-list").append(
+        '<a class="dropdown-item max-yr" href="#">'+y+'</a>'
+      )
+      y++
+    }
 
-  function drawMap(geojson, sicilyLayer) {
+    $(".min-yr").click(function(e) {
 
-    $( "#ui-controls" ).slider({
-      range: true,
-      max: 1900,
-      min: 1880,
-      values: years,
-      create: function(event, ui) {
-        // add year values to handles
-        $("#handle-1").text(years[0]);
-        $("#handle-2").text(years[1]);
-      },
-      // change values on handles as they slide
-      slide: function (event, ui) {
-        $("#handle-1").text(ui.values[0]);
-        $("#handle-2").text(ui.values[1]);
-      },
-      // update map when slider value changes
-      change: function (event,ui) {
-        console.log(ui.values);
-        years = ui.values;
-        sicilyLayer.eachLayer(function (layer) {
-          sicilyLayer.resetStyle(layer); // reset highlighting
-        });
-        clickID = null;
-        updateMap(geojson, years);
-        return years;
-      }
-    });
+      years[0] = Number($(this).text());
 
-    // When "Reset" button clicked, reset map to original state
-    $("#reset-btn").click(function() {
-      //console.log("Click happened");
-      map.setView(options.center, options.zoom);
-      sicilyMap.setView(sicilyOpts.center, sicilyOpts.zoom);
+      $("#min-yr").text(years[0]);
+      updateMap(geojson, years);
+
       // clear Sicily province selection
       sicilyLayer.eachLayer(function (layer) {
         sicilyLayer.resetStyle(layer); // reset highlighting
       });
       clickID = null;
+      return years;
+    });
+
+    $(".max-yr").click(function(e) {
+      // console.log(Number($(this).text()));
+      years[1] = Number($(this).text());
+      // console.log(years);
+      $("#max-yr").text(years[1]);
       updateMap(geojson, years);
+
+      // clear Sicily province selection
+      sicilyLayer.eachLayer(function (layer) {
+        sicilyLayer.resetStyle(layer); // reset highlighting
+      });
+      clickID = null;
+      return years;
+    });
+
+    // When "Reset" button clicked, reset map to original state
+    $("#reset-btn").click(function() {
+
+      map.setView(options.center, options.zoom);
+      sicilyMap.setView(sicilyOpts.center, sicilyOpts.zoom);
+
+      // clear Sicily province selection
+      sicilyLayer.eachLayer(function (layer) {
+        sicilyLayer.resetStyle(layer); // reset highlighting
+      });
+      clickID = null;
+
+      // reset year buttons
+      $("#min-yr").text(yearsOrig[0]);
+      $("#max-yr").text(yearsOrig[1]);
+
+      updateMap(geojson, yearsOrig);
     });
 
     // L.geoJSON(geojson).addTo(map)
-    updateMap(geojson, years);
+    // updateMap(geojson, years);
     // var flowmapLayer = L.canvasFlowmapLayer(geojson).addTo(map).addTo(sicilyMap);
 
   };  // end drawMap
@@ -314,7 +335,6 @@
     // sicilyMap.addLayer(copyFlowmapLayer);
 
   }; //end updateMap
-
 
 
 })();
