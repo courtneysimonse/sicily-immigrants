@@ -73,7 +73,6 @@
   var years = [1890, 1891];
   var geojson = {};
   var clickID = null;
-  var clickID2 = null;
   var hoverID = null;
   var firstPass = true;
   // var flowmapLayer = L.layerGroup();
@@ -230,7 +229,6 @@
           sicilyLayer.resetStyle(layer); // reset highlighting
         });
         clickID = null;
-        clickID2 = null;
         updateMap(geojson, years);
         return years;
       }
@@ -246,7 +244,6 @@
         sicilyLayer.resetStyle(layer); // reset highlighting
       });
       clickID = null;
-      clickID2 = null;
       updateMap(geojson, years);
     });
 
