@@ -196,51 +196,26 @@
         updateMap(geojson, years, this.feature.properties['NAME_2'])
       }
 
-    // Year range slider
-    // $( "#ui-controls" ).slider({
-    //   range: true,
-    //   max: 1900,
-    //   min: 1880,
-    //   values: years,
-    //   create: function(event, ui) {
-    //     // add year values to handles
-    //     $("#handle-1").text(years[0]);
-    //     $("#handle-2").text(years[1]);
-    //   },
-    //   // change values on handles as they slide
-    //   slide: function (event, ui) {
-    //     $("#handle-1").text(ui.values[0]);
-    //     $("#handle-2").text(ui.values[1]);
-    //   },
-    //   // update map when slider value changes
-    //   change: function (event,ui) {
-    //     console.log(ui.values);
-    //     years = ui.values;
-    //     sicilyLayer.eachLayer(function (layer) {
-    //       sicilyLayer.resetStyle(layer); // reset highlighting
-    //     });
-    //     clickID = null;
-    //     clickID2 = null;
-    //     updateMap(geojson, years);
-    //     return years;
-    //   }
-    // });
-
-    // // List of years
+    // List of years 1880-1900
     var y = 1880;
     while (y <= 1900) {
 
-      $(".yr-list").append(
-        '<a class="dropdown-item" href="#">'+y+'</a>'
+      // add year to dropdown list
+      $("#min-yr-list").append(
+        '<a class="dropdown-item min-yr" href="#">'+y+'</a>'
+      )
+      $("#max-yr-list").append(
+        '<a class="dropdown-item max-yr" href="#">'+y+'</a>'
       )
 
       y++
     }
 
-    $(".dropdown-item").click(function(e) {
-      console.log(Number($(this).text()));
+    $(".min-yr").click(function(e) {
+
       years[0] = Number($(this).text());
-      console.log(years);
+
+      $("#min-yr").text(years[0]);
       updateMap(geojson, years);
 
       // clear Sicily province selection
@@ -249,12 +224,28 @@
       });
       clickID = null;
       clickID2 = null;
-      updateMap(geojson, yearsOrig);
+      return years;
+    });
+
+    $(".max-yr").click(function(e) {
+      // console.log(Number($(this).text()));
+      years[1] = Number($(this).text());
+      // console.log(years);
+      $("#max-yr").text(years[1]);
+      updateMap(geojson, years);
+
+      // clear Sicily province selection
+      sicilyLayer.eachLayer(function (layer) {
+        sicilyLayer.resetStyle(layer); // reset highlighting
+      });
+      clickID = null;
+      clickID2 = null;
       return years;
     });
 
     // When "Reset" button clicked, reset map to original state
     $("#reset-btn").click(function() {
+
       map.setView(options.center, options.zoom);
       sicilyMap.setView(sicilyOpts.center, sicilyOpts.zoom);
 
@@ -264,26 +255,16 @@
       });
       clickID = null;
       clickID2 = null;
+
+      // reset year buttons
+      $("#min-yr").text(yearsOrig[0]);
+      $("#max-yr").text(yearsOrig[1]);
       updateMap(geojson, yearsOrig);
     });
 
     // L.geoJSON(geojson).addTo(map)
-    updateMap(geojson, years);
+    // updateMap(geojson, years);
     // var flowmapLayer = L.canvasFlowmapLayer(geojson).addTo(map).addTo(sicilyMap);
-
-    // function for resetting the map - DOESN'T WORK
-    function resetMap() {
-      map.setView(options.center, options.zoom);
-      sicilyMap.setView(sicilyOpts.center, sicilyOpts.zoom);
-
-      // clear Sicily province selection
-      sicilyLayer.eachLayer(function (layer) {
-        sicilyLayer.resetStyle(layer); // reset highlighting
-      });
-      clickID = null;
-      clickID2 = null;
-      updateMap(geojson, yearsOrig);
-    };  //end resetMap
 
   };  // end drawMap
 
