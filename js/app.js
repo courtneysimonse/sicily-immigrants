@@ -163,47 +163,47 @@
       }, {"sticky": true})
       .addTo(sicilyMap);
 
-      function highlight(e) {
-        // if the feature's _leaflet_id is different than last click
-        if (this._leaflet_id != clickID) {
-          // style to highlight polygon
-          this.setStyle({
-            'fillColor': '#16dd66',
-            'fillOpacity': .6
-          });
-        }
-      }
-
-      function resetHighlight(e) {
-        hoverID = this._leaflet_id;
-        // reset style on mouseout if the feature wasn't the last clicked
-        if (hoverID != clickID) {
-          sicilyLayer.resetStyle(e.target);
-        }
-
-      }
-
-      function highlightSelection(e) {
-        // save click selection
-        clickID = this._leaflet_id;
-
-        // reset the style of the previously clicked
-        if (firstPass == false) {
-          resetHighlight(previous)
-        }
-        previous = e;
-
-        // set style of selection
+    function highlight(e) {
+      // if the feature's _leaflet_id is different than last click
+      if (this._leaflet_id != clickID) {
+        // style to highlight polygon
         this.setStyle({
           'fillColor': '#16dd66',
-          'fillOpacity': .9,
-          'color': '#006d2c'
+          'fillOpacity': .6
         });
-        firstPass = false;
-
-        // add event to filter passenger data by origin province
-        updateMap(geojson, years, this.feature.properties['NAME_2'])
       }
+    }
+
+    function resetHighlight(e) {
+      hoverID = this._leaflet_id;
+      // reset style on mouseout if the feature wasn't the last clicked
+      if (hoverID != clickID) {
+        sicilyLayer.resetStyle(e.target);
+      }
+
+    }
+
+    function highlightSelection(e) {
+      // save click selection
+      clickID = this._leaflet_id;
+
+      // reset the style of the previously clicked
+      if (firstPass == false) {
+        resetHighlight(previous)
+      }
+      previous = e;
+
+      // set style of selection
+      this.setStyle({
+        'fillColor': '#16dd66',
+        'fillOpacity': .9,
+        'color': '#006d2c'
+      });
+      firstPass = false;
+
+      // add event to filter passenger data by origin province
+      updateMap(geojson, years, this.feature.properties['NAME_2'])
+    }
 
     // List of years 1880-1900
     var y = 1880;
