@@ -75,7 +75,7 @@
   var clickID = null;
   var clickID2 = null;
   var hoverID = null;
-  var firstPass = false;
+  var firstPass = true;
   // var flowmapLayer = L.layerGroup();
   // var copyFlowmapLayer = L.layerGroup(); // use copy to add layer to second map
   var markers = L.markerClusterGroup({
@@ -137,11 +137,17 @@
 
     // console.log(sicily);
     var sicilyLayer = L.geoJSON(sicily, {
+      // set style for Sicily polygons
       style: sicilyStyle,
+      // loop through each feature
       onEachFeature: function (feature, layer) {
+        // set behavior on
         layer.on({
+          // mouseover - temporarily highlight
           mouseover: highlight,
+          // mouseout - reset to original styling
           mouseout: resetHighlight,
+          // click - highlight selection until another click
           click: highlightSelection
         })
       }
@@ -152,7 +158,9 @@
       .addTo(sicilyMap);
 
       function highlight(e) {
+        // if the feature's _leaflet_id is different than last click
         if (this._leaflet_id != clickID) {
+          // style to highlight polygon
           this.setStyle({
             'fillColor': '#16dd66',
             'fillOpacity': .6
@@ -162,28 +170,30 @@
 
       function resetHighlight(e) {
         hoverID = this._leaflet_id;
+        // reset style on mouseout if the feature wasn't the last clicked
         if (hoverID != clickID) {
           sicilyLayer.resetStyle(e.target);
-        } else if (clickID != clickID2) {
-          sicilyLayer.resetStyle(e.target);
         }
+
       }
 
       function highlightSelection(e) {
+        // save click selection
         clickID = this._leaflet_id;
 
-        if (firstPass == true) {
+        // reset the style of the previously clicked
+        if (firstPass == false) {
           resetHighlight(previous)
         }
         previous = e;
-        clickID2 = this._leaflet_id
 
+        // set style of selection
         this.setStyle({
           'fillColor': '#16dd66',
           'fillOpacity': .9,
           'color': '#006d2c'
         });
-        firstPass = true;
+        firstPass = false;
 
         // add event to filter passenger data by origin province
         updateMap(geojson, years, this.feature.properties['NAME_2'])
