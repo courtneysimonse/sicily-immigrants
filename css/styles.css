@@ -79,3 +79,9 @@ h1 {
 .row {
   height: 100%;
 }
+
+.yr-list {
+    height: auto;
+    max-height: 200px;
+    overflow-x: hidden;
+}
