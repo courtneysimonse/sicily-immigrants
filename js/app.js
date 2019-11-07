@@ -77,6 +77,7 @@
   var clickID = null;
   var hoverID = null;
   var firstPass = true;
+
   // var flowmapLayer = L.layerGroup();
   // var copyFlowmapLayer = L.layerGroup(); // use copy to add layer to second map
   var markers = L.markerClusterGroup({
@@ -136,10 +137,15 @@
   function drawMap(geojson, sicily) {
     var sicilyStyle = {
       "color": "#006d2c",
-      'fillColor': '#e5f5e0',
+      'fillColor': '#006d2c',
       'fillOpacity': .2,
       "clickable": true
     };
+
+    var sicilyColors = {
+      "base": "",
+      "selection": ""
+    }
 
     // console.log(sicily);
     var sicilyLayer = L.geoJSON(sicily, {
@@ -162,6 +168,8 @@
         return layer.feature.properties['NAME_2']
       }, {"sticky": true})
       .addTo(sicilyMap);
+
+    updateMap(geojson, yearsOrig);
 
     function highlight(e) {
       // if the feature's _leaflet_id is different than last click
@@ -196,8 +204,8 @@
       // set style of selection
       this.setStyle({
         'fillColor': '#16dd66',
-        'fillOpacity': .9,
-        'color': '#006d2c'
+        'fillOpacity': .9
+        // 'color': '#16dd66'
       });
       firstPass = false;
 
