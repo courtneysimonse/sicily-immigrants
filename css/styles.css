@@ -89,12 +89,6 @@ h1 {
 #info-area {
   position: absolute;
   z-index: 1000; /* place above map */
-  bottom: 18px;
+  top: 18px;
   right: 18px;
-  padding: 6px 12px;
-  background: rgba(256,256,256,.9);
-}
-
-#metadata {
-  background: rgba(256,256,256,.9);
 }
