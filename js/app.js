@@ -273,6 +273,9 @@
       $("#min-yr").text(yearsOrig[0]);
       $("#max-yr").text(yearsOrig[1]);
 
+      // clear passenger info box
+      $("#info-list").empty();
+
       updateMap(geojson, yearsOrig);
     });
 
@@ -310,16 +313,27 @@
         }
       },
       pointToLayer: function (feature, latlng) {
+        var props = feature.properties
         markers.addLayer(L.circleMarker(latlng, markerOptions)
-          .bindTooltip('Origin: ' + feature.properties['origin_city'] + ", " + feature.properties['Province'] + '<br>' +
-            'Destination: ' + feature.properties['destination_city'] + '<br>' +
-            'Arrival: ' + feature.properties['Arrival'])
+          .bindTooltip('Origin: ' + props['origin_city'] + ", " + props['Province'] + '<br>' +
+            'Destination: ' + props['destination_city'] + '<br>' +
+            'Arrival: ' + props['Arrival'])
           .on('click', function(e) {
-            console.log(feature.properties);
+            console.log(props);
             originMarkers.clearLayers();
-            L.circleMarker([Number(feature.properties.origin_lat), Number(feature.properties.origin_lon)], markerOptions)
+            L.circleMarker([Number(props.origin_lat), Number(props.origin_lon)], markerOptions)
               .addTo(originMarkers);
             originMarkers.addTo(sicilyMap);
+            // remove previous passenger info
+            $("#info-list").empty();
+            // add clicked passenger info
+            $("#info-list").append(
+              "<li>Name: "+props['FirstName']+" "+props['LastName']+"</li>"+
+              "<li>Age: "+props['Age']+"</li>"+
+              "<li>Occupation: "+props['Occupation']+"</li>"+
+              "<li>Literacy: "+props['Literacy']+"</li>"
+            )
+
           }));
         // originMarkers.addLayer(
         //   L.circleMarker([Number(feature.properties.origin_lat), Number(feature.properties.origin_lon)], markerOptions)
