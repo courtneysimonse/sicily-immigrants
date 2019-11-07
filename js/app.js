@@ -85,6 +85,7 @@
     maxClusterRadius: 30,
     chunkedLoading: true
   });
+  var originMarkers = L.layerGroup();
   // var originMarkers = L.markerClusterGroup({
   //   showCoverageOnHover: false,
   //   maxClusterRadius: 20,
@@ -275,6 +276,9 @@
 
       // clear passenger info box
       $("#info-list").empty();
+
+      // remove marker from Sicily map
+      originMarkers.clearLayers();
 
       updateMap(geojson, yearsOrig);
     });
