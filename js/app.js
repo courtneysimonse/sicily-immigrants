@@ -335,7 +335,9 @@
               "<li>Name: "+props['FirstName']+" "+props['LastName']+"</li>"+
               "<li>Age: "+props['Age']+"</li>"+
               "<li>Occupation: "+props['Occupation']+"</li>"+
-              "<li>Literacy: "+props['Literacy']+"</li>"
+              "<li>Literacy: "+props['Literacy']+"</li>"+
+              "<li>Origin: "+props['origin_city']+", "+props['Province']+"</li>"+
+              "<li>Destination: "+props['destination_city']+"</li>"
             )
 
           }));
