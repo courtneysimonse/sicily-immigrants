@@ -48,7 +48,7 @@ html, body {
   /* top: 0;
   bottom: 0;
   left: 0; */
-  z-index: 6;
+  z-index: 1;
 }
 
 #buttons {
@@ -87,10 +87,14 @@ h1 {
 }
 
 #info-area {
-position: absolute;
-z-index: 1000; /* place above map */
-bottom: 18px;
-right: 18px;
-padding: 6px 12px;
-background: rgba(256,256,256,.9);
+  position: absolute;
+  z-index: 1000; /* place above map */
+  bottom: 18px;
+  right: 18px;
+  padding: 6px 12px;
+  background: rgba(256,256,256,.9);
+}
+
+#metadata {
+  background: rgba(256,256,256,.9);
 }
