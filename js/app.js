@@ -18,7 +18,8 @@
     zoomControl: false,
     attributionControl: false,
     center: [37.5, 14],
-    zoom: 7
+    zoom: 7,
+    maxBounds: [[39.9, 17.8],[35.0, 10.2]]
   }
   var sicilyMap = L.map('sicilyMap', sicilyOpts);
 
