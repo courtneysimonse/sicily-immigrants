@@ -1,5 +1,8 @@
 (function () {
 
+  // hide Passenger Info card
+  $("#info-area").hide();
+
   // US map options
   var options = {
         zoomSnap: .5,
@@ -275,8 +278,9 @@
       $("#min-yr").text(yearsOrig[0]);
       $("#max-yr").text(yearsOrig[1]);
 
-      // clear passenger info box
+      // clear passenger info box and hide card
       $("#info-list").empty();
+      $("#info-area").hide();
 
       // remove marker from Sicily map
       originMarkers.clearLayers();
@@ -329,6 +333,7 @@
             L.circleMarker([Number(props.origin_lat), Number(props.origin_lon)], markerOptions)
               .addTo(originMarkers);
             originMarkers.addTo(sicilyMap);
+            $("#info-area").show();
             // remove previous passenger info
             $("#info-list").empty();
             // add clicked passenger info
