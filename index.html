@@ -53,7 +53,7 @@
             </button>
             <div class="dropdown-menu yr-list" id="max-yr-list"></div>
           </div>
-          <input type="range" multiple value="1880,1900" />
+
 
           <button type="button" class="btn btn-secondary info" data-toggle="modal" data-target="#infoModal">?</button>
 
@@ -105,6 +105,20 @@
     <div class="card-body">
       <ul id="info-list"></ul>
     </div>
+  </div>
+
+  <div class="card" id="ui-controls">
+    <div class="card-header">
+      <a href="#" data-toggle="collapse" data-target="#collapseOne">Instructions</a>
+    </div>
+    <div id="collapseOne" class="card-body collapse show">
+      <ol>
+        <li>Select a province</li>
+        <li>Select a year range
+        <input type="range" multiple value="1880,1900" id="yr-range"></li>
+        <li>Reset the map to start again</li>
+    </div>
+
   </div>
 
   <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
