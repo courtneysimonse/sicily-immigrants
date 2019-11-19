@@ -328,7 +328,7 @@
             'Destination: ' + props['destination_city'] + '<br>' +
             'Arrival: ' + props['Arrival'])
           .on('click', function(e) {
-            console.log(props);
+            // console.log(props);
             originMarkers.clearLayers();
             L.circleMarker([Number(props.origin_lat), Number(props.origin_lon)], markerOptions)
               .addTo(originMarkers);
