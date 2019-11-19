@@ -3,6 +3,18 @@
   // hide Passenger Info card
   $("#info-area").hide();
 
+  // create slider for year range
+  var slider = document.getElementById('slider');
+
+  noUiSlider.create(slider, {
+      start: [1885, 1890],
+      connect: true,
+      range: {
+          'min': 1880,
+          'max': 1900
+      }
+  });
+
   // US map options
   var options = {
         zoomSnap: .5,
