@@ -233,6 +233,10 @@
 
       province = this.feature.properties['NAME_2'];
 
+      // hightlight step-two
+      $("li").removeClass("active");
+      $("#step-two").addClass("active");
+
       // add event to filter passenger data by origin province
       updateMap(geojson, years, province);
       return province;
@@ -243,6 +247,10 @@
       years[0] = values[0];
       updateMap(geojson, years, province);
 
+      // hightlight step-three
+      $("li").removeClass("active");
+      $("#step-three").addClass("active");
+
       return years;
 
     });
@@ -251,6 +259,10 @@
 
       years[1] = values[1];
       updateMap(geojson, years, province);
+
+      // hightlight step-three
+      $("li").removeClass("active");
+      $("#step-three").addClass("active");
 
       return years;
 
@@ -274,6 +286,12 @@
       // clear passenger info box and hide card
       $("#info-list").empty();
       $("#info-area").hide();
+
+      // reset ui-controls highlighting
+      $("li").removeClass("active");
+
+      // highlight step-one
+      $("#step-one").addClass("active");
 
       // remove marker from Sicily map
       originMarkers.clearLayers();

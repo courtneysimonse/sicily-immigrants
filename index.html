@@ -30,7 +30,6 @@
       <!-- <p>&rarr;</p>
       <i class="fa fa-long-arrow-right"></i> -->
     </h1>
-    <!-- <div id="arrow"></div> -->
   </div>
 
   <div class='container-fluid'>
@@ -95,16 +94,18 @@
       <a href="#" data-toggle="collapse" data-target="#collapseOne">Instructions</a>
     </div>
     <div id="collapseOne" class="card-body collapse show">
-      <ol>
-        <li><strong>Select a province</strong></li>
-        <li>Select a year range
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item active" id="step-one">Select a province</li>
+        <li class="list-group-item mb-4" id="step-two">Select a year range
           <div id="slider"></div>
         </li>
-        <li>Select a point for more information.</li>
-        <li>Reset the map to start again</li>
-        <button type="button" class="btn btn-primary info" id="reset-btn">
-          Reset
-        </button>
+        <li class="list-group-item" id="step-three">Select a point for more information.</li>
+        <li class="list-group-item" id="step-four">
+          <button type="button" class="btn btn-primary info" id="reset-btn">
+            Reset
+          </button> the map to start again
+        </li>
+
     </div>
   </div>
 

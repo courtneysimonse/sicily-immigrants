@@ -65,14 +65,6 @@ html, body {
   font-weight: bold;
 }
 
-#arrow {
-  border-right: 10px solid;
-  border-bottom: 10px solid;
-  height: 30px;
-  width: 30px;
-  transform: rotate(-45deg);
-}
-
 .container-fluid {
   height: 100%;
 }
