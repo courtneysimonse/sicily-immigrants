@@ -93,6 +93,10 @@ html, body {
   z-index: 100;
 }
 
+.noUi-connect {
+	background: #2de075;
+}
+
 #info-btn {
   position: absolute;
   bottom: 18px;
