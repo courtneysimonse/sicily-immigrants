@@ -35,32 +35,7 @@
       <div class="col-sm col-xs-6 m-0 p-0">
         <div id='map'></div>
       </div>
-      <div class="row m-0">
-
-        <div class='col-12 my-4 mx-1 justify-end fixed-bottom' id='buttons'>
-          <button type="button" class="btn btn-primary info" id="reset-btn">
-            Reset
-          </button>
-          <div class="btn-group">
-            <button type="button" class="btn btn-primary dropdown-toggle" id="min-yr" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Min Yr
-            </button>
-            <div class="dropdown-menu yr-list" id="min-yr-list"></div>
-          </div>
-          <div class="btn-group">
-            <button type="button" class="btn btn-primary dropdown-toggle" id="max-yr" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Max Yr
-            </button>
-            <div class="dropdown-menu yr-list" id="max-yr-list"></div>
-          </div>
-
-
-          <button type="button" class="btn btn-secondary info" data-toggle="modal" data-target="#infoModal">?</button>
-
-        </div>
-
     </div>
-
   </div>
 
 
@@ -113,14 +88,19 @@
     </div>
     <div id="collapseOne" class="card-body collapse show">
       <ol>
-        <li>Select a province</li>
+        <li><strong>Select a province</strong></li>
         <li>Select a year range
           <div id="slider"></div>
         </li>
+        <li>Select a point for more information.</li>
         <li>Reset the map to start again</li>
+        <button type="button" class="btn btn-primary info" id="reset-btn">
+          Reset
+        </button>
     </div>
-
   </div>
+
+  <button type="button" class="btn btn-secondary info" data-toggle="modal" data-target="#infoModal" id="info-btn">?</button>
 
   <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
     integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="

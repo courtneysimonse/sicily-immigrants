@@ -226,52 +226,29 @@
       });
       firstPass = false;
 
+      province = this.feature.properties['NAME_2'];
+
       // add event to filter passenger data by origin province
-      updateMap(geojson, years, this.feature.properties['NAME_2'])
+      updateMap(geojson, years, province);
+      return province;
     }
 
-    // List of years 1880-1900
-    var y = 1880;
-    while (y <= 1900) {
+    slider.noUiSlider.on('change.one', function (values) {
 
-      // add year to dropdown list
-      $("#min-yr-list").append(
-        '<a class="dropdown-item min-yr" href="#">'+y+'</a>'
-      )
-      $("#max-yr-list").append(
-        '<a class="dropdown-item max-yr" href="#">'+y+'</a>'
-      )
-      y++
-    }
+      years[0] = values[0];
+      updateMap(geojson, years, province);
 
-    $(".min-yr").click(function(e) {
-
-      years[0] = Number($(this).text());
-
-      $("#min-yr").text(years[0]);
-      updateMap(geojson, years);
-
-      // clear Sicily province selection
-      sicilyLayer.eachLayer(function (layer) {
-        sicilyLayer.resetStyle(layer); // reset highlighting
-      });
-      clickID = null;
       return years;
+
     });
 
-    $(".max-yr").click(function(e) {
-      // console.log(Number($(this).text()));
-      years[1] = Number($(this).text());
-      // console.log(years);
-      $("#max-yr").text(years[1]);
-      updateMap(geojson, years);
+    slider.noUiSlider.on('change.two', function (values) {
 
-      // clear Sicily province selection
-      sicilyLayer.eachLayer(function (layer) {
-        sicilyLayer.resetStyle(layer); // reset highlighting
-      });
-      clickID = null;
+      years[1] = values[1];
+      updateMap(geojson, years, province);
+
       return years;
+
     });
 
     // When "Reset" button clicked, reset map to original state
@@ -286,9 +263,8 @@
       });
       clickID = null;
 
-      // reset year buttons
-      $("#min-yr").text(yearsOrig[0]);
-      $("#max-yr").text(yearsOrig[1]);
+      // reset year slider
+      slider.noUiSlider.reset();
 
       // clear passenger info box and hide card
       $("#info-list").empty();
