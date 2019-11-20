@@ -289,6 +289,9 @@
 
   function updateMap(geojson, years, province = "") {
     // console.log('updateMap');
+
+    $("#loader").show();
+
     originMarkers = L.layerGroup();
 
     markers.clearLayers();
@@ -360,7 +363,7 @@
     // copyFlowmapLayer.addLayer(L.canvasFlowmapLayer(filteredData));
     // map.addLayer(flowmapLayer);
     // sicilyMap.addLayer(copyFlowmapLayer);
-
+    $("#loader").hide();
   }; //end updateMap
 
 
