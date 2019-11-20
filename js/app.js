@@ -12,6 +12,10 @@
       range: {
           'min': 1880,
           'max': 1900
+      },
+      pips: {
+        mode: 'range',
+        density: 3
       }
   });
 
@@ -93,6 +97,7 @@
   var clickID = null;
   var hoverID = null;
   var firstPass = true;
+  var province = "";
 
   // var flowmapLayer = L.layerGroup();
   // var copyFlowmapLayer = L.layerGroup(); // use copy to add layer to second map

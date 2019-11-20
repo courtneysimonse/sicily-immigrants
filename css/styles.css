@@ -58,11 +58,19 @@ html, body {
   z-index: 1;
 }
 
-h1 {
+.title {
   position: absolute;
   background: rgba(255,255,255,0.9);
   border-radius: 5px;
   font-weight: bold;
+}
+
+#arrow {
+  border-right: 10px solid;
+  border-bottom: 10px solid;
+  height: 30px;
+  width: 30px;
+  transform: rotate(-45deg);
 }
 
 .container-fluid {
