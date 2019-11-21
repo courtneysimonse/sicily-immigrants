@@ -22,7 +22,7 @@
   var sicilyOpts = {
     zoomControl: false,
     attributionControl: false,
-    center: [37.5, 14],
+    center: [37.5, 12.7],
     zoom: 7,
     maxBounds: [[40, 20],[33, 8]]
   }

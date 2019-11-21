@@ -90,6 +90,7 @@ html, body {
   position: absolute;
   bottom: 18px;
   left: 18px;
+  width: 215px;
   z-index: 100;
 }
 
