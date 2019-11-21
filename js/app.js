@@ -34,7 +34,7 @@
   // US map options
   var options = {
         zoomSnap: .5,
-        center: [38, -85],
+        center: [39, -97],
         zoom: 4,
         minZoom: 2,
         zoomControl: false,
@@ -50,7 +50,7 @@
     attributionControl: false,
     center: [37.5, 14],
     zoom: 7,
-    maxBounds: [[39.9, 17.8],[35.0, 10.2]]
+    maxBounds: [[40, 20],[33, 8]]
   }
   var sicilyMap = L.map('sicilyMap', sicilyOpts);
 
@@ -209,7 +209,7 @@
       }, {"sticky": true})
       .addTo(sicilyMap);
 
-    updateMap(geojson, yearsOrig);
+    // updateMap(geojson, yearsOrig);
 
     function highlight(e) {
       // if the feature's _leaflet_id is different than last click
@@ -255,10 +255,15 @@
       $("li").removeClass("active");
       $("#step-two").addClass("active");
 
+      // hide passenger info area
+      $("#info-area").hide();
+      // clear markers on Sicily map
+      originMarkers.clearLayers();
+
       // add event to filter passenger data by origin province
       updateMap(geojson, years, province);
       return province;
-    }
+    }  //end highlightSelection()
 
     slider.noUiSlider.on('change.one', function (values) {
 
@@ -318,7 +323,7 @@
     });
 
     // L.geoJSON(geojson).addTo(map)
-    // updateMap(geojson, years);
+    updateMap(geojson, years);
     // var flowmapLayer = L.canvasFlowmapLayer(geojson).addTo(map).addTo(sicilyMap);
 
   };  // end drawMap
@@ -328,7 +333,7 @@
 
     $("#loader").show();
 
-    originMarkers = L.layerGroup();
+    // originMarkers = L.layerGroup();
 
     markers.clearLayers();
     originMarkers.clearLayers();
