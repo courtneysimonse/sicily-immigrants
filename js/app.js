@@ -3,32 +3,6 @@
   // hide Passenger Info card
   $("#info-area").hide();
 
-  // create slider for year range
-  var slider = document.getElementById('slider');
-
-  noUiSlider.create(slider, {
-      start: [1885, 1890],
-      connect: true,
-      range: {
-          'min': 1880,
-          'max': 1900
-      },
-      step: 1,
-      format: {
-        to: function (value) {
-          return value.toFixed(0);
-        },
-        from: function (value) {
-          return Number(value);
-        }
-      },
-      tooltips: [true, true]
-      // pips: {
-      //   mode: 'range',
-      //   density: 3
-      // }
-  });
-
   var sicilyColors = chroma.scale('Accent').colors(9);
 
   // US map options
@@ -103,13 +77,39 @@
   //
   // }
 
-  var yearsOrig = [1890, 1891];
-  var years = yearsOrig
+  var yearsOrig = [1885, 1890];
+  var years = yearsOrig;
   var geojson = {};
   var clickID = null;
   var hoverID = null;
   var firstPass = true;
   var province = "";
+
+  // create slider for year range
+  var slider = document.getElementById('slider');
+
+  noUiSlider.create(slider, {
+      start: yearsOrig,
+      connect: true,
+      range: {
+          'min': 1880,
+          'max': 1900
+      },
+      step: 1,
+      format: {
+        to: function (value) {
+          return value.toFixed(0);
+        },
+        from: function (value) {
+          return Number(value);
+        }
+      },
+      tooltips: [true, true]
+      // pips: {
+      //   mode: 'range',
+      //   density: 3
+      // }
+  });
 
   // var flowmapLayer = L.layerGroup();
   // var copyFlowmapLayer = L.layerGroup(); // use copy to add layer to second map
@@ -304,7 +304,9 @@
       clickID = null;
 
       // reset year slider
-      slider.noUiSlider.reset();
+      slider.noUiSlider.set([1885,1890]);
+      // years = yearsOrig;  //why doesn't this work??
+      years = [1885,1890];
 
       // clear passenger info box and hide card
       $("#info-list").empty();
@@ -319,7 +321,7 @@
       // remove marker from Sicily map
       originMarkers.clearLayers();
 
-      updateMap(geojson, yearsOrig);
+      updateMap(geojson, years);
     });
 
     // L.geoJSON(geojson).addTo(map)
