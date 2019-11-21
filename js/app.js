@@ -343,15 +343,18 @@
       filter: function (feature) {
         arrival = feature.properties['ArrivalYr'];
         originProv = feature.properties['Province'];
-        if (arrival >= years[0] && arrival <= years[1]) {
-          if (province == "") {
-            return true
-          }
-          else if (originProv == province) {
-            // filteredData.features.push(feature);
-            return true
+        if (feature.properties['destination_city'] != 'USA') {
+          if (arrival >= years[0] && arrival <= years[1]) {
+            if (province == "") {
+              return true
+            }
+            else if (originProv == province) {
+              // filteredData.features.push(feature);
+              return true
+            }
           }
         }
+
       },
       pointToLayer: function (feature, latlng) {
         var props = feature.properties
