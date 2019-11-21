@@ -19,6 +19,8 @@
       }
   });
 
+  var sicilyColors = chroma.scale('Set2').colors(9);
+
   // US map options
   var options = {
         zoomSnap: .5,
@@ -157,22 +159,28 @@
   };
 
   function drawMap(geojson, sicily) {
-    var sicilyStyle = {
-      "color": "#006d2c",
-      'fillColor': '#006d2c',
-      'fillOpacity': .2,
-      "clickable": true
-    };
+    // var sicilyStyle = {
+    //   "color": "#006d2c",
+    //   'fillColor': '#006d2c',
+    //   'fillOpacity': .2,
+    //   "clickable": true
+    // };
 
-    var sicilyColors = {
-      "base": "",
-      "selection": ""
-    }
+    // var sicilyColors = {
+    //   "base": "",
+    //   "selection": ""
+    // }
 
     // console.log(sicily);
     var sicilyLayer = L.geoJSON(sicily, {
       // set style for Sicily polygons
-      style: sicilyStyle,
+      style: function (feature) {
+        return {
+          fillColor: sicilyColors[feature.properties.ID],
+          color: sicilyColors[feature.properties.ID],
+          fillOpacity: .2
+        }
+      },
       // loop through each feature
       onEachFeature: function (feature, layer) {
         // set behavior on
@@ -198,7 +206,7 @@
       if (this._leaflet_id != clickID) {
         // style to highlight polygon
         this.setStyle({
-          'fillColor': '#16dd66',
+          // 'fillColor': '#16dd66',
           'fillOpacity': .6
         });
       }
@@ -225,7 +233,7 @@
 
       // set style of selection
       this.setStyle({
-        'fillColor': '#16dd66',
+        // 'fillColor': '#16dd66',
         'fillOpacity': .9
         // 'color': '#16dd66'
       });
