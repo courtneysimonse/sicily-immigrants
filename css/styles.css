@@ -97,6 +97,13 @@ html, body {
 	background: #2de075;
 }
 
+.noUi-tooltip {
+    display: none;
+}
+.noUi-active .noUi-tooltip {
+    display: block;
+}
+
 #info-btn {
   position: absolute;
   bottom: 18px;

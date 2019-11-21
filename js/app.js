@@ -13,13 +13,23 @@
           'min': 1880,
           'max': 1900
       },
-      pips: {
-        mode: 'range',
-        density: 3
-      }
+      step: 1,
+      format: {
+        to: function (value) {
+          return value.toFixed(0);
+        },
+        from: function (value) {
+          return Number(value);
+        }
+      },
+      tooltips: [true, true]
+      // pips: {
+      //   mode: 'range',
+      //   density: 3
+      // }
   });
 
-  var sicilyColors = chroma.scale('Set2').colors(9);
+  var sicilyColors = chroma.scale('Accent').colors(9);
 
   // US map options
   var options = {
@@ -178,7 +188,7 @@
         return {
           fillColor: sicilyColors[feature.properties.ID],
           color: sicilyColors[feature.properties.ID],
-          fillOpacity: .2
+          fillOpacity: .4
         }
       },
       // loop through each feature
@@ -207,7 +217,7 @@
         // style to highlight polygon
         this.setStyle({
           // 'fillColor': '#16dd66',
-          'fillOpacity': .6
+          'fillOpacity': .7
         });
       }
     }
