@@ -265,21 +265,13 @@
       return province;
     }  //end highlightSelection()
 
-    slider.noUiSlider.on('change.one', function (values) {
-
-      years[0] = values[0];
-      updateMap(geojson, years, province);
-
-      // hightlight step-three
-      $("li").removeClass("active");
-      $("#step-three").addClass("active");
-
-      return years;
-
+    slider.noUiSlider.on('slide', function () {
+      $(".spinner-border").show()
     });
 
-    slider.noUiSlider.on('change.two', function (values) {
+    slider.noUiSlider.on('change', function (values) {
 
+      years[0] = values[0];
       years[1] = values[1];
       updateMap(geojson, years, province);
 
@@ -333,7 +325,7 @@
   function updateMap(geojson, years, province = "") {
     // console.log('updateMap');
 
-    $("#loader").show();
+    $(".spinner-border").show();
 
     // originMarkers = L.layerGroup();
 
@@ -409,7 +401,7 @@
     // copyFlowmapLayer.addLayer(L.canvasFlowmapLayer(filteredData));
     // map.addLayer(flowmapLayer);
     // sicilyMap.addLayer(copyFlowmapLayer);
-    $("#loader").hide();
+    $(".spinner-border").hide();
   }; //end updateMap
 
 
