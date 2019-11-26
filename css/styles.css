@@ -90,7 +90,7 @@ html, body {
   position: absolute;
   bottom: 18px;
   left: 18px;
-  width: 215px;
+  /* width: 215px; */
   z-index: 100;
 }
 
@@ -105,7 +105,7 @@ html, body {
     display: block;
 }
 
-#info-btn {
+#btn-grp {
   position: absolute;
   bottom: 18px;
   right: 18px;

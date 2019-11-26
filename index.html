@@ -92,26 +92,22 @@
   </div>
 
   <div class="card" id="ui-controls">
-    <div class="card-header">
-      <a href="#" class="btn dropdown-toggle" data-toggle="collapse" data-target="#collapseOne">Instructions</a>
-    </div>
+    <a href="#" class="btn dropdown-toggle" data-toggle="collapse" data-target="#collapseOne">Instructions</a>
     <div id="collapseOne" class="card-body collapse show">
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item active" id="step-one">Select a province</li>
-        <li class="list-group-item" id="step-two"><p class="pb-1">Select a year range</p>
+      <ol class="list-group">
+        <li class="list-group-item active" id="step-one">1. Select a province</li>
+        <li class="list-group-item" id="step-two"><p class="pb-1">2. Select a year range</p>
           <div id="slider"></div>
         </li>
-        <li class="list-group-item" id="step-three">Select a point for more information.</li>
-        <li class="list-group-item" id="step-four">
-          <button type="button" class="btn btn-primary info" id="reset-btn">
-            Reset
-          </button> the map to start again
-        </li>
+        <li class="list-group-item" id="step-three">3. Select a point for more information.</li>
+      </ol>
 
     </div>
   </div>
-
-  <button type="button" class="btn btn-secondary info" data-toggle="modal" data-target="#infoModal" id="info-btn">?</button>
+  <div id="btn-grp">
+    <button type="button" class="btn btn-primary info" id="reset-btn">Reset</button>
+    <button type="button" class="btn btn-secondary info" data-toggle="modal" data-target="#infoModal" id="info-btn">?</button>
+  </div>
 
   <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
     integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
