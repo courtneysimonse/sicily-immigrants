@@ -3,6 +3,10 @@
   // hide Passenger Info card
   $("#info-area").hide();
 
+  // hide arrows
+  $("#arrow-2").hide();
+  $("#arrow-3").hide();
+
   var sicilyColors = chroma.scale('Accent').colors(9);
 
   // US map options
@@ -253,7 +257,9 @@
 
       // hightlight step-two
       $("li").removeClass("next");
+      $("#arrow-1").hide();
       $("#step-two").addClass("next");
+      $("#arrow-2").show();
 
       // hide passenger info area
       $("#info-area").hide();
@@ -277,7 +283,9 @@
 
       // hightlight step-three
       $("li").removeClass("next");
+      $("#arrow-2").hide();
       $("#step-three").addClass("next");
+      $("#arrow-3").show();
 
       return years;
 
@@ -306,9 +314,12 @@
 
       // reset ui-controls highlighting
       $("li").removeClass("next");
+      $("#arrow-2").hide();
+      $("#arrow-3").hide();
 
       // highlight step-one
       $("#step-one").addClass("next");
+      $("#arrow-1").show();
 
       // remove marker from Sicily map
       originMarkers.clearLayers();
