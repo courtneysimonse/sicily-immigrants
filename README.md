@@ -33,7 +33,7 @@ My aim is for the user to gain some understanding of the history of immigration 
 **Wrangling and analysis process**
 
 - I scraped the passenger and manifest header data using the process documented in jupyter notebook [NARA_scraper.ipynb](NARA_scraper.ipynb), resulting in three passenger data files ([italians_parta.csv](data/italians_parta.csv), [italians_partb.csv](data/italians_partb.csv), and [italans_partc.csv](data/italians_partc.csv)) and [manifest_list_1855_1900.csv](data/manifest_list_1855_1900.csv).  
-- In the Jupyter Notebook [Italians_data_exploration.ipynb](Italians_data_exploration.ipynb), I combined the three passenger data files into [italians_to_america.csv](data/italians_to_america.csv). I then used the list of communes in Sicily [communes_sicily.csv](data/communes_sicily.csv) to filter the passengers to only those that reported a last previous residence in Sicily. I did not account for multiple communes with the same name or any now defunct communes in this analysis. 
+- In the Jupyter Notebook [Italians_data_exploration.ipynb](Italians_data_exploration.ipynb), I combined the three passenger data files into [italians_to_america.csv](data/italians_to_america.csv). I then used the list of communes in Sicily [communes_sicily.csv](data/communes_sicily.csv) to filter the passengers to only those that reported a last previous residence in Sicily. I did not account for multiple communes with the same name or any now defunct communes in this analysis.
 
   I then added the province name as a new column by matching with the commune name. Finally, I converted the Manifest ID to be "int" to match the manifest list file and added the manifest header information to the passenger data file.
 
@@ -55,5 +55,16 @@ Example of cleaned data:
  + I aggregated "Final Destination" data to match duplicates in [destinations.ipynb](destinations.ipynb).
  + I added geocoding results from [geocoding.ipynb](geocoding.ipynb) back to the passenger data.  
 
+### B. Map
+**Usability Considerations**
 
+
+**Technology Stack**
+
+
+**Final Map**
+
+[courtneysimonse.ninja/sicily-immigrants](courtneysimonse.ninja/sicily-immigrants)
+
+## Conclusion
  Ellis Island and its predecessor, Castle Garden, processed many immigrants. Today, over 40% of Americans can trace their roots back to one of these immigrants ([Ellis Island Fact Sheet](https://www.nps.gov/npnh/learn/news/fact-sheet-elis.htm)). I want to design a map that explore emigration from Sicily to the United States because I want to find out what the patterns were, in order to help the map user or audience understand US immigration better.

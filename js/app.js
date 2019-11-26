@@ -252,8 +252,8 @@
       province = this.feature.properties['NAME_2'];
 
       // hightlight step-two
-      $("li").removeClass("active");
-      $("#step-two").addClass("active");
+      $("li").removeClass("next");
+      $("#step-two").addClass("next");
 
       // hide passenger info area
       $("#info-area").hide();
@@ -276,8 +276,8 @@
       updateMap(geojson, years, province);
 
       // hightlight step-three
-      $("li").removeClass("active");
-      $("#step-three").addClass("active");
+      $("li").removeClass("next");
+      $("#step-three").addClass("next");
 
       return years;
 
@@ -305,10 +305,10 @@
       $("#info-area").hide();
 
       // reset ui-controls highlighting
-      $("li").removeClass("active");
+      $("li").removeClass("next");
 
       // highlight step-one
-      $("#step-one").addClass("active");
+      $("#step-one").addClass("next");
 
       // remove marker from Sicily map
       originMarkers.clearLayers();
