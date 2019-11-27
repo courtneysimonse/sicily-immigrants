@@ -83,6 +83,9 @@
 
   var yearsOrig = [1885, 1890];
   var years = yearsOrig;
+  // show year range in UI control area
+  var year0 = $("#year-0").html(years[0]);
+  var year1 = $("#year-1").html(years[1]);
   var geojson = {};
   var clickID = null;
   var hoverID = null;
@@ -277,8 +280,12 @@
 
     slider.noUiSlider.on('change', function (values) {
 
+      // set years to new slider values and display on ui-controls
       years[0] = values[0];
+      year0.html(values[0]);
       years[1] = values[1];
+      year1.html(values[1]);
+      
       updateMap(geojson, years, province);
 
       // hightlight step-three
