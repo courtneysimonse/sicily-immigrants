@@ -110,7 +110,7 @@ html, body {
 }
 
 .next {
-  color: #b51d0d;
+  font-weight: bold;
 }
 
 .leaflet-tooltip {
