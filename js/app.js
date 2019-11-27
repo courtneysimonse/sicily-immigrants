@@ -283,7 +283,7 @@
       year0.html(values[0]);
       years[1] = values[1];
       year1.html(values[1]);
-      
+
       updateMap(geojson, years, province);
 
       // hightlight step-three
