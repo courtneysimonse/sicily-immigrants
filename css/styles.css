@@ -94,6 +94,13 @@ html, body {
   z-index: 100;
 }
 
+#legend {
+  position: absolute;
+  z-index: 1200; /* place above map */
+  top: 200px;
+  left: 18px;
+}
+
 .noUi-connect {
 	background: #2de075;
 }

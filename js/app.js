@@ -176,25 +176,24 @@
   };
 
   function drawMap(geojson, sicily) {
-    // var sicilyStyle = {
-    //   "color": "#006d2c",
-    //   'fillColor': '#006d2c',
-    //   'fillOpacity': .2,
-    //   "clickable": true
-    // };
 
-    // var sicilyColors = {
-    //   "base": "",
-    //   "selection": ""
-    // }
+    // build legend
+    var legendList = $("#legend-list");
+    // loop through the features and create a new
+    // list item for each feature in the legend
+    sicily.features.forEach(function (feature) {
+      legendList.append('<li class="legend-item" id="obj-id-' + feature.properties["ID"] +
+          '"><a style="color:' + sicilyColors[feature.properties["ID"]] + '" href="#">' +
+          feature.properties["NAME_2"] + '</a></li>');
+    });
 
     // console.log(sicily);
     var sicilyLayer = L.geoJSON(sicily, {
       // set style for Sicily polygons
       style: function (feature) {
         return {
-          fillColor: sicilyColors[feature.properties.ID],
-          color: sicilyColors[feature.properties.ID],
+          fillColor: sicilyColors[feature.properties["ID"]],
+          color: sicilyColors[feature.properties["ID"]],
           fillOpacity: .4
         }
       },
@@ -285,7 +284,7 @@
       year0.html(values[0]);
       years[1] = values[1];
       year1.html(values[1]);
-      
+
       updateMap(geojson, years, province);
 
       // hightlight step-three
