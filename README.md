@@ -59,8 +59,16 @@ Example of cleaned data:
 **Usability Considerations**
 
 
-**Technology Stack**
-
+**Medium for Delivery**
+The final product is a web map accessible via a web browser on desktop and mobile.
+- HTML
+- CSS (Bootstrap framwork and custom styling)
+- JavaScript packages
+    - Leaflet.js
+    - JQuery
+    - PapaParse
+    - Leaflet.markercluster
+    - noUiSlider
 
 **Final Map**
 
