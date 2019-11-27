@@ -208,11 +208,7 @@
           click: highlightSelection
         })
       }
-    }).bindTooltip(function(layer) {
-        // add tooltip with province name
-        return layer.feature.properties['NAME_2']
-      }, {"sticky": true}).openTooltip()
-      .addTo(sicilyMap);
+    }).addTo(sicilyMap);
 
     // updateMap(geojson, yearsOrig);
 
@@ -425,7 +421,7 @@
       pointToLayer: function (feature, latlng) {
         // console.log(feature);
         var labelIcon = L.divIcon({
-          html: "<strong>"+feature.properties.name+"</strong>",
+          html: feature.properties.name,
           className: 'label-icon'
         });
         return L.marker(latlng, {
