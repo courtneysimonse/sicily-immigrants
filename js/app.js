@@ -28,13 +28,15 @@
     attributionControl: false,
     center: [37.5, 13.5],
     zoom: 7,
+    minZoom: 6.5,
+    zoomSnap: .2,
     maxBounds: [[40, 20],[33, 8]]
   }
   var sicilyMap = L.map('sicilyMap', sicilyOpts);
 
   // request tiles and add to map
-  var CartoDB_Positron = L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png', {
-  	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="http://cartodb.com/attributions">CartoDB</a>',
+  var CartoDB_PositronNoLabels = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png', {
+  	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
   	subdomains: 'abcd',
   	maxZoom: 19
   }).addTo(sicilyMap);
@@ -53,6 +55,13 @@
       	// 	console.log("Row:", row.data);
       	// },
       	complete: function(data) {
+          $.getJSON('data/sicily-labels.json', function(labels) {
+            drawLabels(labels);
+          }).fail(function(error) {
+              // the data file failed to load
+              console.log("Error... error...");
+              // console.log(error);
+          });
       		console.log("All done!");
           processData(data.data);
           drawMap(geojson, sicily);
@@ -173,17 +182,6 @@
   };
 
   function drawMap(geojson, sicily) {
-    // var sicilyStyle = {
-    //   "color": "#006d2c",
-    //   'fillColor': '#006d2c',
-    //   'fillOpacity': .2,
-    //   "clickable": true
-    // };
-
-    // var sicilyColors = {
-    //   "base": "",
-    //   "selection": ""
-    // }
 
     // console.log(sicily);
     var sicilyLayer = L.geoJSON(sicily, {
@@ -210,7 +208,7 @@
     }).bindTooltip(function(layer) {
         // add tooltip with province name
         return layer.feature.properties['NAME_2']
-      }, {"sticky": true})
+      }, {"sticky": true}).openTooltip()
       .addTo(sicilyMap);
 
     // updateMap(geojson, yearsOrig);
@@ -414,6 +412,22 @@
     // sicilyMap.addLayer(copyFlowmapLayer);
     $(".spinner-border").hide();
   }; //end updateMap
+
+  function drawLabels(labelsJSON) {
+    L.geoJSON(labelsJSON, {
+      pointToLayer: function (feature, latlng) {
+        // console.log(feature);
+        var labelIcon = L.divIcon({
+          html: "<strong>"+feature.properties.name+"</strong>",
+          className: 'label-icon'
+        });
+        return L.marker(latlng, {
+          icon: labelIcon,
+          interactive: false
+        }).bindTooltip();
+      }
+    }).addTo(sicilyMap);
+  }; //end drawLabels
 
 
 })();
