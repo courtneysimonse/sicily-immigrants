@@ -28,7 +28,7 @@
     attributionControl: false,
     center: [37.5, 13.5],
     zoom: 7,
-    maxBounds: [[40, 20],[33, 8]]
+    maxBounds: [[40, 20],[30, 8]]
   }
   var sicilyMap = L.map('sicilyMap', sicilyOpts);
 
@@ -285,7 +285,7 @@
       year0.html(values[0]);
       years[1] = values[1];
       year1.html(values[1]);
-      
+
       updateMap(geojson, years, province);
 
       // hightlight step-three
