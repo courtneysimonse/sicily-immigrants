@@ -51,6 +51,7 @@
       Papa.parse('data/sicily_passengers.csv', {
         download: true,
         dynamicTyping: true,
+        header: true,
         // step: function(row) {
       	// 	console.log("Row:", row.data);
       	// },
@@ -65,8 +66,7 @@
       		console.log("All done!");
           processData(data.data);
           drawMap(geojson, sicily);
-      	},
-        header: true
+      	}
       });
   })
   .fail(function(error) {
@@ -177,7 +177,8 @@
         // console.log(datum);
         // console.log(feature);
       } else {
-        // filter out generic data
+        // filter out generic data - after researching, Altona looks like a transcription
+        // error. The documents say "United States of America"
         if (datum.destination_city == "Usa" | datum.destination_city == "Altona") {
 
         }else {
