@@ -177,8 +177,13 @@
         // console.log(datum);
         // console.log(feature);
       } else {
-        // push each feature to geojson
-        geojson.features.push(feature)
+        // filter out generic data
+        if (datum.destination_city == "Usa" | datum.destination_city == "Altona") {
+
+        }else {
+          // push each feature to geojson
+          geojson.features.push(feature)
+        }
       }
 
     });
@@ -357,7 +362,6 @@
       filter: function (feature) {
         arrival = feature.properties['ArrivalYr'];
         originProv = feature.properties['Province'];
-        if (feature.properties['destination_city'] != 'USA') {
           if (arrival >= years[0] && arrival <= years[1]) {
             if (province == "") {
               return true
@@ -367,7 +371,6 @@
               return true
             }
           }
-        }
 
       },
       pointToLayer: function (feature, latlng) {
