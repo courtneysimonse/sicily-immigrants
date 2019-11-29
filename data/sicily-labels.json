@@ -1,0 +1,122 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Catania"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.853515625,
+          37.579412513438385
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Siracusa"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.9468994140625,
+          37.09462150015557
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Ragusa"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.496459960937502,
+          36.94111143010769
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Caltanissetta"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.897705078125,
+          37.22158045838649
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Agrigento"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2440185546875,
+          37.501010429493284
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Trapani"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.5518798828125,
+          37.80978395301097
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Palermo"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.216552734375,
+          37.91820111976663
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Messina"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.00732421875,
+          38.039438891821746
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Enna"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.348144531249998,
+          37.63163475580643
+        ]
+      }
+    }
+  ]
+}

@@ -89,6 +89,7 @@ html, body {
 .noUi-tooltip {
     display: none;
 }
+
 .noUi-active .noUi-tooltip {
     display: block;
 }
@@ -109,9 +110,14 @@ html, body {
 }
 
 .next {
-  color: #b51d0d;
+  font-weight: bold;
 }
 
 .leaflet-tooltip {
   font-family: 'Poppins', sans-serif;
+}
+
+.label-icon {
+  font-family: 'Poppins', sans-serif;
+  text-shadow: 0 0 1em white, 0 0 .2em white, 1px 1px 2px white;
 }
