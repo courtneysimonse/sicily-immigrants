@@ -30,7 +30,7 @@
     zoom: 7,
     minZoom: 6.5,
     zoomSnap: .2,
-    maxBounds: [[40, 20],[33, 8]]
+    maxBounds: [[41, 20],[33, 8]]
   }
   var sicilyMap = L.map('sicilyMap', sicilyOpts);
 
@@ -143,6 +143,12 @@
   var markerOptions = {
     radius: 5,
     color: '#de2d26'
+  }
+  var originMarkerOpts = {
+    radius: 5,
+    color: '#de2d26',
+    fillColor: 'yellow',
+    fillOpacity: 0.8
   }
 
   function processData(data) {
@@ -379,10 +385,15 @@
             'Arrival: ' + props['Arrival'])
           .on('click', function(e) {
             // console.log(props);
+            // clear marker on Sicily map from prev click
             originMarkers.clearLayers();
-            L.circleMarker([Number(props.origin_lat), Number(props.origin_lon)], markerOptions)
+            // create marker at origin city coords and add to map
+            var originCoords = [Number(props.origin_lat), Number(props.origin_lon)];
+            L.circleMarker(originCoords, originMarkerOpts)
               .addTo(originMarkers);
             originMarkers.addTo(sicilyMap);
+            // zoom to origin marker
+            sicilyMap.flyTo(originCoords, 7.5)
             $("#info-area").show();
             // remove previous passenger info
             $("#info-list").empty();
