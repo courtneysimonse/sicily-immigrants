@@ -142,10 +142,7 @@
   // });
   var markerOptions = {
     radius: 5,
-    fillColor: '#de2d26',
-    color: '#d7beb2',
-    weight: 2,
-    fillOpacity: .8
+    color: '#de2d26'
   }
 
   function processData(data) {
