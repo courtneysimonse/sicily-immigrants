@@ -62,7 +62,7 @@ Example of cleaned data:
 **Medium for Delivery**
 The final product is a web map accessible via a web browser on desktop and mobile.
 - HTML
-- CSS (Bootstrap framwork and custom styling)
+- CSS (Bootstrap framework and custom styling)
 - JavaScript packages
     - Leaflet.js
     - JQuery

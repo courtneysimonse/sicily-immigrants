@@ -132,7 +132,10 @@
   var markers = L.markerClusterGroup({
     showCoverageOnHover: false,
     maxClusterRadius: 30,
-    chunkedLoading: true
+    chunkedLoading: true,
+    spiderLegPolylineOptions: {
+      color: "#fee0d2"
+    }
   });
   var originMarkers = L.layerGroup();
   // var originMarkers = L.markerClusterGroup({
@@ -147,7 +150,7 @@
   var originMarkerOpts = {
     radius: 5,
     color: '#de2d26',
-    fillColor: 'yellow',
+    fillColor: '#fff7d4',
     fillOpacity: 0.8
   }
 
