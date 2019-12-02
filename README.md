@@ -30,10 +30,17 @@ My aim is for the user to gain some understanding of the history of immigration 
 - [List of the communes in Sicily](https://en.wikipedia.org/wiki/List_of_communes_of_Sicily) from Wikipedia
 - Province boundaries for Italy from http://www.diva-gis.org/. I am using modern-day province boundaries.
 
-**Wrangling and analysis process**
+**Tools**  
+- Python
+  - Jupyter Notebook
+  - BeautifulSoup
+  - Pandas
+  - Geocoder
+- QGIS
 
-- I scraped the passenger and manifest header data using the process documented in jupyter notebook [NARA_scraper.ipynb](NARA_scraper.ipynb), resulting in three passenger data files ([italians_parta.csv](data/italians_parta.csv), [italians_partb.csv](data/italians_partb.csv), and [italans_partc.csv](data/italians_partc.csv)) and [manifest_list_1855_1900.csv](data/manifest_list_1855_1900.csv).  
-- In the Jupyter Notebook [Italians_data_exploration.ipynb](Italians_data_exploration.ipynb), I combined the three passenger data files into [italians_to_america.csv](data/italians_to_america.csv). I then used the list of communes in Sicily [communes_sicily.csv](data/communes_sicily.csv) to filter the passengers to only those that reported a last previous residence in Sicily. I did not account for multiple communes with the same name or any now defunct communes in this analysis.
+**Wrangling and analysis process**
+- I scraped the passenger and manifest header data using the process documented in jupyter notebook [NARA_scraper.ipynb](project-files/NARA_scraper.ipynb), resulting in three passenger data files ([italians_parta.csv](project-files/italians_parta.csv), [italians_partb.csv](project-files/italians_partb.csv), and [italans_partc.csv](project-files/italians_partc.csv)) and [manifest_list_1855_1900.csv](project-files/manifest_list_1855_1900.csv).  
+- In the Jupyter Notebook [Italians_data_exploration.ipynb](project-files/Italians_data_exploration.ipynb), I combined the three passenger data files into [italians_to_america.csv](project-files/italians_to_america.csv). I then used the list of communes in Sicily [communes_sicily.csv](project-files/communes_sicily.csv) to filter the passengers to only those that reported a last previous residence in Sicily. I did not account for multiple communes with the same name or any now defunct communes in this analysis.
 
   I then added the province name as a new column by matching with the commune name. Finally, I converted the Manifest ID to be "int" to match the manifest list file and added the manifest header information to the passenger data file.
 
@@ -52,15 +59,18 @@ Example of cleaned data:
 |   8   |  DACQUISTO   |    LORENZO    |          22          |    BLACKSMITH    |   UNKNOWN    |        ITALY        |           PALERMO           |        NEW YORK         |  Staying in the USA [Transit]; Stowaway [Travel]  |     80591      |   Palermo    |   GOTTARDO   |     ANTWERP      | 11/30/1884  |
 |   9   |    DERASE    |     LUIGI     |       Unknown        |     UNKNOWN      |   UNKNOWN    |        ITALY        |           MESSINA           |        NEW YORK         |  Staying in the USA [Transit]; Stowaway [Travel]  |       63       |   Messina    |    ALESIA    | MESSINA & NAPLES | 04/25/1885  |
 
- + I aggregated "Final Destination" data to match duplicates in [destinations.ipynb](destinations.ipynb).
- + I added geocoding results from [geocoding.ipynb](geocoding.ipynb) back to the passenger data.  
+ + I aggregated "Final Destination" data to match duplicates in [destinations.ipynb](project-files/destinations.ipynb).
+ + I added geocoding results from [geocoding.ipynb](project-files/geocoding.ipynb) back to the passenger data.  
+ + I used QGIS to filter the Italy province GeoJSON to include only Sicily.
 
 ### B. Map
-**Usability Considerations**
+**User Interaction and Design Considerations**  
+The web page initially loads with an initial year range pre-selected and no province filter. An instructions card in the lower left invites the user to select a province, select a year range via a two-handle slider, then expand a cluster for more information.  
+The province polygons are highlighted on mouseover as an indicator. The passenger data points have a tooltip attached on mouseover, as well. When the user clicks a point, both a point corresponding to the passenger's reported origin and an informational area in the top right with additional information about the passenger appears.  
+Two button are in the bottom right. The Reset button restores the maps to their original states. The ? button provides metadata.
 
-
-**Medium for Delivery**
-The final product is a web map accessible via a web browser on desktop and mobile.
+**Medium for Delivery**  
+The final product is a web map accessible via a web browser on desktop and mobile. The technology stack includes:  
 - HTML
 - CSS (Bootstrap framework and custom styling)
 - JavaScript packages
@@ -75,4 +85,4 @@ The final product is a web map accessible via a web browser on desktop and mobil
 [courtneysimonse.ninja/sicily-immigrants](courtneysimonse.ninja/sicily-immigrants)
 
 ## Conclusion
- Ellis Island and its predecessor, Castle Garden, processed many immigrants. Today, over 40% of Americans can trace their roots back to one of these immigrants ([Ellis Island Fact Sheet](https://www.nps.gov/npnh/learn/news/fact-sheet-elis.htm)). I want to design a map that explore emigration from Sicily to the United States because I want to find out what the patterns were, in order to help the map user or audience understand US immigration better.
+ Ellis Island and its predecessor, Castle Garden, processed many immigrants. Today, over 40% of Americans can trace their roots back to one of these immigrants ([Ellis Island Fact Sheet](https://www.nps.gov/npnh/learn/news/fact-sheet-elis.htm)). I have designed a map that explores emigration from Sicily to the United States in order to help the map user or audience understand US immigration better.
