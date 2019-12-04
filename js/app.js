@@ -136,7 +136,12 @@
     spiderLegPolylineOptions: {
       color: "#fee0d2"
     }
-  });
+  })
+  // .on('spiderfied', function (e) {
+  //   map.flyTo(e.cluster._latlng);
+  //   e.cluster.spiderfy();
+  // });
+  //
   var originMarkers = L.layerGroup();
   // var originMarkers = L.markerClusterGroup({
   //   showCoverageOnHover: false,
@@ -394,9 +399,7 @@
             });
           })
           .on('mouseout', function (e) {
-            e.target.setStyle({
-              fillOpacity: .4
-            });
+            e.target.setStyle(markerOptions);
           })
           .on('click', function(e) {
             // console.log(props);
@@ -407,6 +410,9 @@
             L.circleMarker(originCoords, originMarkerOpts)
               .addTo(originMarkers);
             originMarkers.addTo(sicilyMap);
+            // center passenger marker
+            // console.log(e.target._latlng);
+            // map.flyTo(e.target._latlng)
             // zoom to origin marker
             sicilyMap.flyTo(originCoords, 7.5)
             $("#info-area").show();
