@@ -145,7 +145,9 @@
   // });
   var markerOptions = {
     radius: 5,
-    color: '#de2d26'
+    color: '#de2d26',
+    fillColor: "#fff7d4",
+    fillOpacity: .5
   }
   var originMarkerOpts = {
     radius: 5,
@@ -386,6 +388,16 @@
           .bindTooltip('Origin: ' + props['origin_city'] + ", " + props['Province'] + '<br>' +
             'Destination: ' + props['destination_city'] + '<br>' +
             'Arrival: ' + props['Arrival'])
+          .on('mouseover', function (e) {
+            e.target.setStyle({
+              fillOpacity: 1
+            });
+          })
+          .on('mouseout', function (e) {
+            e.target.setStyle({
+              fillOpacity: .4
+            });
+          })
           .on('click', function(e) {
             // console.log(props);
             // clear marker on Sicily map from prev click
