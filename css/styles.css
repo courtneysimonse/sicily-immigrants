@@ -48,9 +48,10 @@ html, body {
 
 .title {
   position: absolute;
-  background: rgba(255,255,255,0.9);
+  background: #fbeae9;
   border-radius: 5px;
   font-weight: bold;
+  color: #195a17;
 }
 
 .container-fluid {
@@ -80,7 +81,12 @@ html, body {
   left: 18px;
   width: 300px;
   z-index: 100;
+  background: #f8d5d3;
 }
+
+#info-area .card-header {
+  background: #f8d5d3;
+} 
 
 .noUi-connect {
 	background: #2de075;
