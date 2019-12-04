@@ -94,6 +94,21 @@ html, body {
     display: block;
 }
 
+#slider .noUi-handle {
+  width: 12px;
+  right: -6px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: none;
+  background: gray;
+  cursor: grab;
+}
+
+#slider .noUi-handle::before, .noUi-handle::after {
+  left: 6px;
+  background: none;
+}
+
 #btn-grp {
   position: absolute;
   bottom: 18px;

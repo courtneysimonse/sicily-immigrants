@@ -390,7 +390,11 @@
       pointToLayer: function (feature, latlng) {
         var props = feature.properties
         markers.addLayer(L.circleMarker(latlng, markerOptions)
-          .bindTooltip('Origin: ' + props['origin_city'] + ", " + props['Province'] + '<br>' +
+          .bindTooltip(props['FirstName']+" "+props['LastName']+"<br>"+
+            "Age: "+props['Age']+"<br>"+
+            "Occupation: "+props['Occupation']+"<br>"+
+            "Literacy: "+props['Literacy']+"<br>"+
+            'Origin: ' + props['origin_city'] + ", " + props['Province'] + '<br>' +
             'Destination: ' + props['destination_city'] + '<br>' +
             'Arrival: ' + props['Arrival'])
           .on('mouseover', function (e) {
