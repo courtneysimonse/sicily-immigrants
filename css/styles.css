@@ -15,6 +15,9 @@
   .col-xs-6 {
     height: 50%;
   }
+  #info-area {
+    dispay: none;
+  }
 }
 
 @media (min-width: 576px) {
@@ -48,10 +51,9 @@ html, body {
 
 .title {
   position: absolute;
-  background: #fbeae9;
+  background: #195a17;
   border-radius: 5px;
   font-weight: bold;
-  color: #195a17;
 }
 
 .container-fluid {
@@ -71,8 +73,12 @@ html, body {
 #info-area {
   position: absolute;
   z-index: 1200; /* place above map */
-  top: 36px;
+  top: 48px;
   right: 18px;
+}
+
+#info-area .card-header {
+  background: #ce2939;
 }
 
 #ui-controls {
@@ -81,15 +87,11 @@ html, body {
   left: 18px;
   width: 300px;
   z-index: 100;
-  background: #f8d5d3;
+  background: #ce2939;
 }
 
-#info-area .card-header {
-  background: #f8d5d3;
-} 
-
 .noUi-connect {
-	background: #2de075;
+	background: #195a17;
 }
 
 .noUi-tooltip {
