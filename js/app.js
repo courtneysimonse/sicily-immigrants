@@ -339,7 +339,8 @@
       // remove marker from Sicily map
       originMarkers.clearLayers();
 
-      updateMap(geojson, years, "");
+      province = "";
+      updateMap(geojson, years);
     });
 
     // L.geoJSON(geojson).addTo(map)
