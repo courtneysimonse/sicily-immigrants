@@ -339,7 +339,7 @@
       // remove marker from Sicily map
       originMarkers.clearLayers();
 
-      updateMap(geojson, years);
+      updateMap(geojson, years, "");
     });
 
     // L.geoJSON(geojson).addTo(map)
@@ -381,21 +381,16 @@
       },
       pointToLayer: function (feature, latlng) {
         var props = feature.properties
+        var content = props['FirstName']+" "+props['LastName']+"<br>"+
+          "Age: "+props['Age']+"<br>"+
+          "Occupation: "+props['Occupation']+"<br>"+
+          "Literacy: "+props['Literacy']+"<br>"+
+          'Origin: ' + props['origin_city'] + ", " + props['Province'] + '<br>' +
+          'Destination: ' + props['destination_city'] + '<br>' +
+          'Arrival: ' + props['Arrival'];
         markers.addLayer(L.circleMarker(latlng, markerOptions)
-          .bindTooltip(props['FirstName']+" "+props['LastName']+"<br>"+
-            "Age: "+props['Age']+"<br>"+
-            "Occupation: "+props['Occupation']+"<br>"+
-            "Literacy: "+props['Literacy']+"<br>"+
-            'Origin: ' + props['origin_city'] + ", " + props['Province'] + '<br>' +
-            'Destination: ' + props['destination_city'] + '<br>' +
-            'Arrival: ' + props['Arrival'])
-          .bindPopup(props['FirstName']+" "+props['LastName']+"<br>"+
-            "Age: "+props['Age']+"<br>"+
-            "Occupation: "+props['Occupation']+"<br>"+
-            "Literacy: "+props['Literacy']+"<br>"+
-            'Origin: ' + props['origin_city'] + ", " + props['Province'] + '<br>' +
-            'Destination: ' + props['destination_city'] + '<br>' +
-            'Arrival: ' + props['Arrival'])
+          .bindTooltip(content)
+          .bindPopup(content)
           .on('mouseover', function (e) {
             e.target.setStyle({
               fillOpacity: 1
