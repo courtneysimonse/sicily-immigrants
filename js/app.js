@@ -1,8 +1,5 @@
 (function () {
 
-  // hide Passenger Info card
-  $("#info-area").hide();
-
   // hide arrows
   $("#arrow-2").hide();
   $("#arrow-3").hide();
@@ -280,8 +277,6 @@
       $("#step-two").addClass("next");
       $("#arrow-2").show();
 
-      // hide passenger info area
-      $("#info-area").hide();
       // clear markers on Sicily map
       originMarkers.clearLayers();
 
@@ -331,9 +326,6 @@
       // years = yearsOrig;  //why doesn't this work??
       years = [1885,1890];
 
-      // clear passenger info box and hide card
-      $("#info-list").empty();
-      $("#info-area").hide();
 
       // reset ui-controls highlighting
       $("li").removeClass("next");
@@ -418,19 +410,7 @@
             // console.log(e.target._latlng);
             // map.flyTo(e.target._latlng)
             // zoom to origin marker
-            sicilyMap.flyTo(originCoords, 7.5)
-            $("#info-area").show();
-            // remove previous passenger info
-            $("#info-list").empty();
-            // add clicked passenger info
-            $("#info-list").append(
-              "<li>Name: "+props['FirstName']+" "+props['LastName']+"</li>"+
-              "<li>Age: "+props['Age']+"</li>"+
-              "<li>Occupation: "+props['Occupation']+"</li>"+
-              "<li>Literacy: "+props['Literacy']+"</li>"+
-              "<li>Origin: "+props['origin_city']+", "+props['Province']+"</li>"+
-              "<li>Destination: "+props['destination_city']+"</li>"
-            )
+            sicilyMap.flyTo(originCoords, 7.5);
 
           }));
         // originMarkers.addLayer(
