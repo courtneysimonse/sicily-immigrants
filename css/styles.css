@@ -51,6 +51,7 @@ html, body {
   background: #195a17;
   border-radius: 5px;
   font-weight: bold;
+  font-family: 'Zilla Slab', serif;
 }
 
 .container-fluid {
