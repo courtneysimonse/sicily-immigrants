@@ -43,7 +43,7 @@ Users can gain understanding of the history of immigration to the United States 
 + I scraped the passenger and manifest header data using the process documented in Jupyter notebook (see [data/NARA_scraper.ipynb](project-files/NARA_scraper.ipynb)), resulting in four passenger data files
   + [italians_parta.csv](project-files/italians_parta.csv),
   + [italians_partb.csv](project-files/italians_partb.csv),
-  + [italans_partc.csv](project-files/italians_partc.csv)), and
+  + [italans_partc.csv](project-files/italians_partc.csv), and
   + [manifest_list_1855_1900.csv](project-files/manifest_list_1855_1900.csv).  
 + In the jupyter notebook [Italians_data_exploration.ipynb](project-files/Italians_data_exploration.ipynb), I combined the three passenger data files into [italians_to_america.csv](data/italians_to_america.csv).
 + I then used the list of communes in Sicily [communes_sicily.csv](data/communes_sicily.csv) to filter the passengers to only those that reported a last previous residence in Sicily. I did not account for multiple communes with the same name or any now defunct communes in this analysis. I then added the province name as a new column by matching with the commune name. Finally, I converted the Manifest ID to be "int" to match the manifest list file and added the manifest header information to the passenger data file.
