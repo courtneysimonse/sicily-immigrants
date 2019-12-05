@@ -77,14 +77,15 @@ The map of Sicily represents provinces encoded with a nomimal color scheme. Mark
 
 **Medium for Delivery**  
 The final product is a web map accessible via a web browser on desktop and mobile. The mobile design will responsibly adjust to accommodate varying screen sizes. The technology stack includes:  
-- HTML
-- CSS (Bootstrap framework and custom styling)
-- JavaScript packages
-    - Leaflet.js
-    - JQuery
-    - PapaParse
-    - Leaflet.markercluster
-    - noUiSlider
++ HTML
++ CSS (Bootstrap framework and custom styling)
++ JavaScript packages
+    + Leaflet.js
+    + JQuery
+    + PapaParse
+    + Leaflet.markercluster
+    + noUiSlider
+    + Chroma
 
 **Final Map**
 

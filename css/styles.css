@@ -15,9 +15,6 @@
   .col-xs-6 {
     height: 50%;
   }
-  #info-area {
-    dispay: none;
-  }
 }
 
 @media (min-width: 576px) {
