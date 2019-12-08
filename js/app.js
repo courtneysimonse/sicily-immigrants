@@ -391,6 +391,7 @@
           'Arrival: ' + props['Arrival'];
         markers.addLayer(L.circleMarker(latlng, markerOptions)
           .bindTooltip(content)
+          .bindPopup(content)
           .on('mouseover', function (e) {
             e.target.setStyle({
               fillOpacity: 1
@@ -407,9 +408,7 @@
             var originCoords = [Number(props.origin_lat), Number(props.origin_lon)];
             L.circleMarker(originCoords, originMarkerOpts)
               .addTo(originMarkers);
-            originMarkers
-            .bindPopup(content)
-            .addTo(sicilyMap);
+            originMarkers.addTo(sicilyMap);
             // center passenger marker
             // console.log(e.target._latlng);
             // map.flyTo(e.target._latlng)
