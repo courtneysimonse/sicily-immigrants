@@ -391,7 +391,7 @@
           'Arrival: ' + props['Arrival'];
         markers.addLayer(L.circleMarker(latlng, markerOptions)
           .bindTooltip(content)
-          .bindPopup(content)
+          // .bindPopup(content)
           .on('mouseover', function (e) {
             e.target.setStyle({
               fillOpacity: 1
@@ -406,7 +406,8 @@
             originMarkers.clearLayers();
             // create marker at origin city coords and add to map
             var originCoords = [Number(props.origin_lat), Number(props.origin_lon)];
-            L.circleMarker(originCoords, originMarkerOpts)
+            var originMarker = L.circleMarker(originCoords, originMarkerOpts)
+              .bindPopup(content)
               .addTo(originMarkers);
             originMarkers.addTo(sicilyMap);
             // center passenger marker
@@ -414,7 +415,7 @@
             // map.flyTo(e.target._latlng)
             // zoom to origin marker
             sicilyMap.flyTo(originCoords, 7.5);
-
+            originMarker.openPopup();
           }));
         // originMarkers.addLayer(
         //   L.circleMarker([Number(feature.properties.origin_lat), Number(feature.properties.origin_lon)], markerOptions)
