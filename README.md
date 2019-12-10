@@ -64,7 +64,7 @@ Example of cleaned data:
 |   9   |    Derase    |     Luigi     |       Unknown        |     Unknown      |   Unknown    |        Italy        |           MESSINA           |        New York         |  Staying in the USA [Transit]; Stowaway [Travel]  |       63       |   Messina    |    Alesia    | Messina & Naples | 04/25/1885  |
 
  + I aggregated "Final Destination" data to match duplicates in the juypter notebook [destinations.ipynb](project-files/destinations.ipynb).
- + I added geocoding results from [geocoding.ipynb](project-files/geocoding.ipynb) back to the passenger data to create [sicily_passengers.csv](data/sicily_passengers.csv), used in the map.  
+ + I added geocoding results from [geocoding.ipynb](project-files/geocoding.ipynb) back to the passenger data to create [sicily_passengers.csv](data/sicily_passengers.csv), used in the map. For each destination, I used the center point of the reported area (city or state). I filtered out the country-level data points.  
  + I used QGIS to filter the Italy province GeoJSON to include only features in Sicily, creating [sicily.geojson](data/sicily.geojson).
 
 ### Map
@@ -73,7 +73,7 @@ The web page initially loads with an initial year range pre-selected and no prov
 
 Two buttons are located in the bottom right of the interface. The Reset button restores the maps to their original states. The ? button provides metadata.  
 
-The map of Sicily represents provinces encoded with a nomimal color scheme. Marker clusters will represent number of people who immigrated to the US, and individual points are accessible through zooming and clicking on the Markerclusters.
+The map of Sicily represents provinces encoded with a nominal color scheme. Marker clusters will represent number of people who immigrated to the US, and individual points are accessible through zooming and clicking on the Markerclusters.
 
 **Medium for Delivery**  
 The final product is a web map accessible via a web browser on desktop and mobile. The mobile design will responsibly adjust to accommodate varying screen sizes. The technology stack includes:  
