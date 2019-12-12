@@ -68,17 +68,6 @@ html, body {
     overflow-x: hidden;
 }
 
-#info-area {
-  position: absolute;
-  z-index: 1200; /* place above map */
-  top: 48px;
-  right: 18px;
-}
-
-#info-area .card-header {
-  background: #ce2939;
-}
-
 #ui-controls {
   position: absolute;
   bottom: 18px;
