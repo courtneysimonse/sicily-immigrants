@@ -45,7 +45,7 @@
   }).addTo(map);
 
   $.getJSON('data/sicily.geojson', function(sicily) {
-      Papa.parse('data/sicily_passengers.csv', {
+      Papa.parse('data/sicily_passengers2.csv', {
         download: true,
         dynamicTyping: true,
         header: true,
@@ -181,10 +181,11 @@
       // add all data as props
       feature.properties = datum;
       // add coordinate info
-      feature.geometry.coordinates = [Number(datum.destination_lon), Number(datum.destination_lat)];
+      feature.geometry.coordinates = [Number(datum["randY"]), Number(datum["randX"])];
+      // console.log(feature.geometry.coordinates);
 
-      if (isNaN(datum.destination_lat)) {
-        // console.log(datum);
+      if (isNaN(datum["randX"])) {
+        console.log(datum);
         // console.log(feature);
       } else {
         // filter out generic data - after researching, Altona looks like a transcription
