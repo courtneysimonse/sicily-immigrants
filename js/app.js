@@ -271,11 +271,11 @@
 
       province = this.feature.properties['NAME_2'];
 
-      // hightlight step-two
+      // hightlight step-three
       $("li").removeClass("next");
-      $("#arrow-1").hide();
-      $("#step-two").addClass("next");
-      $("#arrow-2").show();
+      $("#arrow-2").hide();
+      $("#step-three").addClass("next");
+      $("#arrow-3").show();
 
       // clear markers on Sicily map
       originMarkers.clearLayers();
@@ -289,6 +289,10 @@
       $(".spinner-border").show()
     });
 
+    slider.noUiSlider.on('click', function () {
+      $(".spinner-border").show()
+    })
+
     slider.noUiSlider.on('change', function (values) {
 
       // set years to new slider values and display on ui-controls
@@ -299,11 +303,11 @@
 
       updateMap(geojson, years, province);
 
-      // hightlight step-three
+      // hightlight step-two
       $("li").removeClass("next");
-      $("#arrow-2").hide();
-      $("#step-three").addClass("next");
-      $("#arrow-3").show();
+      $("#arrow-1").hide();
+      $("#step-two").addClass("next");
+      $("#arrow-2").show();
 
       return years;
 
