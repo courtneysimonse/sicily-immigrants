@@ -55,6 +55,11 @@
       	complete: function(data) {
           $.getJSON('data/sicily-labels.json', function(labels) {
             drawLabels(labels);
+            $.getJSON('project-files/nyc-points.geojson', function (nycpts) {
+              drawNYC(nycpts);
+            }).fail(function (error) {
+                console.log("Error... error...");
+            });
           }).fail(function(error) {
               // the data file failed to load
               console.log("Error... error...");
@@ -457,5 +462,15 @@
     }).addTo(sicilyMap);
   }; //end drawLabels
 
+  function drawNYC(points) {
+    L.geoJSON(points, {
+      pointToLayer: function (feature, latlng) {
+        if (feature.properties['id']<23213) {
+          markers.addLayer(L.circleMarker(latlng, markerOptions));
+        }
+      }
+    })
+    console.log("Draw NYC done");
+  }
 
 })();
