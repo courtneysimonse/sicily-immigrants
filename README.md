@@ -90,7 +90,7 @@ The final product is a web map accessible via a web browser on desktop and mobil
 **Final Map**
 
 ![Sicily to the US: 1880-1900](images/final-map-screenshot.png)
-**Figure 03.** Final Map Layout [courtneysimonse.ninja/sicily-immigrants](courtneysimonse.ninja/sicily-immigrants)
+**Figure 03.** Final Map Layout [courtneysimonse.ninja/sicily-immigrants](https://courtneysimonse.ninja/sicily-immigrants)
 
 ## Conclusion
 Ellis Island and its predecessor, Castle Garden, processed many immigrants. Today, over 40% of Americans can trace their roots back to one of these immigrants ([Ellis Island Fact Sheet](https://www.nps.gov/npnh/learn/news/fact-sheet-elis.htm)). This map explores migration from Sicily to the United States and allows users to identify patterns of emigration and settlement.  The broader impact of the map contributes to a fuller understanding of US immigration.
